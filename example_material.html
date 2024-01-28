@@ -356,7 +356,12 @@ document.write(`
                   
   <section id="material">
 <h1>Material<a class="headerlink" href="#material" title="Permalink to this heading">#</a></h1>
-<p>This example is an active material consisting of a zinc powder with a set of properties. In EMMO, a ConventionalProperty is a property whose value is assigned by convention (e.g. from a technical specification sheet, handbook, etc.)</p>
+<p>This example, let’s describe an instance of some zinc powder with a set of properties defined in the specification sheet from the manufacturer. This example highlights a few things:</p>
+<ol class="arabic simple">
+<li><p><strong>EMMO distinguishes properties according to how they were determined.</strong> In this example, a <code class="docutils literal notranslate"><span class="pre">ConventionalProperty</span></code> is a property whose value is assigned by convention (e.g. from a technical specification sheet, handbook, etc.). EMMO also provides terms for <code class="docutils literal notranslate"><span class="pre">MeasuredProperty</span></code> for properties which were actually determined by some measurement and <code class="docutils literal notranslate"><span class="pre">ModelledProperty</span></code> for properties that were obtained from some model.</p></li>
+<li><p><strong>EMMO has a specific way of expressing quantitative properties.</strong> As shown in the example, a quantitative property has a <code class="docutils literal notranslate"><span class="pre">&#64;type</span></code> that describes what kind of property it is, a numerical part that describes the value, and a measurement unit that defines the unit. Please adhere to this format when expressing quantities in your linked data.</p></li>
+<li><p><strong>We can re-use terms from common vocabularies like schema.org.</strong> One of the core principles of linked data is to re-use existing vocabularies when possible. The schema.org vocabulary was developed to support internet search engines and contains terms for things that people often search for (e.g. people, organizations, products, etc.) In this case, we can re-use schema.org terms to describe the manufacturer and product.</p></li>
+</ol>
 <p>The JSON-LD description of the material is given below:</p>
 </section>
 
