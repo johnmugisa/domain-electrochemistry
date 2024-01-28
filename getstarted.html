@@ -375,22 +375,22 @@ document.write(`
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
 <div class="sd-card-header docutils">
-<p class="sd-card-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil sd-text-info" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25a1.75 1.75 0 01.445-.758l8.61-8.61zm1.414 1.06a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086zM11.189 6.25L9.75 4.81l-6.286 6.287a.25.25 0 00-.064.108l-.558 1.953 1.953-.558a.249.249 0 00.108-.064l6.286-6.286z"></path></svg>  Examples</p>
-</div>
-<div class="sd-card-body docutils">
-<p class="sd-card-text">Here are some examples that demonstrate basic usage of the ontology</p>
-</div>
-<a class="sd-stretched-link reference external" href="examples.html"></a></div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
-<div class="sd-card-header docutils">
 <p class="sd-card-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-book sd-text-info" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"></path></svg>  Resources</p>
 </div>
 <div class="sd-card-body docutils">
 <p class="sd-card-text">Here are some other resources and best practices for creating linked data on the web.</p>
 </div>
 <a class="sd-stretched-link reference external" href="resources.html"></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-pencil sd-text-info" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25a1.75 1.75 0 01.445-.758l8.61-8.61zm1.414 1.06a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086zM11.189 6.25L9.75 4.81l-6.286 6.287a.25.25 0 00-.064.108l-.558 1.953 1.953-.558a.249.249 0 00.108-.064l6.286-6.286z"></path></svg>  Examples</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Here are some examples that demonstrate basic usage of the ontology</p>
+</div>
+<a class="sd-stretched-link reference external" href="examples.html"></a></div>
 </div>
 </div>
 </div>
@@ -427,6 +427,9 @@ document.write(`
 </section>
 <section id="step-5-make-your-own-linked-data">
 <h2>Step 5: Make your own linked data!<a class="headerlink" href="#step-5-make-your-own-linked-data" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="id1">
+<h2>Step 5: Make your own linked data!<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Now you can make your own piece of linked data using ontology terms and JSON-LD. Let’s make a linked data description of a simple electrochemical cell consisting of a zinc negative electrode, a manganese dioxide positive electrode, and an alkaline electrolyte. This is expressed in JSON-LD as:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
 <span class="linenos"> 2</span><span class="w">   </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/context.json&quot;</span><span class="p">,</span>
@@ -504,6 +507,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-open-and-explore-the-ontology-file-in-protege">Step 3: Open and explore the ontology file in Protégé</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-explore-the-json-ld-context-file">Step 4: Explore the JSON-LD context file</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-make-your-own-linked-data">Step 5: Make your own linked data!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Step 5: Make your own linked data!</a></li>
 </ul>
   </nav></div>
 
