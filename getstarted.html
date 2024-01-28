@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Quick Start &#8212; BattInfo  documentation</title>
+    <title>Get Started &#8212; BattInfo  documentation</title>
   
   
   
@@ -339,7 +339,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Quick Start</li>
+    <li class="breadcrumb-item active" aria-current="page">Get Started</li>
   </ul>
 </nav>
 </div>
@@ -356,33 +356,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="quick-start">
-<h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this heading">#</a></h1>
+  <section id="get-started">
+<h1>Get Started<a class="headerlink" href="#get-started" title="Permalink to this heading">#</a></h1>
 <p>This ontology is used mostly for generating linked data and complying with the FAIR data guidelines (although it can also do much more!). It provides machine-readable persistent identifiers for terms and semantic relations that help describe what things are and how they are related to each other.</p>
 <p>An easy way to get started is to use the ontology vocabulary to create semantic linked data using JSON-LD files. We’ve provided some examples that you are free to re-use or modify for your own needs.</p>
-<p>But if you are new to working with ontologies, we recommend you follow this step-by-step guide to understand the background and make your first piece of linked data.</p>
-<section id="step-1-install-protege">
-<h2>Step 1: Install Protégé<a class="headerlink" href="#step-1-install-protege" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://protege.stanford.edu/">Protégé</a> is a graphical ontology editor developed by Stanford University. It is free and one of the most widely used tools for ontology development. You can read more about it in the tools section.</p>
-</section>
-<section id="step-2-download-the-pre-inferred-version-of-the-ontology">
-<h2>Step 2: Download the pre-inferred version of the ontology<a class="headerlink" href="#step-2-download-the-pre-inferred-version-of-the-ontology" title="Permalink to this heading">#</a></h2>
-<p>Ontologies within the EMMO universe import many different modules to try to re-use knowledge and terms from other domains. We then run a tool called a “reasoner” to make logical inferrences about how terms from different domains are connected, and lump them into one ontology.</p>
-<p>We make it easy for you by providing a pre-inferred version in advance. You can download it from the GitHub repository <a class="reference external" href="https://github.com/emmo-repo/domain-electrochemistry/blob/master/electrochemistry-inferred.ttl">download it from the GitHub repository</a>  or access it at anytime using this URL:</p>
-<p><a class="reference external" href="https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/electrochemistry-inferred.ttl">https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/electrochemistry-inferred.ttl</a></p>
-</section>
-<section id="step-3-open-and-explore-the-ontology-file-in-protege">
-<h2>Step 3: Open and explore the ontology file in Protégé<a class="headerlink" href="#step-3-open-and-explore-the-ontology-file-in-protege" title="Permalink to this heading">#</a></h2>
-<p>Within Protégé, you can explore the class hierarchy that contains all the “things” that are included in the ontology, as well as the object properties that describe how those things are related to each other. There are a few things to notice:</p>
-<ol class="arabic simple">
-<li><p><strong>Each item has a unique, persistent, and machine readable identifier called an IRI.</strong> An IRI (Internationalized Reference Identifier) is the official identifier for that term. It is the anchor to which all other information is linked. In the EMMO universe, IRIs usually contain some Universal Unique Identifier (UUID) character sequence that ensures their uniqueness, but also makes them hard for humans to read. But fear not! Each term also comes with a set of human readable labels called prefLabel and altLabel.</p></li>
-<li><p><strong>Each item has one human-readable preferred label and can have many alternative labels.</strong> The EMMO universe uses the SKOS terminology for labelling items. The main label for the term is called its prefLabel (short for preferred label) and is often expressed in the source files as skos:prefLabel. But sometimes, there can be multiple labels for the same thing. In that case we use skos:altLabel to list possible alternative labels.</p></li>
-<li><p><strong>Each item has an elucidation, describing the meaning of the term.</strong> The elucidation is a short human-readable text that describes the conceptualization for the term. It should give some insight into what the term means and how it can be used.</p></li>
-<li><p><strong>Many terms have links to other sources of information.</strong> For many terms, there are other authoritative sources of information available that can provide more context about its meaning. To account for that, we include annotations that point to places like the IEC Vocabulary, IUPAC Goldbook, DBpedia, WikiData, or Wikipedia where humans or machines can go to retrieve more information.</p></li>
-</ol>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row docutils">
-<div class="sd-col sd-d-flex-row docutils">
+<blockquote>
+<div><div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
 <div class="sd-card-header docutils">
 <p class="sd-card-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-tools sd-text-info" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M5.433 2.304A4.494 4.494 0 003.5 6c0 1.598.832 3.002 2.09 3.802.518.328.929.923.902 1.64v.008l-.164 3.337a.75.75 0 11-1.498-.073l.163-3.33c.002-.085-.05-.216-.207-.316A5.996 5.996 0 012 6a5.994 5.994 0 012.567-4.92 1.482 1.482 0 011.673-.04c.462.296.76.827.76 1.423v2.82c0 .082.041.16.11.206l.75.51a.25.25 0 00.28 0l.75-.51A.25.25 0 009 5.282V2.463c0-.596.298-1.127.76-1.423a1.482 1.482 0 011.673.04A5.994 5.994 0 0114 6a5.996 5.996 0 01-2.786 5.068c-.157.1-.209.23-.207.315l.163 3.33a.75.75 0 11-1.498.074l-.164-3.345c-.027-.717.384-1.312.902-1.64A4.496 4.496 0 0012.5 6a4.494 4.494 0 00-1.933-3.696c-.024.017-.067.067-.067.16v2.818a1.75 1.75 0 01-.767 1.448l-.75.51a1.75 1.75 0 01-1.966 0l-.75-.51A1.75 1.75 0 015.5 5.282V2.463c0-.092-.043-.142-.067-.159zm.01-.005z"></path></svg>  Tools</p>
@@ -392,6 +373,15 @@ document.write(`
 </div>
 <a class="sd-stretched-link reference external" href="tools.html"></a></div>
 </div>
+</div></blockquote>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+:link: examples.html</div>
+<blockquote>
+<div><p class="sd-card-text">Here are some examples that demonstrate basic usage of the ontology</p>
+</div></blockquote>
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
 <div class="sd-card-header docutils">
@@ -404,187 +394,45 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-<section id="what-do-i-use-this-for">
-<h2>What do I use this for?<a class="headerlink" href="#what-do-i-use-this-for" title="Permalink to this heading">#</a></h2>
-<blockquote>
-<div><p>Terms and elucidations are derived from authoritative sources like the IEC and IUPAC, so you can be sure that your data &amp; metadata are properly annotated.</p>
-</div></blockquote>
-</section>
-<section id="how-do-i-use-it">
-<h2>How do I use it?<a class="headerlink" href="#how-do-i-use-it" title="Permalink to this heading">#</a></h2>
-<p>The easiest way is to use it to create JSON-LD files.</p>
-</section>
-<section id="why-should-i-do-this">
-<h2>Why should I do this?<a class="headerlink" href="#why-should-i-do-this" title="Permalink to this heading">#</a></h2>
-<section id="persistent-identifiers">
-<h3>Persistent identifiers<a class="headerlink" href="#persistent-identifiers" title="Permalink to this heading">#</a></h3>
-<p>This ontology assigns persistent machine-readable identifiers to
-concepts from the electrochemistry domain. These identifiers facilitate
-data exchange and interoperability among various tools and systems. It
-includes annotations to other sources of information including
-<a class="reference external" href="https://www.dbpedia.org/">DBPedia</a> and
-<a class="reference external" href="https://www.wikidata.org/">Wikidata</a>.</p>
-</section>
-<section id="standardized-nomenclature">
-<h3>Standardized Nomenclature<a class="headerlink" href="#standardized-nomenclature" title="Permalink to this heading">#</a></h3>
-<p>The ontology builds on standardized nomenclature for electrochemistry,
-relying on recognized authorities including
-<a class="reference external" href="https://iupac.org/what-we-do/nomenclature/">IUPAC</a> and the
-<a class="reference external" href="https://www.electropedia.org/">IEC</a>. IUPAC is the
-universally-recognized authority on chemical nomenclature and
-terminology, and IEC is the the world’s leading organization that
-prepares and publishes International Standards for all electrical,
-electronic and related technologies. This consistency in naming
-conventions enhances collaboration and data sharing.</p>
-</section>
-<section id="key-features">
-<h3>Key Features<a class="headerlink" href="#key-features" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Seamless integration with the EMMO ontology.</p></li>
-<li><p>Provides persistent machine-readable identifiers for electorchemical
-systems, devices, methods, datasets, and quantities.</p></li>
-<li><p>Standardized nomenclature for electrochemical entities.</p></li>
-<li><p>Facilitates data exchange and interoperability within the EMMO
-ecosystem.</p></li>
-</ul>
-</section>
-<section id="usage">
-<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h3>
-<p>Researchers, domain experts, and developers within the electrochemical
-communities can utilize the ontology for various purposes, including:</p>
-<ul class="simple">
-<li><p>Incorporating consistent and standardized information into their
-modeling and simulation activities.</p></li>
-<li><p>Enhancing data interoperability between modeling tools, databases,
-and platforms.</p></li>
-<li><p>Supporting research projects that require precise and standardized
-electrochemical knowledge representation.</p></li>
-<li><p>Building applications, databases, or knowledge graphs that leverage
-EMMO and require electrochemical information.</p></li>
-<li><p>Generating linked data in the semantic web.</p></li>
-<li><p>Complying with FAIR data mandates (FAIR Guidelines available
-<a class="reference external" href="FAIR.md">here</a>)</p></li>
-</ul>
-</section>
-<section id="structure-and-integration-with-emmo">
-<h3>Structure and Integration with EMMO<a class="headerlink" href="#structure-and-integration-with-emmo" title="Permalink to this heading">#</a></h3>
-<p>The Electrochemistry Domain Ontology is an official domain on the EMMO.
-The asserted source consists of two files: - <code class="docutils literal notranslate"><span class="pre">electrochemistry.ttl</span></code>:
-describes terms and object properties for the electrochemistry domain. -
-<code class="docutils literal notranslate"><span class="pre">electrochemicalquantities.ttl</span></code>: describes the physical quantities
-related to the electrochemistry domain. It is encapsulated to allow it
-to be imported by other EMMO domains without needing to import the
-entire ontology.</p>
-<p>The electrochemistry domain also imports other EMMO domains: - <a class="reference external" href="https://github.com/emmo-repo/domain-chemical-substance">Chemical
-Substance Domain
-Ontology</a>:
-provides material annotations for electrochemical (meta)data.</p>
-<p>The import structure is summarized in the following table:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><strong>Imported Ontologies</strong></p></th>
-<th class="head"><p><strong>Version</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>EMMO</p></td>
-<td><p>1.0.0-beta5</p></td>
-</tr>
-<tr class="row-odd"><td><p>chemical-substance</p></td>
-<td><p>0.2.0-alpha</p></td>
-</tr>
-</tbody>
-</table>
-<p>For simplicity, we complie the source files and other imports into a
-<a class="reference external" href="inferred_version/electrochemistry-inferred.ttl">pre-inferred
-ontology</a>. This is
-the result of running the asserted source files through a semantic
-reasoner and includes both asserted and inferred properties in a clear
-graph.</p>
-</section>
-<section id="getting-started">
-<h3>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h3>
-</section>
-</section>
-<section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
-<p>Before you begin, we recommend that you install the following tools.
-They are not all required, but greatly simplify the process of working
-with ontologies:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://protege.stanford.edu/">Protégé</a> (a graphical ontology
-editor)</p>
-<ul>
-<li><p>Installation instructions are available
-<a class="reference external" href="https://protege.stanford.edu/software.php#desktop-protege">here</a>.</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://github.com/emmo-repo/EMMOntoPy">EMMOntoPy</a> (python
-package for working with EMMO ontologies)</p>
-<ul>
-<li><p>Installation instructions are available
-<a class="reference external" href="https://github.com/emmo-repo/EMMOntoPy#installation">here</a>.</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://rdflib.readthedocs.io/en/stable/">RDFLib</a> (optional,
-python package for working with RDF graphs)</p>
-<ul>
-<li><p>Installation instructions are available
-<a class="reference external" href="https://rdflib.readthedocs.io/en/stable/gettingstarted.html">here</a>.</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://code.visualstudio.com/">VS Studio Code</a> (optional, a code
-editor with extensions for RDF formats like TTL and JSON-LD)</p>
-<ul>
-<li><p>Installation instructions are available
-<a class="reference external" href="https://code.visualstudio.com/download">here</a>.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="id1">
-<h2>Quick Start<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>To quickly explore and make use of the ontology, first download the
-pre-inferred version <a class="reference external" href="inferred_version/electrochemistry-inferred.ttl">pre-inferred
-ontology</a>. You can
-then simply open the file in Protégé and explore its content or load the
-ontology into python using EMMOntoPy.</p>
-<p>In <a class="reference external" href="https://github.com/emmo-repo/EMMOntoPy">EMMOntoPy</a>, you can
-choose to import the ontology from your local downloaded copy or
-directly from the web. Commands for both options are given below:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ontopy</span> <span class="kn">import</span> <span class="n">get_ontology</span>
-
-<span class="c1"># Loading from local repository</span>
-<span class="n">electrochemistry</span> <span class="o">=</span> <span class="n">get_ontology</span><span class="p">(</span><span class="s1">&#39;/path/to/domain-electrochemistry/electrochemistry-inferred.ttl&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">url_from_catalog</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Loading from web</span>
-<span class="n">electrochemistry</span> <span class="o">=</span> <span class="n">get_ontology</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/inferred_version/electrochemistry-inferred.ttl&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
-</pre></div>
 </div>
-<section id="contributing">
-<h3>Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">#</a></h3>
-<p>We welcome contributions from the community to enhance and expand the
-ontology. If you have suggestions, improvements, or additional chemical
-substance information to contribute, please refer to our <a class="reference external" href="CONTRIBUTING.md">Contribution
-Guidelines</a>.</p>
+</div>
+</div>
+<p>But if you are new to working with ontologies, we recommend you follow this step-by-step guide to understand the background and make your first piece of linked data.</p>
+<section id="step-1-install-protege">
+<h2>Step 1: Install Protégé<a class="headerlink" href="#step-1-install-protege" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://protege.stanford.edu/">Protégé</a> is a graphical ontology editor developed by Stanford University. It is free and one of the most widely used tools for ontology development. You can read more about it in the tools section.</p>
 </section>
+<section id="step-2-download-the-pre-inferred-version-of-the-ontology">
+<h2>Step 2: Download the pre-inferred version of the ontology<a class="headerlink" href="#step-2-download-the-pre-inferred-version-of-the-ontology" title="Permalink to this heading">#</a></h2>
+<p>Ontologies within the EMMO universe import many different modules to try to re-use knowledge and terms from other domains. We then run a tool called a “reasoner” to make logical inferrences about how terms from different domains are connected, and lump them into one ontology.</p>
+<p>We make it easy for you by providing a pre-inferred version in advance. You can <a class="reference external" href="https://github.com/emmo-repo/domain-electrochemistry/blob/master/electrochemistry-inferred.ttl">download it from the GitHub repository</a>  or access it at anytime using this URL:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/electrochemistry-inferred.ttl">https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/electrochemistry-inferred.ttl</a></p>
 </section>
-<section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
-<p>This project has received support from European Union research and
-innovation programs, under grant agreement numbers:</p>
-<ul class="simple">
-<li><p>957189 - <a class="reference external" href="http://www.big-map.eu/">BIG-MAP</a></p></li>
-</ul>
-<section id="license">
-<h3>License<a class="headerlink" href="#license" title="Permalink to this heading">#</a></h3>
-<p>The Battery Interface Domain Ontology is released under the <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative
-Commons Attribution 4.0
-International</a>
-license (CC BY 4.0).</p>
+<section id="step-3-open-and-explore-the-ontology-file-in-protege">
+<h2>Step 3: Open and explore the ontology file in Protégé<a class="headerlink" href="#step-3-open-and-explore-the-ontology-file-in-protege" title="Permalink to this heading">#</a></h2>
+<p>Within Protégé, you can explore the class hierarchy that contains all the “things” that are included in the ontology, as well as the object properties that describe how those things are related to each other. There are a few things to notice:</p>
+<ol class="arabic simple">
+<li><p><strong>Each item has a unique, persistent, and machine readable identifier called an IRI.</strong> An IRI (Internationalized Reference Identifier) is the official identifier for that term. It is the anchor to which all other information is linked. In the EMMO universe, IRIs usually contain some Universal Unique Identifier (UUID) character sequence that ensures their uniqueness, but also makes them hard for humans to read. But fear not! Each term also comes with a set of human readable labels called prefLabel and altLabel.</p></li>
+<li><p><strong>Each item has one human-readable preferred label and can have many alternative labels.</strong> The EMMO universe uses the SKOS terminology for labelling items. The main label for the term is called its prefLabel (short for preferred label) and is often expressed in the source files as skos:prefLabel. But sometimes, there can be multiple labels for the same thing. In that case we use skos:altLabel to list possible alternative labels.</p></li>
+<li><p><strong>Each item has an elucidation, describing the meaning of the term.</strong> The elucidation is a short human-readable text that describes the conceptualization for the term. It should give some insight into what the term means and how it can be used.</p></li>
+<li><p><strong>Many terms have links to other sources of information.</strong> For many terms, there are other authoritative sources of information available that can provide more context about its meaning. To account for that, we include annotations that point to places like the IEC Vocabulary, IUPAC Goldbook, DBpedia, WikiData, or Wikipedia where humans or machines can go to retrieve more information.</p></li>
+</ol>
 </section>
+<section id="step-4-explore-the-json-ld-context-file">
+<h2>Step 4: Explore the JSON-LD context file<a class="headerlink" href="#step-4-explore-the-json-ld-context-file" title="Permalink to this heading">#</a></h2>
+<p>JSON-LD is one of the easiest and most common file formats for creating linked data. JSON-LD uses the same key-value pair structure of traditional JSON, but adds a few keywords to support semantic linked data. One of these is the &#64;context keyword, which points to a dictionary that pairs human readable term labels with machine readable IRIs. For convenience, we provide a JSON-LD context file that is generated from the pre-inferred version of the ontology that pairs prefLabels with IRIs. You can find the <a class="reference external" href="https://github.com/emmo-repo/domain-electrochemistry/blob/master/context.json">context file on the GitHub repository</a>  or access it anytime using this URL:</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/context.json">https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/context.json</a></p>
 </section>
+<section id="step-5-make-your-own-linked-data">
+<h2>Step 5: Make your own linked data!<a class="headerlink" href="#step-5-make-your-own-linked-data" title="Permalink to this heading">#</a></h2>
+<p>Now you can make your own piece of linked data using ontology terms and JSON-LD. Let’s make a linked data description of a simple electrochemical cell consisting of a zinc negative electrode, a manganese dioxide positive electrode, and an alkaline electrolyte. This is expressed in JSON-LD as:</p>
+<p>First, we use the <code class="docutils literal notranslate"><span class="pre">&#64;context</span></code> keyword to establish the context for machines to process the file by pointing to our pre-inferred context file on GitHub.</p>
+<p>Then, we use the keyword <code class="docutils literal notranslate"><span class="pre">&#64;type</span></code> to describe what type of thing we are describing, in this case an <code class="docutils literal notranslate"><span class="pre">ElectrochemicalCell</span></code>. When a machine processes this file, it is going to check in the context and retrieve the IRI that is associated to the label <code class="docutils literal notranslate"><span class="pre">ElectrochemicalCell</span></code>.</p>
+<p>Next, we use object properties that are defined in the ontology like <code class="docutils literal notranslate"><span class="pre">hasNegativeElectrode</span></code>, <code class="docutils literal notranslate"><span class="pre">hasPositiveElectrode</span></code>, and <code class="docutils literal notranslate"><span class="pre">hasElectrolyte</span></code> to define links to other things. In this example, we say that our electrochemical cell has a ngeative electrode, and that electrode is of the type <code class="docutils literal notranslate"><span class="pre">ZincElectrode</span></code>.</p>
+<p>Finally, you can use the <a class="reference external" href="https://json-ld.org/playground/">JSON-LD Playground</a> to see how machines can process the linked data file.</p>
+<div style="position: relative; padding-top: 56.25%; height: 0;">
+<iframe src="https://json-ld.org/playground/#startTab=tab-table&json-ld=%7B%22%40context%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2Femmo-repo%2Fdomain-electrochemistry%2Fmaster%2Fcontext.json%22%2C%22%40type%22%3A%22ElectrochemicalCell%22%2C%22hasNegativeElectrode%22%3A%7B%22%40type%22%3A%22ZincElectrode%22%7D%2C%22hasPositiveElectrode%22%3A%7B%22%40type%22%3A%22ManganeseDioxideElectrode%22%7D%2C%22hasElectrolyte%22%3A%7B%22%40type%22%3A%22AlkalineElectrolyte%22%7D%7D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div></section>
 </section>
 
 
@@ -637,26 +485,8 @@ license (CC BY 4.0).</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-install-protege">Step 1: Install Protégé</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-the-pre-inferred-version-of-the-ontology">Step 2: Download the pre-inferred version of the ontology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-open-and-explore-the-ontology-file-in-protege">Step 3: Open and explore the ontology file in Protégé</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-i-use-this-for">What do I use this for?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-use-it">How do I use it?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-should-i-do-this">Why should I do this?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persistent-identifiers">Persistent identifiers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standardized-nomenclature">Standardized Nomenclature</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-and-integration-with-emmo">Structure and Integration with EMMO</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Quick Start</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing">Contributing</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-explore-the-json-ld-context-file">Step 4: Explore the JSON-LD context file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-make-your-own-linked-data">Step 5: Make your own linked data!</a></li>
 </ul>
   </nav></div>
 
