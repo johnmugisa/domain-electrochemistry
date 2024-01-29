@@ -408,13 +408,12 @@ document.write(`
 <section id="step-3-open-and-explore-the-ontology-file-in-protege">
 <h2>Step 3: Open and explore the ontology file in Protégé<a class="headerlink" href="#step-3-open-and-explore-the-ontology-file-in-protege" title="Permalink to this heading">#</a></h2>
 <p>Within Protégé, you can explore the class hierarchy that contains all the “things” that are included in the ontology, as well as the object properties that describe how those things are related to each other. There are a few things to notice:</p>
-<ol class="arabic simple">
-<li><p><strong>Each item has a unique, persistent, and machine readable identifier called an IRI.</strong> An IRI (Internationalized Reference Identifier) is the official identifier for that term. It is the anchor to which all other information is linked. In the EMMO universe, IRIs usually contain some Universal Unique Identifier (UUID) character sequence that ensures their uniqueness. For example, the IRI for ElectrochemicalCell is:</p></li>
-</ol>
+<ol class="arabic">
+<li><p><strong>Each item has a unique, persistent, and machine readable identifier called an IRI.</strong> An IRI (Internationalized Reference Identifier) is the official identifier for that term. It is the anchor to which all other information is linked. In the EMMO universe, IRIs usually contain some Universal Unique Identifier (UUID) character sequence that ensures their uniqueness. For example, the IRI for ElectrochemicalCell is:</p>
 <p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_6f2c88c9_5c04_4953_a298_032cc3ab9b77">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_6f2c88c9_5c04_4953_a298_032cc3ab9b77</a></p>
 <p>Clicking the link will take you to human-readable documentation. But if the request comes from an application or if you add a trailing slash / character to the IRI, then it will take you to a machine-readable turtle file.</p>
 <p>As you can see, the use of UUIDs in the IRIs make it difficult for humans to read and understand. But fear not! Each term also comes with a set of human readable labels called prefLabel and altLabel.</p>
-<ol class="arabic simple">
+</li>
 <li><p><strong>Each item has one human-readable preferred label and can have many alternative labels.</strong> The EMMO universe uses the SKOS terminology for labelling items. The main label for the term is called its prefLabel (short for preferred label) and is often expressed in the source files as skos:prefLabel. But sometimes, there can be multiple labels for the same thing. In that case we use skos:altLabel to list possible alternative labels.</p></li>
 <li><p><strong>Each item has an elucidation, describing the meaning of the term.</strong> The elucidation is a short human-readable text that describes the conceptualization for the term. It should give some insight into what the term means and how it can be used.</p></li>
 <li><p><strong>Many terms have links to other sources of information.</strong> For many terms, there are other authoritative sources of information available that can provide more context about its meaning. To account for that, we include annotations that point to places like the IEC Vocabulary, IUPAC Goldbook, DBpedia, WikiData, or Wikipedia where humans or machines can go to retrieve more information.</p></li>
