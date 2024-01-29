@@ -418,6 +418,10 @@ JSON-LD Playground</label><div class="sd-tab-content docutils">
 <div style="position: relative; padding-top: 56.25%; height: 0;">
    <iframe src="https://json-ld.org/playground/#startTab=tab-table&json-ld=%7B%22%40context%22%3A%22https%3A%2F%2Fraw.githubusercontent.com%2Femmo-repo%2Fdomain-electrochemistry%2Fmaster%2Fcontext.json%22%2C%22%40type%22%3A%22ElectrochemicalCell%22%2C%22hasNegativeElectrode%22%3A%7B%22%40type%22%3A%22ZincElectrode%22%7D%2C%22hasPositiveElectrode%22%3A%7B%22%40type%22%3A%22ManganeseDioxideElectrode%22%7D%2C%22hasElectrolyte%22%3A%7B%22%40type%22%3A%22AlkalineElectrolyte%22%7D%7D" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
 </div></div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Colab Notebook</label><div class="sd-tab-content docutils">
+<iframe src="https://colab.research.google.com/drive/14XqRJPWs07RUQgZmDZEu3yb2m1xGvxEQ/embed" width="700" height="480"></iframe></div>
 </div>
 <p>First, we use the <code class="docutils literal notranslate"><span class="pre">&#64;context</span></code> keyword to establish the context for machines to process the file by pointing to our pre-inferred context file on GitHub.</p>
 <p>Then, we use the keyword <code class="docutils literal notranslate"><span class="pre">&#64;type</span></code> to describe what type of thing we are describing, in this case an <code class="docutils literal notranslate"><span class="pre">ElectrochemicalCell</span></code>. When a machine processes this file, it is going to check in the context and retrieve the IRI that is associated to the label <code class="docutils literal notranslate"><span class="pre">ElectrochemicalCell</span></code>.</p>
