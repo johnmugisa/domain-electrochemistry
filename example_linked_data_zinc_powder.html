@@ -378,20 +378,24 @@ document.write(`
 <h1>Example: Zinc Powder from a Supplier<a class="headerlink" href="#Example:-Zinc-Powder-from-a-Supplier" title="Permalink to this heading">#</a></h1>
 <p>Let’s describe an instance of some zinc powder with a set of properties defined in the specification sheet from the manufacturer!</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span># Install and import dependencies
-!pip install jsonschema rdflib &gt; /dev/null
+!pip install jsonschema rdflib requests matplotlib &gt; /dev/null
 
 import json
 import rdflib
+import requests
+import sys
+from IPython.display import Image, display
+import matplotlib.pyplot as plt
 </pre></div>
 </div>
 </div>
 <p>The JSON-LD data that we will use is:</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jsonld</span> <span class="o">=</span> <span class="p">{</span>
@@ -418,31 +422,9 @@ import rdflib
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-(rdflib.term.URIRef(&#39;https://www.wikidata.org/wiki/Q680841&#39;), rdflib.term.URIRef(&#39;https://schema.org/name&#39;), rdflib.term.Literal(&#39;Sigma-Aldrich&#39;))
-(rdflib.term.BNode(&#39;Nc95e8898daef460e92f102f978c57630&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_02d2d1d1_241c_429b_b4e7_31f2c3dc4835&#39;))
-(rdflib.term.BNode(&#39;N9622032c417e4e21918ccb2f84ff1be7&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_18d180e4_5e3e_42f7_820c_e08951223486&#39;))
-(rdflib.term.BNode(&#39;Nfc73816cdf3e4970aebf113d2188ff03&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc&#39;))
-(rdflib.term.BNode(&#39;Nfc73816cdf3e4970aebf113d2188ff03&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204&#39;), rdflib.term.BNode(&#39;Nc95e8898daef460e92f102f978c57630&#39;))
-(rdflib.term.BNode(&#39;Nfc73816cdf3e4970aebf113d2188ff03&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ee479886_6805_4018_95e1_500185e44215&#39;))
-(rdflib.term.BNode(&#39;N9622032c417e4e21918ccb2f84ff1be7&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_faf79f53_749d_40b2_807c_d34244c192f4&#39;), rdflib.term.Literal(&#39;150&#39;, datatype=rdflib.term.URIRef(&#39;http://www.w3.org/2001/XMLSchema#integer&#39;)))
-(rdflib.term.BNode(&#39;Nfc73816cdf3e4970aebf113d2188ff03&#39;), rdflib.term.URIRef(&#39;https://schema.org/manufacturer&#39;), rdflib.term.URIRef(&#39;https://www.wikidata.org/wiki/Q680841&#39;))
-(rdflib.term.BNode(&#39;Nc95e8898daef460e92f102f978c57630&#39;), rdflib.term.URIRef(&#39;http://purl.org/dc/elements/1.1/source&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
-(rdflib.term.BNode(&#39;Nc95e8898daef460e92f102f978c57630&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_d8aa8e1f_b650_416d_88a0_5118de945456&#39;))
-(rdflib.term.BNode(&#39;Nfc73816cdf3e4970aebf113d2188ff03&#39;), rdflib.term.URIRef(&#39;https://schema.org/url&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
-(rdflib.term.BNode(&#39;Nc95e8898daef460e92f102f978c57630&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0&#39;), rdflib.term.BNode(&#39;N9622032c417e4e21918ccb2f84ff1be7&#39;))
-(rdflib.term.BNode(&#39;Nfc73816cdf3e4970aebf113d2188ff03&#39;), rdflib.term.URIRef(&#39;https://schema.org/productID&#39;), rdflib.term.Literal(&#39;324930&#39;))
-(rdflib.term.BNode(&#39;Nc95e8898daef460e92f102f978c57630&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#MicroMetre&#39;))
-(rdflib.term.Literal(&#39;Sigma-Aldrich&#39;),)
-</pre></div></div>
-</div>
 <p>Now let’s see how a machine would process this by reading it into an RDF Graph! We can then use SPARQL to write a query and list all the things the machine thinks is in this file…</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new graph</span>
@@ -466,9 +448,30 @@ import rdflib
 <br/></pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc&#39;))
+(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;https://schema.org/manufacturer&#39;), rdflib.term.URIRef(&#39;https://www.wikidata.org/wiki/Q680841&#39;))
+(rdflib.term.BNode(&#39;Nd2170694b6284f04aea18b7229390552&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_18d180e4_5e3e_42f7_820c_e08951223486&#39;))
+(rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0&#39;), rdflib.term.BNode(&#39;Nd2170694b6284f04aea18b7229390552&#39;))
+(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;https://schema.org/productID&#39;), rdflib.term.Literal(&#39;324930&#39;))
+(rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#MicroMetre&#39;))
+(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ee479886_6805_4018_95e1_500185e44215&#39;))
+(rdflib.term.BNode(&#39;Nd2170694b6284f04aea18b7229390552&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_faf79f53_749d_40b2_807c_d34244c192f4&#39;), rdflib.term.Literal(&#39;150&#39;, datatype=rdflib.term.URIRef(&#39;http://www.w3.org/2001/XMLSchema#integer&#39;)))
+(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204&#39;), rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;))
+(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;https://schema.org/url&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
+(rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;), rdflib.term.URIRef(&#39;http://purl.org/dc/elements/1.1/source&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
+(rdflib.term.URIRef(&#39;https://www.wikidata.org/wiki/Q680841&#39;), rdflib.term.URIRef(&#39;https://schema.org/name&#39;), rdflib.term.Literal(&#39;Sigma-Aldrich&#39;))
+(rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_02d2d1d1_241c_429b_b4e7_31f2c3dc4835&#39;))
+(rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_d8aa8e1f_b650_416d_88a0_5118de945456&#39;))
+</pre></div></div>
+</div>
 <p>Now, let’s write a SPARQL query to get back some specific thing…like what is the name of the manufacturer?</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -488,6 +491,122 @@ import rdflib
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 <br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(rdflib.term.Literal(&#39;Sigma-Aldrich&#39;),)
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">endpoint_url</span> <span class="o">=</span> <span class="s2">&quot;https://query.wikidata.org/sparql&quot;</span>
+
+<span class="c1"># SPARQL query to get the mass of zinc (Q758)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT ?mass WHERE {</span>
+<span class="s2">  wd:Q758 wdt:P2067 ?mass .</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Set headers for request</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;WDQS-example Python/</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">1</span><span class="p">])}</span>
+
+<span class="c1"># Execute the request</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">endpoint_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">})</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># Extract and print the mass value</span>
+<span class="n">mass</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="s1">&#39;bindings&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;mass&#39;</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mass of Zinc: </span><span class="si">{</span><span class="n">mass</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Mass of Zinc: 65.38
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># SPARQL query to get the image of zinc (Q758)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT ?image WHERE {</span>
+<span class="s2">  wd:Q758 wdt:P18 ?image .</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Set headers for request</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;WDQS-example Python/</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">1</span><span class="p">])}</span>
+
+<span class="c1"># Execute the request</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">endpoint_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">})</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># Extract and display the image URL</span>
+<span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="s1">&#39;bindings&#39;</span><span class="p">]:</span>
+    <span class="n">image_url</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="s1">&#39;bindings&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;image&#39;</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Image of Zinc: </span><span class="si">{</span><span class="n">image_url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">image_url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">))</span>  <span class="c1"># Adjust width and height as needed</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No image found for Zinc.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Image of Zinc: http://commons.wikimedia.org/wiki/Special:FilePath/Zinc%20fragment%20sublimed%20and%201cm3%20cube.jpg
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<img src="http://commons.wikimedia.org/wiki/Special:FilePath/Zinc%20fragment%20sublimed%20and%201cm3%20cube.jpg" width="300" height="300"/></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample data</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+
+<span class="c1"># Create a figure and axis</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="c1"># Plot data</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Set labels and title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X Axis Label&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y Axis Label&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Simple Plot&#39;</span><span class="p">)</span>
+
+<span class="c1"># Display the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/example_linked_data_zinc_powder_10_0.png" src="_images/example_linked_data_zinc_powder_10_0.png" />
 </div>
 </div>
 </section>
