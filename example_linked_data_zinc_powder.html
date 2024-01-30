@@ -377,25 +377,12 @@ document.write(`
   <section id="Example:-Zinc-Powder-from-a-Supplier">
 <h1>Example: Zinc Powder from a Supplier<a class="headerlink" href="#Example:-Zinc-Powder-from-a-Supplier" title="Permalink to this heading">#</a></h1>
 <p>Let’s describe an instance of some zinc powder with a set of properties defined in the specification sheet from the manufacturer!</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
-</pre></div>
-</div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span># Install and import dependencies
-!pip install jsonschema rdflib requests matplotlib &gt; /dev/null
-
-import json
-import rdflib
-import requests
-import sys
-from IPython.display import Image, display
-import matplotlib.pyplot as plt
-</pre></div>
-</div>
-</div>
+<p>This example covers a few topics: - How to describe a resource using ontology terms and JSON-LD - How machines convert JSON-LD into triples - What is the meaning of the subject, predicate, and object identifiers - How to run a simple query using SPARQL <strong>[Moderate]</strong> - How to use the ontology to fetch more information from other sources <strong>[Advanced]</strong></p>
+<section id="Describe-the-powder-using-ontology-terms-in-JSON-LD-format">
+<h2>Describe the powder using ontology terms in JSON-LD format<a class="headerlink" href="#Describe-the-powder-using-ontology-terms-in-JSON-LD-format" title="Permalink to this heading">#</a></h2>
 <p>The JSON-LD data that we will use is:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jsonld</span> <span class="o">=</span> <span class="p">{</span>
@@ -422,16 +409,39 @@ import matplotlib.pyplot as plt
 </pre></div>
 </div>
 </div>
-<p>Now let’s see how a machine would process this by reading it into an RDF Graph! We can then use SPARQL to write a query and list all the things the machine thinks is in this file…</p>
+</section>
+<section id="Parse-this-description-into-a-graph">
+<h2>Parse this description into a graph<a class="headerlink" href="#Parse-this-description-into-a-graph" title="Permalink to this heading">#</a></h2>
+<p>Now let’s see how a machine would process this data by reading it into a Graph!</p>
+<p>First, we install and import the python dependencies that we need for this example.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span># Install and import dependencies
+!pip install jsonschema rdflib requests matplotlib &gt; /dev/null
+
+import json
+import rdflib
+import requests
+import sys
+from IPython.display import Image, display
+import matplotlib.pyplot as plt
+</pre></div>
+</div>
+</div>
+<p>Now we create the graph using a very handy python package called <a class="reference external" href="https://rdflib.readthedocs.io/en/stable/">rdflib</a>, which provides us a way to parse our json-ld data, run some queries using the language <a class="reference external" href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a>, and serialize the graph in any RDF compatible format (e.g. JSON-LD, Turtle, etc.).</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new graph</span>
 <span class="n">g</span> <span class="o">=</span> <span class="n">rdflib</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
 
+<span class="c1"># Parse our json-ld data into the graph</span>
 <span class="n">g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">jsonld</span><span class="p">),</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;json-ld&quot;</span><span class="p">)</span>
 
+<span class="c1"># Create a SPARQL query to return all the triples in the graph</span>
 <span class="n">query_all</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT ?subject ?predicate ?object</span>
 <span class="s2">WHERE {</span>
@@ -453,25 +463,51 @@ import matplotlib.pyplot as plt
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc&#39;))
-(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;https://schema.org/manufacturer&#39;), rdflib.term.URIRef(&#39;https://www.wikidata.org/wiki/Q680841&#39;))
-(rdflib.term.BNode(&#39;Nd2170694b6284f04aea18b7229390552&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_18d180e4_5e3e_42f7_820c_e08951223486&#39;))
-(rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0&#39;), rdflib.term.BNode(&#39;Nd2170694b6284f04aea18b7229390552&#39;))
-(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;https://schema.org/productID&#39;), rdflib.term.Literal(&#39;324930&#39;))
-(rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#MicroMetre&#39;))
-(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ee479886_6805_4018_95e1_500185e44215&#39;))
-(rdflib.term.BNode(&#39;Nd2170694b6284f04aea18b7229390552&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_faf79f53_749d_40b2_807c_d34244c192f4&#39;), rdflib.term.Literal(&#39;150&#39;, datatype=rdflib.term.URIRef(&#39;http://www.w3.org/2001/XMLSchema#integer&#39;)))
-(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204&#39;), rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;))
-(rdflib.term.BNode(&#39;Nc41f2c7bf5bd497e9161e124fe2bfc66&#39;), rdflib.term.URIRef(&#39;https://schema.org/url&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
-(rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;), rdflib.term.URIRef(&#39;http://purl.org/dc/elements/1.1/source&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
+(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;https://schema.org/manufacturer&#39;), rdflib.term.URIRef(&#39;https://www.wikidata.org/wiki/Q680841&#39;))
+(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;https://schema.org/productID&#39;), rdflib.term.Literal(&#39;324930&#39;))
+(rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;), rdflib.term.URIRef(&#39;http://purl.org/dc/elements/1.1/source&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
+(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc&#39;))
+(rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#MicroMetre&#39;))
+(rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0&#39;), rdflib.term.BNode(&#39;N4f72df06f0e140bc9957b97c8ffb724a&#39;))
+(rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_d8aa8e1f_b650_416d_88a0_5118de945456&#39;))
+(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;https://schema.org/url&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
+(rdflib.term.BNode(&#39;N4f72df06f0e140bc9957b97c8ffb724a&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_faf79f53_749d_40b2_807c_d34244c192f4&#39;), rdflib.term.Literal(&#39;150&#39;, datatype=rdflib.term.URIRef(&#39;http://www.w3.org/2001/XMLSchema#integer&#39;)))
+(rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_02d2d1d1_241c_429b_b4e7_31f2c3dc4835&#39;))
 (rdflib.term.URIRef(&#39;https://www.wikidata.org/wiki/Q680841&#39;), rdflib.term.URIRef(&#39;https://schema.org/name&#39;), rdflib.term.Literal(&#39;Sigma-Aldrich&#39;))
-(rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_02d2d1d1_241c_429b_b4e7_31f2c3dc4835&#39;))
-(rdflib.term.BNode(&#39;N0b3d6babf6ed4b289629f69ed796200c&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_d8aa8e1f_b650_416d_88a0_5118de945456&#39;))
+(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204&#39;), rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;))
+(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ee479886_6805_4018_95e1_500185e44215&#39;))
+(rdflib.term.BNode(&#39;N4f72df06f0e140bc9957b97c8ffb724a&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_18d180e4_5e3e_42f7_820c_e08951223486&#39;))
 </pre></div></div>
 </div>
+<p>You can see that our human-readable JSON-LD file has been transformed into some nasty looking (but machine-readable!) triples. Let’s look at a couple in more detail to understand what’s going on.</p>
+</section>
+<section id="Examine-and-explore-the-triples">
+<h2>Examine and explore the triples<a class="headerlink" href="#Examine-and-explore-the-triples" title="Permalink to this heading">#</a></h2>
+<p>Let’s start with this one:</p>
+<table style="font-size: 18px;"><tr><td><p>subject:</p>
+</td><td><p><a class="reference external" href="https://www.wikidata.org/wiki/Q680841">https://www.wikidata.org/wiki/Q680841</a></p>
+</td></tr><tr><td><p>predicate:</p>
+</td><td><p><a class="reference external" href="https://schema.org/name">https://schema.org/name</a></p>
+</td></tr><tr><td><p>object:</p>
+</td><td><p>‘Sigma-Aldrich’</p>
+</td></tr></table><p>This tells the machine that something with a wikidata identifier has a property called ‘name’ from the schema.org vocabulary with a literal value ‘<strong>Sigma-Aldrich</strong>’. These identifiers serve not only as persistent and unique identifiers for the concepts, but also point to a place where a machine can go to learn more about what it is. Try it yourself! Click on one and see where it takes you!</p>
+<p>Neat, right?! Let’s look at another one:</p>
+<table><tr><td><p>subject:</p>
+</td><td><p>‘Nb9d4bdc220954548a09b8b56f95d9cf3’</p>
+</td></tr><tr><td><p>predicate:</p>
+</td><td><p><a class="reference external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></p>
+</td></tr><tr><td><p>object:</p>
+</td><td><p><a class="reference external" href="https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc">https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc</a></p>
+</td></tr></table><p>This tells the machine that a certain node in the graph is a a type of some thing that exists in the EMMO domain ‘chemicalsubstance’. And this gets to one of the difficult bits for humans: many ontologies (like EMMO) use UUIDs for term names to ensure that they are universally unique. It works, but it sacrifices the human readability. Luckily we can get around this by assigning human-readable annotations to that term and/or mapping the IRI to a human readable label in a JSON-LD context like we
+did above.</p>
+<p>Go ahead, click the link and see if you can figure out what this thing is…</p>
+<p>…it’s Zinc! Now we can see how our simple description in the JSON-LD file has now been converted to a machine-readable IRI.</p>
+</section>
+<section id="Query-the-graph-using-SPARQL-[Moderate]">
+<h2>Query the graph using SPARQL [Moderate]<a class="headerlink" href="#Query-the-graph-using-SPARQL-[Moderate]" title="Permalink to this heading">#</a></h2>
 <p>Now, let’s write a SPARQL query to get back some specific thing…like what is the name of the manufacturer?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -479,7 +515,7 @@ import matplotlib.pyplot as plt
 
 <span class="s2">SELECT ?manufacturerName</span>
 <span class="s2">WHERE {</span>
-<span class="s2">  ?product schema:manufacturer ?manufacturer .</span>
+<span class="s2">  ?thing schema:manufacturer ?manufacturer .</span>
 <span class="s2">  ?manufacturer schema:name ?manufacturerName .</span>
 <span class="s2">}</span>
 <span class="s2">&quot;&quot;&quot;</span>
@@ -501,30 +537,42 @@ import matplotlib.pyplot as plt
 (rdflib.term.Literal(&#39;Sigma-Aldrich&#39;),)
 </pre></div></div>
 </div>
+</section>
+<section id="Fetch-additional-information-from-other-sources-[Advanced]">
+<h2>Fetch additional information from other sources [Advanced]<a class="headerlink" href="#Fetch-additional-information-from-other-sources-[Advanced]" title="Permalink to this heading">#</a></h2>
+<p>Ontologies contain a lot of information about the meaning of things, but they don’t always contain an exhaustive list of all the properties. Instead, they often point to other sources where that information exists rather than duplicating it. Let’s see how you can use the ontology to fetch additional information from other sources.</p>
+<p>First, we parse the ontology into the knowledge graph and retrieve the IRIs for the terms that we are interested in. In this case, we want to retrieve more information about Zinc from Wikidata, so we query the ontology to find Zinc’s Wikidata ID.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[80]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">endpoint_url</span> <span class="o">=</span> <span class="s2">&quot;https://query.wikidata.org/sparql&quot;</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parse the ontology into the knowledge graph</span>
+<span class="n">ontology</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/electrochemistry-inferred.ttl&quot;</span>
+<span class="n">g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">ontology</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;turtle&#39;</span><span class="p">)</span>
 
-<span class="c1"># SPARQL query to get the mass of zinc (Q758)</span>
+<span class="c1"># Fetch the context</span>
+<span class="n">context_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/context.json&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">context_url</span><span class="p">)</span>
+<span class="n">context_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># Look for the IRI of Zinc in the context</span>
+<span class="n">zinc_iri</span> <span class="o">=</span> <span class="n">context_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;@context&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Zinc&#39;</span><span class="p">)</span>
+<span class="n">wikidata_iri</span> <span class="o">=</span> <span class="n">context_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;@context&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;wikidataReference&#39;</span><span class="p">)</span>
+
+<span class="c1"># Query the ontology to find the wikidata id for zinc</span>
 <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT ?mass WHERE {</span>
-<span class="s2">  wd:Q758 wdt:P2067 ?mass .</span>
+<span class="s2">SELECT ?wikidataId</span>
+<span class="s2">WHERE {</span>
+<span class="s2">    &lt;</span><span class="si">%s</span><span class="s2">&gt; &lt;</span><span class="si">%s</span><span class="s2">&gt; ?wikidataId .</span>
 <span class="s2">}</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&quot;&quot;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">zinc_iri</span><span class="p">,</span> <span class="n">wikidata_iri</span><span class="p">)</span>
 
-<span class="c1"># Set headers for request</span>
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;WDQS-example Python/</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">1</span><span class="p">])}</span>
+<span class="n">qres</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">qres</span><span class="p">:</span>
+    <span class="n">wikidata_id</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">wikidataId</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="c1"># Execute the request</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">endpoint_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">})</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-
-<span class="c1"># Extract and print the mass value</span>
-<span class="n">mass</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="s1">&#39;bindings&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;mass&#39;</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mass of Zinc: </span><span class="si">{</span><span class="n">mass</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<br/></pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The Wikidata ID of Zinc: </span><span class="si">{</span><span class="n">wikidata_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -532,32 +580,63 @@ import matplotlib.pyplot as plt
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Mass of Zinc: 65.38
+The Wikidata ID of Zinc: Q758
 </pre></div></div>
 </div>
+<p>Now that we have the Wikidata ID for Zinc, we can query their SPARQL endpoint to retrieve some property. Let’s ask it for the atomic mass.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Query the Wikidata knowledge graph for more information about zinc</span>
+<span class="n">wikidata_endpoint</span> <span class="o">=</span> <span class="s2">&quot;https://query.wikidata.org/sparql&quot;</span>
+
+<span class="c1"># SPARQL query to get the atomic mass of zinc (Q758)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT ?mass WHERE {</span>
+<span class="s2">  wd:</span><span class="si">%s</span><span class="s2"> wdt:P2067 ?mass .</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">wikidata_id</span>
+
+<span class="c1"># Execute the request</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">wikidata_endpoint</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">})</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c1"># Extract and print the mass value</span>
+<span class="n">mass</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="s1">&#39;bindings&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;mass&#39;</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wikidata says the atomic mass of zinc is: </span><span class="si">{</span><span class="n">mass</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Wikidata says the atomic mass of zinc is: 65.38
+</pre></div></div>
+</div>
+<p>We can also retrieve more complex data. For example, let’s ask Wikidata to show us an image of zinc.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[82]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># SPARQL query to get the image of zinc (Q758)</span>
 <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT ?image WHERE {</span>
-<span class="s2">  wd:Q758 wdt:P18 ?image .</span>
+<span class="s2">  wd:</span><span class="si">%s</span><span class="s2"> wdt:P18 ?image .</span>
 <span class="s2">}</span>
-<span class="s2">&quot;&quot;&quot;</span>
-
-<span class="c1"># Set headers for request</span>
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;WDQS-example Python/</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">1</span><span class="p">])}</span>
+<span class="s2">&quot;&quot;&quot;</span> <span class="o">%</span> <span class="n">wikidata_id</span>
 
 <span class="c1"># Execute the request</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">endpoint_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">})</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">wikidata_endpoint</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">})</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
 <span class="c1"># Extract and display the image URL</span>
 <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="s1">&#39;bindings&#39;</span><span class="p">]:</span>
     <span class="n">image_url</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="s1">&#39;bindings&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;image&#39;</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Image of Zinc: </span><span class="si">{</span><span class="n">image_url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">image_url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">))</span>  <span class="c1"># Adjust width and height as needed</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">image_url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">))</span>  <span class="c1"># Adjust width and height as needed</span>
 
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No image found for Zinc.&quot;</span><span class="p">)</span>
@@ -576,39 +655,17 @@ Image of Zinc: http://commons.wikimedia.org/wiki/Special:FilePath/Zinc%20fragmen
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<img src="http://commons.wikimedia.org/wiki/Special:FilePath/Zinc%20fragment%20sublimed%20and%201cm3%20cube.jpg" width="300" height="300"/></div>
+<img src="http://commons.wikimedia.org/wiki/Special:FilePath/Zinc%20fragment%20sublimed%20and%201cm3%20cube.jpg" width="300"/></div>
 </div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample data</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
-
-<span class="c1"># Create a figure and axis</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-
-<span class="c1"># Plot data</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-
-<span class="c1"># Set labels and title</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X Axis Label&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y Axis Label&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Simple Plot&#39;</span><span class="p">)</span>
-
-<span class="c1"># Display the plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="_images/example_linked_data_zinc_powder_10_0.png" src="_images/example_linked_data_zinc_powder_10_0.png" />
-</div>
-</div>
+</section>
 </section>
 
 
@@ -651,6 +708,20 @@ Image of Zinc: http://commons.wikimedia.org/wiki/Special:FilePath/Zinc%20fragmen
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Describe-the-powder-using-ontology-terms-in-JSON-LD-format">Describe the powder using ontology terms in JSON-LD format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Parse-this-description-into-a-graph">Parse this description into a graph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Examine-and-explore-the-triples">Examine and explore the triples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Query-the-graph-using-SPARQL-[Moderate]">Query the graph using SPARQL [Moderate]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Fetch-additional-information-from-other-sources-[Advanced]">Fetch additional information from other sources [Advanced]</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
