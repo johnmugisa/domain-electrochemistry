@@ -377,12 +377,18 @@ document.write(`
   <section id="Example:-Zinc-Powder-from-a-Supplier">
 <h1>Example: Zinc Powder from a Supplier<a class="headerlink" href="#Example:-Zinc-Powder-from-a-Supplier" title="Permalink to this heading">#</a></h1>
 <p>Let’s describe an instance of some zinc powder with a set of properties defined in the specification sheet from the manufacturer!</p>
-<p>This example covers a few topics: - How to describe a resource using ontology terms and JSON-LD - How machines convert JSON-LD into triples - What is the meaning of the subject, predicate, and object identifiers - How to run a simple query using SPARQL <strong>[Moderate]</strong> - How to use the ontology to fetch more information from other sources <strong>[Advanced]</strong></p>
+<div class="line-block">
+<div class="line">This example covers a few topics: - How to describe a resource using ontology terms and JSON-LD</div>
+<div class="line">- How machines convert JSON-LD into triples</div>
+<div class="line">- What is the meaning of the subject, predicate, and object identifiers</div>
+<div class="line">- How to run a simple query using SPARQL <strong>[Moderate]</strong></div>
+<div class="line">- How to use the ontology to fetch more information from other sources <strong>[Advanced]</strong></div>
+</div>
 <section id="Describe-the-powder-using-ontology-terms-in-JSON-LD-format">
 <h2>Describe the powder using ontology terms in JSON-LD format<a class="headerlink" href="#Describe-the-powder-using-ontology-terms-in-JSON-LD-format" title="Permalink to this heading">#</a></h2>
 <p>The JSON-LD data that we will use is:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jsonld</span> <span class="o">=</span> <span class="p">{</span>
@@ -415,7 +421,7 @@ document.write(`
 <p>Now let’s see how a machine would process this data by reading it into a Graph!</p>
 <p>First, we install and import the python dependencies that we need for this example.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span># Install and import dependencies
@@ -432,7 +438,7 @@ import matplotlib.pyplot as plt
 </div>
 <p>Now we create the graph using a very handy python package called <a class="reference external" href="https://rdflib.readthedocs.io/en/stable/">rdflib</a>, which provides us a way to parse our json-ld data, run some queries using the language <a class="reference external" href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a>, and serialize the graph in any RDF compatible format (e.g. JSON-LD, Turtle, etc.).</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new graph</span>
@@ -463,20 +469,20 @@ import matplotlib.pyplot as plt
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;https://schema.org/manufacturer&#39;), rdflib.term.URIRef(&#39;https://www.wikidata.org/wiki/Q680841&#39;))
-(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;https://schema.org/productID&#39;), rdflib.term.Literal(&#39;324930&#39;))
-(rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;), rdflib.term.URIRef(&#39;http://purl.org/dc/elements/1.1/source&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
-(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc&#39;))
-(rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#MicroMetre&#39;))
-(rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0&#39;), rdflib.term.BNode(&#39;N4f72df06f0e140bc9957b97c8ffb724a&#39;))
-(rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_d8aa8e1f_b650_416d_88a0_5118de945456&#39;))
-(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;https://schema.org/url&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
-(rdflib.term.BNode(&#39;N4f72df06f0e140bc9957b97c8ffb724a&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_faf79f53_749d_40b2_807c_d34244c192f4&#39;), rdflib.term.Literal(&#39;150&#39;, datatype=rdflib.term.URIRef(&#39;http://www.w3.org/2001/XMLSchema#integer&#39;)))
-(rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_02d2d1d1_241c_429b_b4e7_31f2c3dc4835&#39;))
+(rdflib.term.BNode(&#39;Nca52d7882ab94ea4bda56ca395067561&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204&#39;), rdflib.term.BNode(&#39;Ndeba6ec90c314da6a72bf2c10d6b1448&#39;))
+(rdflib.term.BNode(&#39;Nc7a3704c771441088cd7a1005bc0f1c6&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_18d180e4_5e3e_42f7_820c_e08951223486&#39;))
+(rdflib.term.BNode(&#39;Ndeba6ec90c314da6a72bf2c10d6b1448&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_d8aa8e1f_b650_416d_88a0_5118de945456&#39;))
+(rdflib.term.BNode(&#39;Nca52d7882ab94ea4bda56ca395067561&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ee479886_6805_4018_95e1_500185e44215&#39;))
+(rdflib.term.BNode(&#39;Nca52d7882ab94ea4bda56ca395067561&#39;), rdflib.term.URIRef(&#39;https://schema.org/manufacturer&#39;), rdflib.term.URIRef(&#39;https://www.wikidata.org/wiki/Q680841&#39;))
+(rdflib.term.BNode(&#39;Ndeba6ec90c314da6a72bf2c10d6b1448&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_02d2d1d1_241c_429b_b4e7_31f2c3dc4835&#39;))
+(rdflib.term.BNode(&#39;Ndeba6ec90c314da6a72bf2c10d6b1448&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_bed1d005_b04e_4a90_94cf_02bc678a8569&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#MicroMetre&#39;))
+(rdflib.term.BNode(&#39;Ndeba6ec90c314da6a72bf2c10d6b1448&#39;), rdflib.term.URIRef(&#39;http://purl.org/dc/elements/1.1/source&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
+(rdflib.term.BNode(&#39;Nca52d7882ab94ea4bda56ca395067561&#39;), rdflib.term.URIRef(&#39;https://schema.org/url&#39;), rdflib.term.Literal(&#39;https://www.sigmaaldrich.com/NO/en/product/aldrich/324930&#39;))
+(rdflib.term.BNode(&#39;Nc7a3704c771441088cd7a1005bc0f1c6&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_faf79f53_749d_40b2_807c_d34244c192f4&#39;), rdflib.term.Literal(&#39;150&#39;, datatype=rdflib.term.URIRef(&#39;http://www.w3.org/2001/XMLSchema#integer&#39;)))
 (rdflib.term.URIRef(&#39;https://www.wikidata.org/wiki/Q680841&#39;), rdflib.term.URIRef(&#39;https://schema.org/name&#39;), rdflib.term.Literal(&#39;Sigma-Aldrich&#39;))
-(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204&#39;), rdflib.term.BNode(&#39;Nfd851a2b90264372a97b083071157fec&#39;))
-(rdflib.term.BNode(&#39;N6ce5afc5daa84f3a82b605299713b5ef&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ee479886_6805_4018_95e1_500185e44215&#39;))
-(rdflib.term.BNode(&#39;N4f72df06f0e140bc9957b97c8ffb724a&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_18d180e4_5e3e_42f7_820c_e08951223486&#39;))
+(rdflib.term.BNode(&#39;Nca52d7882ab94ea4bda56ca395067561&#39;), rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;), rdflib.term.URIRef(&#39;https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc&#39;))
+(rdflib.term.BNode(&#39;Ndeba6ec90c314da6a72bf2c10d6b1448&#39;), rdflib.term.URIRef(&#39;http://emmo.info/emmo#EMMO_8ef3cd6d_ae58_4a8d_9fc0_ad8f49015cd0&#39;), rdflib.term.BNode(&#39;Nc7a3704c771441088cd7a1005bc0f1c6&#39;))
+(rdflib.term.BNode(&#39;Nca52d7882ab94ea4bda56ca395067561&#39;), rdflib.term.URIRef(&#39;https://schema.org/productID&#39;), rdflib.term.Literal(&#39;324930&#39;))
 </pre></div></div>
 </div>
 <p>You can see that our human-readable JSON-LD file has been transformed into some nasty looking (but machine-readable!) triples. Let’s look at a couple in more detail to understand what’s going on.</p>
@@ -484,21 +490,45 @@ import matplotlib.pyplot as plt
 <section id="Examine-and-explore-the-triples">
 <h2>Examine and explore the triples<a class="headerlink" href="#Examine-and-explore-the-triples" title="Permalink to this heading">#</a></h2>
 <p>Let’s start with this one:</p>
-<table style="font-size: 18px;"><tr><td><p>subject:</p>
-</td><td><p><a class="reference external" href="https://www.wikidata.org/wiki/Q680841">https://www.wikidata.org/wiki/Q680841</a></p>
-</td></tr><tr><td><p>predicate:</p>
-</td><td><p><a class="reference external" href="https://schema.org/name">https://schema.org/name</a></p>
-</td></tr><tr><td><p>object:</p>
-</td><td><p>‘Sigma-Aldrich’</p>
-</td></tr></table><p>This tells the machine that something with a wikidata identifier has a property called ‘name’ from the schema.org vocabulary with a literal value ‘<strong>Sigma-Aldrich</strong>’. These identifiers serve not only as persistent and unique identifiers for the concepts, but also point to a place where a machine can go to learn more about what it is. Try it yourself! Click on one and see where it takes you!</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>subject</p></td>
+<td><p><a class="reference external" href="https://www.wikidata.org/wiki/Q680841">https://www.wikidata.org/wiki/Q680841</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>predicate</p></td>
+<td><p><a class="reference external" href="https://schema.org/name">https://schema.org/name</a></p></td>
+</tr>
+<tr class="row-even"><td><p>object</p></td>
+<td><p>‘Sigma-Aldrich’</p></td>
+</tr>
+</tbody>
+</table>
+<p>This tells the machine that something with a wikidata identifier has a property called ‘name’ from the schema.org vocabulary with a literal value ‘<strong>Sigma-Aldrich</strong>’. These identifiers serve not only as persistent and unique identifiers for the concepts, but also point to a place where a machine can go to learn more about what it is. Try it yourself! Click on one and see where it takes you!</p>
 <p>Neat, right?! Let’s look at another one:</p>
-<table><tr><td><p>subject:</p>
-</td><td><p>‘Nb9d4bdc220954548a09b8b56f95d9cf3’</p>
-</td></tr><tr><td><p>predicate:</p>
-</td><td><p><a class="reference external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></p>
-</td></tr><tr><td><p>object:</p>
-</td><td><p><a class="reference external" href="https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc">https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc</a></p>
-</td></tr></table><p>This tells the machine that a certain node in the graph is a a type of some thing that exists in the EMMO domain ‘chemicalsubstance’. And this gets to one of the difficult bits for humans: many ontologies (like EMMO) use UUIDs for term names to ensure that they are universally unique. It works, but it sacrifices the human readability. Luckily we can get around this by assigning human-readable annotations to that term and/or mapping the IRI to a human readable label in a JSON-LD context like we
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>subject</p></td>
+<td><p>‘Nb9d4bdc220954548a09b8b56f95d9cf3’</p></td>
+</tr>
+<tr class="row-odd"><td><p>predicate</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></p></td>
+</tr>
+<tr class="row-even"><td><p>object</p></td>
+<td><p><a class="reference external" href="https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc">https://w3id.org/emmo/domain/chemicalsubstance#substance_9bd78e1c_a4dc_41b6_8013_adb51df1ffdc</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>This tells the machine that a certain node in the graph is a a type of some thing that exists in the EMMO domain ‘chemicalsubstance’. And this gets to one of the difficult bits for humans: many ontologies (like EMMO) use UUIDs for term names to ensure that they are universally unique. It works, but it sacrifices the human readability. Luckily we can get around this by assigning human-readable annotations to that term and/or mapping the IRI to a human readable label in a JSON-LD context like we
 did above.</p>
 <p>Go ahead, click the link and see if you can figure out what this thing is…</p>
 <p>…it’s Zinc! Now we can see how our simple description in the JSON-LD file has now been converted to a machine-readable IRI.</p>
@@ -507,7 +537,7 @@ did above.</p>
 <h2>Query the graph using SPARQL [Moderate]<a class="headerlink" href="#Query-the-graph-using-SPARQL-[Moderate]" title="Permalink to this heading">#</a></h2>
 <p>Now, let’s write a SPARQL query to get back some specific thing…like what is the name of the manufacturer?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -543,7 +573,7 @@ did above.</p>
 <p>Ontologies contain a lot of information about the meaning of things, but they don’t always contain an exhaustive list of all the properties. Instead, they often point to other sources where that information exists rather than duplicating it. Let’s see how you can use the ontology to fetch additional information from other sources.</p>
 <p>First, we parse the ontology into the knowledge graph and retrieve the IRIs for the terms that we are interested in. In this case, we want to retrieve more information about Zinc from Wikidata, so we query the ontology to find Zinc’s Wikidata ID.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[80]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parse the ontology into the knowledge graph</span>
@@ -585,7 +615,7 @@ The Wikidata ID of Zinc: Q758
 </div>
 <p>Now that we have the Wikidata ID for Zinc, we can query their SPARQL endpoint to retrieve some property. Let’s ask it for the atomic mass.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[95]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Query the Wikidata knowledge graph for more information about zinc</span>
@@ -618,7 +648,7 @@ Wikidata says the atomic mass of zinc is: 65.38
 </div>
 <p>We can also retrieve more complex data. For example, let’s ask Wikidata to show us an image of zinc.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[82]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># SPARQL query to get the image of zinc (Q758)</span>
@@ -658,7 +688,7 @@ Image of Zinc: http://commons.wikimedia.org/wiki/Special:FilePath/Zinc%20fragmen
 <img src="http://commons.wikimedia.org/wiki/Special:FilePath/Zinc%20fragment%20sublimed%20and%201cm3%20cube.jpg" width="300"/></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span>
