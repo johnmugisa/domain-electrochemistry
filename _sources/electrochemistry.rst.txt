@@ -4525,6 +4525,29 @@ ActiveMaterialParticleCracking
 
 .. raw:: html
 
+   <div id="electrochemistry_0a399f3f_b873_41f5_be1f_9b6df75cc30a"></div>
+
+Additive
+--------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_0a399f3f_b873_41f5_be1f_9b6df75cc30a
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a substance added to something in small quantities to alter its properties</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
+  <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q350176'>https://www.wikidata.org/wiki/Q350176</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_8b40856f_1ca2_4137_9616_7fb624671909"></div>
 
 AirElectrode
@@ -8132,6 +8155,25 @@ Electrolyte
   <tr>
   <td class="element-table-key"><span class="element-table-key">Comment</span></td>
   <td class="element-table-value">A solid electrolyte is a solid material where the predominant charge carriers are ions. For example: NASICON (Na Super Ionic Conductor), which has the general formula Na1+xZr2P3-xSix O12 , 0 < x < 3.</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_554286d4_1f46_44c0_bebc_4ddae00dbce1"></div>
+
+ElectrolyteAdditive
+-------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_554286d4_1f46_44c0_bebc_4ddae00dbce1
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">A substance added to an electrolyte to alter its properties</td>
   </tr>
   </table>
 
