@@ -8,6 +8,37 @@ Quantities used in Electrochemistry
 
 .. raw:: html
 
+   <div id="electrochemistry_d7f8cab9_b035_4ecd_be63_292672572526"></div>
+
+ActivationEnergy
+----------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_d7f8cab9_b035_4ecd_be63_292672572526
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">ArrheniusActivationEnergy</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">IUPAC Reference</span></td>
+  <td class="element-table-value"><a href='https://doi.org/10.1351/goldbook.A00102'>https://doi.org/10.1351/goldbook.A00102</a></td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
+  <td class="element-table-value"><a href='https://en.wikipedia.org/wiki/Activation_energy'>https://en.wikipedia.org/wiki/Activation_energy</a></td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
+  <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q190474'>https://www.wikidata.org/wiki/Q190474</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_7fa406b0_512a_4d59_9e0c_5d8aba0103ae"></div>
 
 ActivationOverpotential
@@ -198,6 +229,29 @@ BaselineCellVoltage
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">In electrochemical measurements, the voltage of an electrochemical cell to which a voltage signal is superimposed.</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_5c34b3b5_c9c4_477d_809a_3f682f995aa9"></div>
+
+BruggemanCoefficient
+--------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_5c34b3b5_c9c4_477d_809a_3f682f995aa9
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">quantity that is used to estimate effective transport coefficients in porous media</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
+  <td class="element-table-value">valid in situations where the insulating phase is present in a low volume fraction and represented by random, isotropic spheres</td>
   </tr>
   </table>
 
@@ -1649,37 +1703,6 @@ ElectrolyteContainment
 
 .. raw:: html
 
-   <div id="electrochemistry_abfadc99_6e43_4d37_9b04_7fc5b0f327ae"></div>
-
-ElectronNumberOfAnElectrochemicalReaction
------------------------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_abfadc99_6e43_4d37_9b04_7fc5b0f327ae
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">number of electrons transferred in a charge transfer reaction between an electrode and a single entity (ion, radical-ion, or molecule) of an electroactive substance, whose identity must be specified</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">ChargeNumber, ChargeNumber, NumberOfElectronsTransferred, NumberOfElectronsTransferred</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">IUPAC Reference</span></td>
-  <td class="element-table-value"><a href='https://goldbook.iupac.org/terms/view/C00995'>https://goldbook.iupac.org/terms/view/C00995</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Symbol n is commonly used when there is no risk of confusion with an amount of substance.</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
    <div id="electrochemistry_ce74d2dc_d496_4116_b2fb_3e83d88bc744"></div>
 
 ElectronicConductivity
@@ -2567,14 +2590,18 @@ MaximumPulseDischargeDuration
 
    <div id="electrochemistry_95ef8c3c_62fe_467f_b5d4_dd0cd18a7ea8"></div>
 
-MaximumStoichiometry
---------------------
+MaximumStoichiometricCoefficient
+--------------------------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_95ef8c3c_62fe_467f_b5d4_dd0cd18a7ea8
 
 .. raw:: html
 
   <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">The maximum allowed value for stoichiometric coefficient for an entity in a chemical substance</td>
+  </tr>
   </table>
 
 
@@ -2655,14 +2682,18 @@ MigrationCurrent
 
    <div id="electrochemistry_86324806_4263_4d80_b5af_1a7be844ab5b"></div>
 
-MinimumStoichiometry
---------------------
+MinimumStoichiometricCoefficient
+--------------------------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_86324806_4263_4d80_b5af_1a7be844ab5b
 
 .. raw:: html
 
   <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">The minimum allowed value for stoichiometric coefficient for an entity in a chemical substance</td>
+  </tr>
   </table>
 
 
@@ -2827,6 +2858,113 @@ NumberOfCellsConnectedInSeries
 .. raw:: html
 
   <table class="element-table">
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_abfadc99_6e43_4d37_9b04_7fc5b0f327ae"></div>
+
+NumberOfElectronsTransferred
+----------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_abfadc99_6e43_4d37_9b04_7fc5b0f327ae
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">number of electrons transferred in a charge transfer reaction between an electrode and a single entity (ion, radical-ion, or molecule) of an electroactive substance, whose identity must be specified</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">ChargeNumber, ChargeNumber, ElectronNumberOfAnElectrochemicalReaction, ElectronNumberOfAnElectrochemicalReaction</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">IUPAC Reference</span></td>
+  <td class="element-table-value"><a href='https://goldbook.iupac.org/terms/view/C00995'>https://goldbook.iupac.org/terms/view/C00995</a></td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
+  <td class="element-table-value">Symbol n is commonly used when there is no risk of confusion with an amount of substance.</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_47608fd0_cc0d_457e_9141_051935029e3a"></div>
+
+NumberOfFiniteVolumeCells
+-------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_47608fd0_cc0d_457e_9141_051935029e3a
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">number of discrete finite volume cells in a grid or sub-grid</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_e73586eb_8475_4879_a43e_087c702ea6bf"></div>
+
+NumberOfFiniteVolumeCellsInX
+----------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_e73586eb_8475_4879_a43e_087c702ea6bf
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">number of discrete finite volume cells in a grid or sub-grid in the X-direction</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_c2a85d02_c6b4_42df_b5ed_a9904ec34a5c"></div>
+
+NumberOfFiniteVolumeCellsInY
+----------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_c2a85d02_c6b4_42df_b5ed_a9904ec34a5c
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">number of discrete finite volume cells in a grid or sub-grid in the Y-direction</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_a5e00e3a_736c_4200_8d04_ed222fe07037"></div>
+
+NumberOfFiniteVolumeCellsInZ
+----------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_a5e00e3a_736c_4200_8d04_ed222fe07037
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">number of discrete finite volume cells in a grid or sub-grid in the Z-direction</td>
+  </tr>
   </table>
 
 
@@ -3930,14 +4068,64 @@ StepTime
 
    <div id="electrochemistry_f0667139_6428_4e3d_ac0d_08c1dd7f36ea"></div>
 
-Stoichiometry
--------------
+StoichiometricCoefficient
+-------------------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_f0667139_6428_4e3d_ac0d_08c1dd7f36ea
 
 .. raw:: html
 
   <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the absolute value of the stoichiometric number</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
+  <td class="element-table-value"><a href='https://en.wikipedia.org/wiki/Stoichiometry#Stoichiometric_coefficient_and_stoichiometric_number'>https://en.wikipedia.org/wiki/Stoichiometry#Stoichiometric_coefficient_and_stoichiometric_number</a></td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
+  <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q118455387'>https://www.wikidata.org/wiki/Q118455387</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_f22bd1ec_faca_4335_92a5_a1687154c622"></div>
+
+StoichiometricCoefficientAtSOC0
+-------------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_f22bd1ec_faca_4335_92a5_a1687154c622
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the stoichiometric coefficient for a reactive entity in a chemical substance that corresponds to a cell-level state-of-charge of 0%</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_38ab058e_3912_48c2_a7eb_76d25d000820"></div>
+
+StoichiometricCoefficientAtSOC100
+---------------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_38ab058e_3912_48c2_a7eb_76d25d000820
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the stoichiometric coefficient for a reactive entity in a chemical substance that corresponds to a cell-level state-of-charge of 100%</td>
+  </tr>
   </table>
 
 
@@ -11566,6 +11754,29 @@ ParasiticReaction
 
 .. raw:: html
 
+   <div id="electrochemistry_e13b7945_65ac_476b_85ee_5cdc59f5c919"></div>
+
+Particle
+--------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_e13b7945_65ac_476b_85ee_5cdc59f5c919
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a small localized object which can be described by several physical or chemical properties, such as volume, density, or mass.</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
+  <td class="element-table-value"><a href='https://en.wikipedia.org/wiki/Particle'>https://en.wikipedia.org/wiki/Particle</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_d16eec87_c646_4566_bda6_7d3357cda061"></div>
 
 PassivationLayer
@@ -16133,6 +16344,21 @@ hasAnolyte
 
 .. raw:: html
 
+   <div id="electrochemistry_056a5fab_3d99_46bd_8eb1_6e89a368e1a7"></div>
+
+hasBinder
+---------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_056a5fab_3d99_46bd_8eb1_6e89a368e1a7
+
+.. raw:: html
+
+  <table class="element-table">
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_3dcfe33d_6825_43c0_a798_68e871a68d39"></div>
 
 hasCase
@@ -16169,6 +16395,21 @@ hasCoating
 ----------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4df9926d_d4f2_4955_93f3_a03c5edc5383
+
+.. raw:: html
+
+  <table class="element-table">
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_c830c469_60c3_4380_8382_4df13a32a1e7"></div>
+
+hasConductiveAdditive
+---------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_c830c469_60c3_4380_8382_4df13a32a1e7
 
 .. raw:: html
 
@@ -16274,6 +16515,21 @@ hasReferenceElectrode
 ---------------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_5eb197ea_0c3e_4ea2_8392_81152ee91515
+
+.. raw:: html
+
+  <table class="element-table">
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_9317be62_e602_4343_a72d_02c87201b9f6"></div>
+
+hasSeparator
+------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_9317be62_e602_4343_a72d_02c87201b9f6
 
 .. raw:: html
 
