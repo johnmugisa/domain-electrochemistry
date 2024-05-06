@@ -383,11 +383,12 @@ document.write(`
 <li><p>How to use the ontology to fetch more information from other sources <strong>[Advanced]</strong></p></li>
 </ul>
 <p>A live version of this notebook is available on Google Colab <a class="reference external" href="https://colab.research.google.com/drive/19PxdZDPcKda8Ji6Nyzsz-_8KJFgNkmCa?usp=sharing">here</a></p>
-<section id="Describe-the-powder-using-ontology-terms-in-JSON-LD-format">
-<h2>Describe the powder using ontology terms in JSON-LD format<a class="headerlink" href="#Describe-the-powder-using-ontology-terms-in-JSON-LD-format" title="Permalink to this heading">#</a></h2>
-<p>The JSON-LD data that we will use is:</p>
+<section id="Describe-the-powder-using-ontology-terms-in-JSON-LD-[Basic]">
+<h2>Describe the powder using ontology terms in JSON-LD <strong>[Basic]</strong><a class="headerlink" href="#Describe-the-powder-using-ontology-terms-in-JSON-LD-[Basic]" title="Permalink to this heading">#</a></h2>
+<p>In this example, we will describe a <a class="reference external" href="https://www.sigmaaldrich.com/NO/en/product/aldrich/324930">commercially available zinc powder</a> that is available from the chemical company <a class="reference external" href="https://www.wikidata.org/wiki/Q680841">Sigma Aldrich</a>. We will first describe some general information (e.g. what it is, who manufactured it, where more information can be found, etc.) and then we will describe a simple property of the powder.</p>
+<p>The JSON-LD description that we will use is:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jsonld</span> <span class="o">=</span> <span class="p">{</span>
@@ -414,30 +415,34 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</section>
+<p>Let’s break this description down, little by little.</p>
+<p><strong>&#64;context</strong>: the context is a hallmark of JSON-LD descriptions that provides a kind of dictionary to help translate between human-readable labels and machine-readable IRIs. You can use the <a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry/context">generic context</a> available from the domain ontology, or define your own.</p>
+<p><strong>&#64;type</strong>: describes the parent class(es) of the individual thing we are describing. While most things will only have one parent, it is possible to inherit from multiple parents. In this example, our thing inherits from both Zinc and Powder - becoming a Zinc Powder.</p>
+<p>The next three properties use the <a class="reference external" href="https://schema.org/">schema.org vocabulary</a> to make some generic statements about the product, such as its manufacturer, product ID, and URL. Notice that the value of <strong>schema:manufacturer</strong> is a node with an <strong>&#64;id</strong> value of <a class="reference external" href="https://www.wikidata.org/wiki/Q680841">https://www.wikidata.org/wiki/Q680841</a> and described by a property <strong>schema:name</strong>. This allows us to consistently refer to the manufacturer by a persistent and uniquie identifier (e.g. its wikidata URL) and describe it with a
+human-readable name (“Sigma-Aldrich”).</p>
+<p>We use the EMMO term <strong>hasProperty</strong> to assign the value and unit to a quantity. We again use <strong>&#64;type</strong> to give information about the type of property we are defining. In this case, we again use multiple inheretance to state that this is the <strong>D95ParticleSize</strong> and it is a <strong>ConventionalProperty</strong>. A <strong>ConventionalProperty</strong> is an EMMO term that indicates that the property is obtained by convention (e.g. from a manufacturer’s specification sheet) rather than being explicitly measured.</p>
+<p>Quantities always have two parts: a number and a unit. This is achieved in EMMO rules through the use of <strong>hasNumericalPart</strong> and <strong>hasMeasurementUnit</strong>. In this case, we say that the numerical part is a real number with a value of 150 and the measurement unit is micrometre. Finally, we can use the <a class="reference external" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core</a> terms to define a source for where this information came from, such as a URL or other persistent and unique
+identifier (e.g. a DOI).</p>
+<p>But JSON-LD just offers a handy way to generate human-readable linked data graphs. To really take advantage of its potential, we need to convert it into a machine-readable graph for querying and other operations.</p>
 <section id="Parse-this-description-into-a-graph">
-<h2>Parse this description into a graph<a class="headerlink" href="#Parse-this-description-into-a-graph" title="Permalink to this heading">#</a></h2>
-<p>Now let’s see how a machine would process this data by reading it into a Graph!</p>
-<p>First, we install and import the python dependencies that we need for this example.</p>
+<h3>Parse this description into a graph<a class="headerlink" href="#Parse-this-description-into-a-graph" title="Permalink to this heading">#</a></h3>
+<p>Now let’s see how a machine would process this data by reading it into a Graph! First, we install and import the python dependencies that we need for this example.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span># Install and import dependencies
 !pip install jsonschema rdflib requests matplotlib &gt; /dev/null
 
-import json
-import rdflib
-import requests
-import sys
+import json, rdflib, requests, sys
 from IPython.display import Image, display
 import matplotlib.pyplot as plt
 </pre></div>
 </div>
 </div>
-<p>We create the graph using a very handy python package called <a class="reference external" href="https://rdflib.readthedocs.io/en/stable/">rdflib</a>, which provides us a way to parse our json-ld data, run some queries using the language <a class="reference external" href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a>, and serialize the graph in any RDF compatible format (e.g. JSON-LD, Turtle, etc.).</p>
+<p>We create the graph using a very handy python package called <a class="reference external" href="https://rdflib.readthedocs.io/en/stable/">rdflib</a>, which provides us a way to parse our JSON-LD data, run some queries using the language <a class="reference external" href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a>, and serialize the graph in any RDF compatible format (e.g. JSON-LD, Turtle, etc.).</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new graph</span>
@@ -449,23 +454,34 @@ import matplotlib.pyplot as plt
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;Graph identifier=N9f0e3fae68794ed7b050c80a2dda9a81 (&lt;class &#39;rdflib.graph.Graph&#39;&gt;)&gt;
+&lt;Graph identifier=Nb5552bc1d06041c895f1772067933789 (&lt;class &#39;rdflib.graph.Graph&#39;&gt;)&gt;
 </pre></div></div>
 </div>
 </section>
+</section>
 <section id="Query-the-graph-using-SPARQL-[Moderate]">
 <h2>Query the graph using SPARQL [Moderate]<a class="headerlink" href="#Query-the-graph-using-SPARQL-[Moderate]" title="Permalink to this heading">#</a></h2>
-<p>Now, let’s write a SPARQL query to get back some specific thing…like what is the name of the manufacturer?</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<p>Now, let’s write a SPARQL query to get back some information…like what is the name of the manufacturer?</p>
+<p>SPARQL queries reflect the same basic subject-predicate-object (node-edge-node) structure of triples. Variables can be used in place of any of the three parts to query for triples that match the pattern. Multiple lines can be combined to yield more advanced queries.</p>
+<p>In this example, we say that we are looking for the value of some variable <code class="docutils literal notranslate"><span class="pre">?manufacturerName</span></code> that matches the patterns:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>?thing schema:manufacturer ?manufacturer .
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<p>&amp;</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>?manufacturer schema:name ?manufacturerName .
+</pre></div>
+</div>
+<p>Roughly translated into English, the query reads: select all values for the variable manufacturerName, where a thing is manufactured by some manufacturer and the manufacturer has a name manufacturerName. We can execute this query on the grpah using rdflib:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">query_txt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">PREFIX schema: &lt;https://schema.org/&gt;</span>
 
 <span class="s2">SELECT ?manufacturerName</span>
@@ -476,7 +492,7 @@ import matplotlib.pyplot as plt
 <span class="s2">&quot;&quot;&quot;</span>
 
 <span class="c1"># Execute the SPARQL query</span>
-<span class="n">results</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query_txt</span><span class="p">)</span>
 
 <span class="c1"># Print the results</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
@@ -492,17 +508,19 @@ import matplotlib.pyplot as plt
 (rdflib.term.Literal(&#39;Sigma-Aldrich&#39;),)
 </pre></div></div>
 </div>
+<p>We can now see that the name of the manufacturer is ‘Sigma-Aldrich’.</p>
 </section>
 <section id="Fetch-additional-information-from-other-sources-[Advanced]">
 <h2>Fetch additional information from other sources [Advanced]<a class="headerlink" href="#Fetch-additional-information-from-other-sources-[Advanced]" title="Permalink to this heading">#</a></h2>
 <p>Ontologies contain a lot of information about the meaning of things, but they don’t always contain an exhaustive list of all the properties. Instead, they often point to other sources where that information exists rather than duplicating it. Let’s see how you can use the ontology to fetch additional information from other sources.</p>
+<p><a class="reference external" href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a> is a free and open knowledge base that can be read and edited by both humans and machines. Wikidata acts as central storage for the structured data of its Wikimedia sister projects including Wikipedia, Wikivoyage, Wiktionary, Wikisource, and others. EMMO ontologies often include links to Wikidata terms where applicable to provide users with additional information. Let’s give it a try!</p>
 <p>First, we parse the ontology into the knowledge graph and retrieve the IRIs for the terms that we are interested in. In this case, we want to retrieve more information about Zinc from Wikidata, so we query the ontology to find Zinc’s Wikidata ID.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parse the ontology into the knowledge graph</span>
-<span class="n">ontology</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/master/electrochemistry-inferred.ttl&quot;</span>
+<span class="n">ontology</span> <span class="o">=</span> <span class="s2">&quot;https://w3id.org/emmo/domain/electrochemistry/inferred&quot;</span>
 <span class="n">g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">ontology</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;turtle&#39;</span><span class="p">)</span>
 
 <span class="c1"># Fetch the context</span>
@@ -515,18 +533,19 @@ import matplotlib.pyplot as plt
 <span class="n">wikidata_iri</span> <span class="o">=</span> <span class="n">context_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;@context&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;wikidataReference&#39;</span><span class="p">)</span>
 
 <span class="c1"># Query the ontology to find the wikidata id for zinc</span>
-<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="n">query_txt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">SELECT ?wikidataId</span>
 <span class="s2">WHERE {</span>
 <span class="s2">    &lt;</span><span class="si">%s</span><span class="s2">&gt; &lt;</span><span class="si">%s</span><span class="s2">&gt; ?wikidataId .</span>
 <span class="s2">}</span>
 <span class="s2">&quot;&quot;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">zinc_iri</span><span class="p">,</span> <span class="n">wikidata_iri</span><span class="p">)</span>
 
-<span class="n">qres</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">qres</span><span class="p">:</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query_txt</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
     <span class="n">wikidata_id</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">wikidataId</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The Wikidata ID of Zinc: </span><span class="si">{</span><span class="n">wikidata_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The whole URL is: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">wikidataId</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -536,11 +555,12 @@ import matplotlib.pyplot as plt
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 The Wikidata ID of Zinc: Q758
+The whole URL is: https://www.wikidata.org/wiki/Q758
 </pre></div></div>
 </div>
 <p>Now that we have the Wikidata ID for Zinc, we can query their SPARQL endpoint to retrieve some property. Let’s ask it for the atomic mass.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Query the Wikidata knowledge graph for more information about zinc</span>
@@ -573,7 +593,7 @@ Wikidata says the atomic mass of zinc is: 65.38
 </div>
 <p>We can also retrieve more complex data. For example, let’s ask Wikidata to show us an image of zinc.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># SPARQL query to get the image of zinc (Q758)</span>
@@ -612,14 +632,7 @@ Image of Zinc: http://commons.wikimedia.org/wiki/Special:FilePath/Zinc%20fragmen
 <div class="output_area rendered_html docutils container">
 <img src="http://commons.wikimedia.org/wiki/Special:FilePath/Zinc%20fragment%20sublimed%20and%201cm3%20cube.jpg" width="300"/></div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
-</div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
+<p>Isn’t that cool?! And we’re just scratching the surface of what is possible with linked data, ontologies, and knowledge graphs. Keep checking out more examples to explore the possibilities!</p>
 </section>
 </section>
 
@@ -670,8 +683,10 @@ Image of Zinc: http://commons.wikimedia.org/wiki/Special:FilePath/Zinc%20fragmen
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Describe-the-powder-using-ontology-terms-in-JSON-LD-format">Describe the powder using ontology terms in JSON-LD format</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Parse-this-description-into-a-graph">Parse this description into a graph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Describe-the-powder-using-ontology-terms-in-JSON-LD-[Basic]">Describe the powder using ontology terms in JSON-LD <strong>[Basic]</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Parse-this-description-into-a-graph">Parse this description into a graph</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Query-the-graph-using-SPARQL-[Moderate]">Query the graph using SPARQL [Moderate]</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Fetch-additional-information-from-other-sources-[Advanced]">Fetch additional information from other sources [Advanced]</a></li>
 </ul>
