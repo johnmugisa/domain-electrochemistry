@@ -591,10 +591,6 @@ document.write(`
 <td class="element-table-value">ChargeCapacity, ElectricChargeCapacity, StorageCapacity</td>
 </tr>
 <tr>
-<td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
-<td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-14'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-14</a></td>
-</tr>
-<tr>
 <td class="element-table-key"><span class="element-table-key">Comment</span></td>
 <td class="element-table-value">the SI unit for electric charge is the coulomb (1 C = 1 A&#183;s) but in practice, capacity is usually expressed in ampere hours (A&#183;h)</td>
 </tr>
@@ -693,17 +689,6 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Comment</span></td>
 <td class="element-table-value">difference of electric potentials measured between identical metallic leads to two electrodes of an electrochemical cell</td>
 </tr>
-</table><div id="electrochemistry_10763eb0_dbc9_4d34_bd1a_7b8996590d45"></div></section>
-<section id="chargecapacity">
-<h3>ChargeCapacity<a class="headerlink" href="#chargecapacity" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_10763eb0_dbc9_4d34_bd1a_7b8996590d45">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_10763eb0_dbc9_4d34_bd1a_7b8996590d45</a></p></li>
-</ul>
-<table class="element-table">
-<tr>
-<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-<td class="element-table-value">capacity delivered during a charge process</td>
-</tr>
 </table><div id="electrochemistry_a5962e05_466d_46a4_8951_bea59d7326e5"></div></section>
 <section id="chargeefficiency">
 <h3>ChargeEfficiency<a class="headerlink" href="#chargeefficiency" title="Permalink to this heading">#</a></h3>
@@ -718,17 +703,6 @@ document.write(`
 <tr>
 <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
 <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-39'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-39</a></td>
-</tr>
-</table><div id="electrochemistry_2ab7af60_da58_4243_b3bc_cbb2155cac53"></div></section>
-<section id="chargeenergy">
-<h3>ChargeEnergy<a class="headerlink" href="#chargeenergy" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_2ab7af60_da58_4243_b3bc_cbb2155cac53">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_2ab7af60_da58_4243_b3bc_cbb2155cac53</a></p></li>
-</ul>
-<table class="element-table">
-<tr>
-<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-<td class="element-table-value">energy delivered by a deviced under some specific charge conditions</td>
 </tr>
 </table><div id="electrochemistry_49efb72a_f8e6_4f50_acac_975302200d47"></div></section>
 <section id="chargeretention">
@@ -768,6 +742,21 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Comment</span></td>
 <td class="element-table-value">The cathodic transfer coefficient &#945;c is defined as &#8211;(RT/nF)(dlnkc /dE), where kc is the electroreduction rate constant, E is the applied potential, and R, T, and F have their usual significance. This definition is equivalent to the other, -(RT/nF)(dln|jc |/dE), where jc is the cathodic current density corrected for any changes in the reactant concentration at the electrode surface with respect to its bulk value.</td>
 </tr>
+</table><div id="electrochemistry_10763eb0_dbc9_4d34_bd1a_7b8996590d45"></div></section>
+<section id="chargingcapacity">
+<h3>ChargingCapacity<a class="headerlink" href="#chargingcapacity" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_10763eb0_dbc9_4d34_bd1a_7b8996590d45">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_10763eb0_dbc9_4d34_bd1a_7b8996590d45</a></p></li>
+</ul>
+<table class="element-table">
+<tr>
+<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+<td class="element-table-value">capacity delivered during a charge process</td>
+</tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">ChargeCapacity</td>
+</tr>
 </table><div id="electrochemistry_79551e01_4bc6_4292_916e_08fe28a84600"></div></section>
 <section id="chargingcurrent">
 <h3>ChargingCurrent<a class="headerlink" href="#chargingcurrent" title="Permalink to this heading">#</a></h3>
@@ -777,7 +766,22 @@ document.write(`
 <table class="element-table">
 <tr>
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-<td class="element-table-value">electric current applied to a battery during a charging process</td>
+<td class="element-table-value">electric current applied to an electrochemical device during a charging process</td>
+</tr>
+</table><div id="electrochemistry_2ab7af60_da58_4243_b3bc_cbb2155cac53"></div></section>
+<section id="chargingenergy">
+<h3>ChargingEnergy<a class="headerlink" href="#chargingenergy" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_2ab7af60_da58_4243_b3bc_cbb2155cac53">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_2ab7af60_da58_4243_b3bc_cbb2155cac53</a></p></li>
+</ul>
+<table class="element-table">
+<tr>
+<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+<td class="element-table-value">energy delivered by a deviced under some specific charge conditions</td>
+</tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">ChargeEnergy</td>
 </tr>
 </table><div id="electrochemistry_3b938708_e7e4_4ac0_a959_9c04306302e7"></div></section>
 <section id="coatingthickness">
@@ -833,8 +837,8 @@ document.write(`
 <td class="element-table-value">part of the electrode polarization arising from concentration gradients of electrode reactants and products.</td>
 </tr>
 </table><div id="electrochemistry_37c38b7e_9ded_481a_85fd_a467f1ee2b9f"></div></section>
-<section id="constantcurrentchargecapacity">
-<h3>ConstantCurrentChargeCapacity<a class="headerlink" href="#constantcurrentchargecapacity" title="Permalink to this heading">#</a></h3>
+<section id="constantcurrentchargingcapacity">
+<h3>ConstantCurrentChargingCapacity<a class="headerlink" href="#constantcurrentchargingcapacity" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_37c38b7e_9ded_481a_85fd_a467f1ee2b9f">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_37c38b7e_9ded_481a_85fd_a467f1ee2b9f</a></p></li>
 </ul>
@@ -843,20 +847,13 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
 <td class="element-table-value">the capacity obtained during constant current charging of an electrochemical device</td>
 </tr>
-</table><div id="electrochemistry_7f073272_8925_4344_995c_a5a6dd1fcde6"></div></section>
-<section id="constantcurrentchargepercentage">
-<h3>ConstantCurrentChargePercentage<a class="headerlink" href="#constantcurrentchargepercentage" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_7f073272_8925_4344_995c_a5a6dd1fcde6">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_7f073272_8925_4344_995c_a5a6dd1fcde6</a></p></li>
-</ul>
-<table class="element-table">
 <tr>
-<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-<td class="element-table-value">the percentage of the total charge capacity that is obtained during a constant current charge process</td>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">ConstantCurrentChargeCapacity</td>
 </tr>
 </table><div id="electrochemistry_08833ed2_6324_411a_b34b_fe64c44cd5ef"></div></section>
-<section id="constantcurrentdischargecapacity">
-<h3>ConstantCurrentDischargeCapacity<a class="headerlink" href="#constantcurrentdischargecapacity" title="Permalink to this heading">#</a></h3>
+<section id="constantcurrentdischargingcapacity">
+<h3>ConstantCurrentDischargingCapacity<a class="headerlink" href="#constantcurrentdischargingcapacity" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_08833ed2_6324_411a_b34b_fe64c44cd5ef">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_08833ed2_6324_411a_b34b_fe64c44cd5ef</a></p></li>
 </ul>
@@ -865,9 +862,28 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
 <td class="element-table-value">the capacity obtained during constant current discharging of an electrochemical device</td>
 </tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">ConstantCurrentDischargeCapacity</td>
+</tr>
+</table><div id="electrochemistry_7f073272_8925_4344_995c_a5a6dd1fcde6"></div></section>
+<section id="constantcurrentpercentagecharging">
+<h3>ConstantCurrentPercentageCharging<a class="headerlink" href="#constantcurrentpercentagecharging" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_7f073272_8925_4344_995c_a5a6dd1fcde6">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_7f073272_8925_4344_995c_a5a6dd1fcde6</a></p></li>
+</ul>
+<table class="element-table">
+<tr>
+<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+<td class="element-table-value">the percentage of the total charge capacity that is obtained during a constant current charge process</td>
+</tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">ConstantCurrentChargePercentage</td>
+</tr>
 </table><div id="electrochemistry_457aed58_6e7e_42d5_9d78_b424c8d60aa3"></div></section>
-<section id="constantcurrentdischargepercentage">
-<h3>ConstantCurrentDischargePercentage<a class="headerlink" href="#constantcurrentdischargepercentage" title="Permalink to this heading">#</a></h3>
+<section id="constantcurrentpercentagedischarging">
+<h3>ConstantCurrentPercentageDischarging<a class="headerlink" href="#constantcurrentpercentagedischarging" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_457aed58_6e7e_42d5_9d78_b424c8d60aa3">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_457aed58_6e7e_42d5_9d78_b424c8d60aa3</a></p></li>
 </ul>
@@ -875,6 +891,10 @@ document.write(`
 <tr>
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
 <td class="element-table-value">the percentage of the total discharge capacity that is obtained during a constant current discharge process</td>
+</tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">ConstantCurrentDischargePercentage</td>
 </tr>
 </table><div id="electrochemistry_33e6986c_b35a_4cae_9a94_acb23248065c"></div></section>
 <section id="controlproperty">
@@ -1135,8 +1155,8 @@ document.write(`
 </ul>
 <table class="element-table">
 </table><div id="electrochemistry_0141b5c2_9f15_46f4_82e6_92a104faa476"></div></section>
-<section id="dischargecapacity">
-<h3>DischargeCapacity<a class="headerlink" href="#dischargecapacity" title="Permalink to this heading">#</a></h3>
+<section id="dischargingcapacity">
+<h3>DischargingCapacity<a class="headerlink" href="#dischargingcapacity" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_0141b5c2_9f15_46f4_82e6_92a104faa476">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_0141b5c2_9f15_46f4_82e6_92a104faa476</a></p></li>
 </ul>
@@ -1145,9 +1165,17 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
 <td class="element-table-value">capacity delivered during a discharge process</td>
 </tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">DischargeCapacity</td>
+</tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
+<td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-14'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-14</a></td>
+</tr>
 </table><div id="electrochemistry_e4d666ee_d637_45cd_a904_dc33941ead4f"></div></section>
-<section id="dischargecurrent">
-<h3>DischargeCurrent<a class="headerlink" href="#dischargecurrent" title="Permalink to this heading">#</a></h3>
+<section id="dischargingcurrent">
+<h3>DischargingCurrent<a class="headerlink" href="#dischargingcurrent" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_e4d666ee_d637_45cd_a904_dc33941ead4f">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_e4d666ee_d637_45cd_a904_dc33941ead4f</a></p></li>
 </ul>
@@ -1161,8 +1189,8 @@ document.write(`
 <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-24'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-24</a></td>
 </tr>
 </table><div id="electrochemistry_ca36cbf3_1fed_4b88_9177_b4e16ad00cf7"></div></section>
-<section id="dischargeenergy">
-<h3>DischargeEnergy<a class="headerlink" href="#dischargeenergy" title="Permalink to this heading">#</a></h3>
+<section id="dischargingenergy">
+<h3>DischargingEnergy<a class="headerlink" href="#dischargingenergy" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ca36cbf3_1fed_4b88_9177_b4e16ad00cf7">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ca36cbf3_1fed_4b88_9177_b4e16ad00cf7</a></p></li>
 </ul>
@@ -1171,9 +1199,13 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
 <td class="element-table-value">energy delivered by a deviced under some specific discharge conditions</td>
 </tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">DischargeEnergy</td>
+</tr>
 </table><div id="electrochemistry_c7b26177_21bf_4787_b656_8e78edf27f88"></div></section>
-<section id="dischargevoltage">
-<h3>DischargeVoltage<a class="headerlink" href="#dischargevoltage" title="Permalink to this heading">#</a></h3>
+<section id="dischargingvoltage">
+<h3>DischargingVoltage<a class="headerlink" href="#dischargingvoltage" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_c7b26177_21bf_4787_b656_8e78edf27f88">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_c7b26177_21bf_4787_b656_8e78edf27f88</a></p></li>
 </ul>
@@ -1184,7 +1216,7 @@ document.write(`
 </tr>
 <tr>
 <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-<td class="element-table-value">ClosedCircuitVoltage</td>
+<td class="element-table-value">ClosedCircuitVoltage, DischargeVoltage</td>
 </tr>
 </table><div id="electrochemistry_a56fc557_9dea_42e6_b936_e9d62dcaf84f"></div></section>
 <section id="doublelayercurrent">
@@ -1483,8 +1515,8 @@ document.write(`
 <td class="element-table-value">measure of a substance's tendency towards electronic conduction</td>
 </tr>
 </table><div id="electrochemistry_4aa1b96e_44a0_4b1a_a0ac_723d0223d80b"></div></section>
-<section id="energydensityofstorage">
-<h3>EnergyDensityOfStorage<a class="headerlink" href="#energydensityofstorage" title="Permalink to this heading">#</a></h3>
+<section id="energydensity">
+<h3>EnergyDensity<a class="headerlink" href="#energydensity" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4aa1b96e_44a0_4b1a_a0ac_723d0223d80b">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4aa1b96e_44a0_4b1a_a0ac_723d0223d80b</a></p></li>
 </ul>
@@ -1495,7 +1527,33 @@ document.write(`
 </tr>
 <tr>
 <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-<td class="element-table-value">EnergyDensity</td>
+<td class="element-table-value">EnergyDensityOfStorage, VolumetricEnergyDensity</td>
+</tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
+<td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-22'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-22</a></td>
+</tr>
+</table><div id="electrochemistry_31a74e23_bb07_41d0_bb8f_1d8cca157503"></div></section>
+<section id="energydensitycharging">
+<h3>EnergyDensityCharging<a class="headerlink" href="#energydensitycharging" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_31a74e23_bb07_41d0_bb8f_1d8cca157503">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_31a74e23_bb07_41d0_bb8f_1d8cca157503</a></p></li>
+</ul>
+<table class="element-table">
+<tr>
+<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+<td class="element-table-value">the energy density of a device obtained during a charging process</td>
+</tr>
+</table><div id="electrochemistry_4f14e153_cffb_42bd_9a7f_ae40d51ad2cd"></div></section>
+<section id="energydensitydischarging">
+<h3>EnergyDensityDischarging<a class="headerlink" href="#energydensitydischarging" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4f14e153_cffb_42bd_9a7f_ae40d51ad2cd">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4f14e153_cffb_42bd_9a7f_ae40d51ad2cd</a></p></li>
+</ul>
+<table class="element-table">
+<tr>
+<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+<td class="element-table-value">the energy density of a device obtained during a discharging process.</td>
 </tr>
 </table><div id="electrochemistry_79198264_cdf5_4fc3_8bcf_e5140a52547a"></div></section>
 <section id="energyefficiency">
@@ -1731,8 +1789,8 @@ document.write(`
 <td class="element-table-value">E1/2 is used in techniques providing a sigmoidal wave-shaped current including DC voltammetry/polarography, normal pulse voltammetry, hydrodynamic voltammetry, and tast polarography.</td>
 </tr>
 </table><div id="electrochemistry_74861991_7da2_4e0f_b6c1_b16713f538bf"></div></section>
-<section id="initialdischargevoltage">
-<h3>InitialDischargeVoltage<a class="headerlink" href="#initialdischargevoltage" title="Permalink to this heading">#</a></h3>
+<section id="initialdischargingvoltage">
+<h3>InitialDischargingVoltage<a class="headerlink" href="#initialdischargingvoltage" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_74861991_7da2_4e0f_b6c1_b16713f538bf">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_74861991_7da2_4e0f_b6c1_b16713f538bf</a></p></li>
 </ul>
@@ -1743,7 +1801,7 @@ document.write(`
 </tr>
 <tr>
 <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-<td class="element-table-value">InitialClosedCircuitVoltage</td>
+<td class="element-table-value">InitialClosedCircuitVoltage, InitialDischargeVoltage</td>
 </tr>
 <tr>
 <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
@@ -2044,8 +2102,8 @@ document.write(`
 <td class="element-table-value">the maximum amount concentration of a species in a phase, either imposed or naturally occurring</td>
 </tr>
 </table><div id="electrochemistry_ba7ac581_0e13_4815_b888_013c378932f5"></div></section>
-<section id="maximumcontinuousdischargecurrent">
-<h3>MaximumContinuousDischargeCurrent<a class="headerlink" href="#maximumcontinuousdischargecurrent" title="Permalink to this heading">#</a></h3>
+<section id="maximumcontinuouscurrentdischarging">
+<h3>MaximumContinuousCurrentDischarging<a class="headerlink" href="#maximumcontinuouscurrentdischarging" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ba7ac581_0e13_4815_b888_013c378932f5">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ba7ac581_0e13_4815_b888_013c378932f5</a></p></li>
 </ul>
@@ -2054,9 +2112,13 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
 <td class="element-table-value">the maximum current approved for continuous discharge for a given electrochemical device</td>
 </tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">MaximumContinuousDischargeCurrent</td>
+</tr>
 </table><div id="electrochemistry_3e54f9e3_a31d_4821_9bfb_ef953a42c35b"></div></section>
-<section id="maximumpulsedischargecurrent">
-<h3>MaximumPulseDischargeCurrent<a class="headerlink" href="#maximumpulsedischargecurrent" title="Permalink to this heading">#</a></h3>
+<section id="maximumpulsecurrentdischarging">
+<h3>MaximumPulseCurrentDischarging<a class="headerlink" href="#maximumpulsecurrentdischarging" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_3e54f9e3_a31d_4821_9bfb_ef953a42c35b">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_3e54f9e3_a31d_4821_9bfb_ef953a42c35b</a></p></li>
 </ul>
@@ -2065,9 +2127,13 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
 <td class="element-table-value">the maximum current approved for pulse discharge of an electrochemical device</td>
 </tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">MaximumPulseDischargeCurrent</td>
+</tr>
 </table><div id="electrochemistry_d5dc0c1d_0926_4268_89f0_4519a326eabc"></div></section>
-<section id="maximumpulsedischargeduration">
-<h3>MaximumPulseDischargeDuration<a class="headerlink" href="#maximumpulsedischargeduration" title="Permalink to this heading">#</a></h3>
+<section id="maximumpulsedurationdischarging">
+<h3>MaximumPulseDurationDischarging<a class="headerlink" href="#maximumpulsedurationdischarging" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_d5dc0c1d_0926_4268_89f0_4519a326eabc">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_d5dc0c1d_0926_4268_89f0_4519a326eabc</a></p></li>
 </ul>
@@ -2201,7 +2267,7 @@ document.write(`
 </tr>
 <tr>
 <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-<td class="element-table-value">NToPRatio</td>
+<td class="element-table-value">ACRatio, AToCRatio, NToPRatio</td>
 </tr>
 </table><div id="electrochemistry_14577b99_a8a9_4358_9bc5_ab8c401dd34b"></div></section>
 <section id="netfaradaiccurrent">
@@ -2496,6 +2562,21 @@ document.write(`
 <tr>
 <td class="element-table-key"><span class="element-table-key">Comment</span></td>
 <td class="element-table-value">The selectivity coefficient is determined by means of the potential difference of the ion- selective electrode in mixed solutions of the primary ion, A, and interfering ion, B (Fixed Interference Method) or, less desirably, in separate solutions of A and B (Separate Solution Method). The activities of the primary ion, A, and the interfering ion, B, at which K is determined should always be specified, as the value of K is defined by a modified Nikolsky-Eisenman equation. The smaller the value of K , the A,B greater the electrode&#8217;s preference for the primary ion, A.</td>
+</tr>
+</table><div id="electrochemistry_a7eb870c_4ef7_4ccd_85e8_4b7b726d7a2a"></div></section>
+<section id="powerdensity">
+<h3>PowerDensity<a class="headerlink" href="#powerdensity" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_a7eb870c_4ef7_4ccd_85e8_4b7b726d7a2a">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_a7eb870c_4ef7_4ccd_85e8_4b7b726d7a2a</a></p></li>
+</ul>
+<table class="element-table">
+<tr>
+<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+<td class="element-table-value">the quotient of the power of an energy-storage device or system and its volume</td>
+</tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">VolumetricPowerDensity</td>
 </tr>
 </table><div id="electrochemistry_83fbc038_0c2e_4d04_91d7_cdf30f8a5535"></div></section>
 <section id="prismatic">
@@ -2856,8 +2937,8 @@ document.write(`
 <td class="element-table-value">Can also be applied to electrodes.</td>
 </tr>
 </table><div id="electrochemistry_4882cf2f_aab7_4a3a_a103_7f56b55fbed3"></div></section>
-<section id="specificchargecapacity">
-<h3>SpecificChargeCapacity<a class="headerlink" href="#specificchargecapacity" title="Permalink to this heading">#</a></h3>
+<section id="specificcapacitycharging">
+<h3>SpecificCapacityCharging<a class="headerlink" href="#specificcapacitycharging" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4882cf2f_aab7_4a3a_a103_7f56b55fbed3">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4882cf2f_aab7_4a3a_a103_7f56b55fbed3</a></p></li>
 </ul>
@@ -2866,9 +2947,13 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
 <td class="element-table-value">quotient of the capacity of a cell or battery [ or electrode or active material ] obtained during a charge process by its mass.</td>
 </tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">SpecificChargeCapacity</td>
+</tr>
 </table><div id="electrochemistry_884650fd_6cc6_4ec6_8264_c18fbe6b90ee"></div></section>
-<section id="specificdischargecapacity">
-<h3>SpecificDischargeCapacity<a class="headerlink" href="#specificdischargecapacity" title="Permalink to this heading">#</a></h3>
+<section id="specificcapacitydischarging">
+<h3>SpecificCapacityDischarging<a class="headerlink" href="#specificcapacitydischarging" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_884650fd_6cc6_4ec6_8264_c18fbe6b90ee">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_884650fd_6cc6_4ec6_8264_c18fbe6b90ee</a></p></li>
 </ul>
@@ -2877,9 +2962,13 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
 <td class="element-table-value">quotient of the capacity of a cell or battery [ or electrode or active material ] obtained during a discharge process by its mass.</td>
 </tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">SpecificDischargeCapacity</td>
+</tr>
 </table><div id="electrochemistry_5e4490b8_c1dd_4e00_980b_c484e1bf4904"></div></section>
-<section id="specificenergycharge">
-<h3>SpecificEnergyCharge<a class="headerlink" href="#specificenergycharge" title="Permalink to this heading">#</a></h3>
+<section id="specificenergycharging">
+<h3>SpecificEnergyCharging<a class="headerlink" href="#specificenergycharging" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_5e4490b8_c1dd_4e00_980b_c484e1bf4904">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_5e4490b8_c1dd_4e00_980b_c484e1bf4904</a></p></li>
 </ul>
@@ -2888,9 +2977,13 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
 <td class="element-table-value">the specific energy of an electrochemical device obtained during a charge process</td>
 </tr>
+<tr>
+<td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+<td class="element-table-value">SpecificEnergyCharge</td>
+</tr>
 </table><div id="electrochemistry_9d57962c_e150_4e64_962b_8fd6a92c9234"></div></section>
-<section id="specificenergydischarge">
-<h3>SpecificEnergyDischarge<a class="headerlink" href="#specificenergydischarge" title="Permalink to this heading">#</a></h3>
+<section id="specificenergydischarging">
+<h3>SpecificEnergyDischarging<a class="headerlink" href="#specificenergydischarging" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_9d57962c_e150_4e64_962b_8fd6a92c9234">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_9d57962c_e150_4e64_962b_8fd6a92c9234</a></p></li>
 </ul>
@@ -2899,24 +2992,13 @@ document.write(`
 <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
 <td class="element-table-value">the specific energy of an electrochemical device obtained during a discharge process</td>
 </tr>
-</table><div id="electrochemistry_ccdfed06_6d24_47e4_98af_ce3ffe7bd09e"></div></section>
-<section id="specificenergyofstorage">
-<h3>SpecificEnergyOfStorage<a class="headerlink" href="#specificenergyofstorage" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ccdfed06_6d24_47e4_98af_ce3ffe7bd09e">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ccdfed06_6d24_47e4_98af_ce3ffe7bd09e</a></p></li>
-</ul>
-<table class="element-table">
-<tr>
-<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-<td class="element-table-value">the quotient of the energy of an energy-storage device or system and its mass</td>
-</tr>
 <tr>
 <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-<td class="element-table-value">SpecificEnergy</td>
+<td class="element-table-value">SpecificEnergyDischarge</td>
 </tr>
 </table><div id="electrochemistry_c762a928_5a74_46fd_9929_4ac2d7a3a8d7"></div></section>
-<section id="specificpowerofstorage">
-<h3>SpecificPowerOfStorage<a class="headerlink" href="#specificpowerofstorage" title="Permalink to this heading">#</a></h3>
+<section id="specificpower">
+<h3>SpecificPower<a class="headerlink" href="#specificpower" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_c762a928_5a74_46fd_9929_4ac2d7a3a8d7">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_c762a928_5a74_46fd_9929_4ac2d7a3a8d7</a></p></li>
 </ul>
@@ -3211,6 +3293,10 @@ G&#176; or &#916;rG , written as a reduction with respect to that of the standar
 </ul>
 <table class="element-table">
 <tr>
+<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+<td class="element-table-value">the maximum amount of electric charge that can be stored within a device based on its chemical composition and design</td>
+</tr>
+<tr>
 <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
 <td class="element-table-value">TheoreticalChargeCapacity</td>
 </tr>
@@ -3318,17 +3404,6 @@ G&#176; or &#916;rG , written as a reduction with respect to that of the standar
 <tr>
 <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
 <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-17'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-17</a></td>
-</tr>
-</table><div id="electrochemistry_a7eb870c_4ef7_4ccd_85e8_4b7b726d7a2a"></div></section>
-<section id="volumetricpowerdensityofstorage">
-<h3>VolumetricPowerDensityofStorage<a class="headerlink" href="#volumetricpowerdensityofstorage" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://w3id.org/emmo/domain/electrochemistry#electrochemistry_a7eb870c_4ef7_4ccd_85e8_4b7b726d7a2a">https://w3id.org/emmo/domain/electrochemistry#electrochemistry_a7eb870c_4ef7_4ccd_85e8_4b7b726d7a2a</a></p></li>
-</ul>
-<table class="element-table">
-<tr>
-<td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-<td class="element-table-value">the quotient of the power of an energy-storage device or system and its volume</td>
 </tr>
 </table><div id="electrochemistry_a5571263_f153_448f_84a3_cd18092cf8fa"></div></section>
 <section id="volumetricsurfacearea">
@@ -11314,19 +11389,19 @@ of other configurations are used.</td>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cellcurrent">CellCurrent</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cellpolarisationpotential">CellPolarisationPotential</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cellvoltage">CellVoltage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chargecapacity">ChargeCapacity</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chargeefficiency">ChargeEfficiency</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chargeenergy">ChargeEnergy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chargeretention">ChargeRetention</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chargetransfercoefficient">ChargeTransferCoefficient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chargingcapacity">ChargingCapacity</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chargingcurrent">ChargingCurrent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chargingenergy">ChargingEnergy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coatingthickness">CoatingThickness</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concentrationlimit">ConcentrationLimit</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concentrationoverpotential">ConcentrationOverpotential</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constantcurrentchargecapacity">ConstantCurrentChargeCapacity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constantcurrentchargepercentage">ConstantCurrentChargePercentage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constantcurrentdischargecapacity">ConstantCurrentDischargeCapacity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constantcurrentdischargepercentage">ConstantCurrentDischargePercentage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constantcurrentchargingcapacity">ConstantCurrentChargingCapacity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constantcurrentdischargingcapacity">ConstantCurrentDischargingCapacity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constantcurrentpercentagecharging">ConstantCurrentPercentageCharging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constantcurrentpercentagedischarging">ConstantCurrentPercentageDischarging</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controlproperty">ControlProperty</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coulombicefficiency">CoulombicEfficiency</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crystalizationoverpotential">CrystalizationOverpotential</a></li>
@@ -11345,10 +11420,10 @@ of other configurations are used.</td>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diffusioncurrent">DiffusionCurrent</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diffusionlimitedcurrent">DiffusionLimitedCurrent</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diffusivity">Diffusivity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dischargecapacity">DischargeCapacity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dischargecurrent">DischargeCurrent</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dischargeenergy">DischargeEnergy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dischargevoltage">DischargeVoltage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dischargingcapacity">DischargingCapacity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dischargingcurrent">DischargingCurrent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dischargingenergy">DischargingEnergy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dischargingvoltage">DischargingVoltage</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#doublelayercurrent">DoubleLayerCurrent</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#droptimeinpolarography">DropTimeInPolarography</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electrochemicalcontrolquantity">ElectrochemicalControlQuantity</a></li>
@@ -11369,7 +11444,9 @@ of other configurations are used.</td>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electrodesurfacearea">ElectrodeSurfaceArea</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electrolytecontainment">ElectrolyteContainment</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electronicconductivity">ElectronicConductivity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energydensityofstorage">EnergyDensityOfStorage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energydensity">EnergyDensity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energydensitycharging">EnergyDensityCharging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energydensitydischarging">EnergyDensityDischarging</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energyefficiency">EnergyEfficiency</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energystoragecapability">EnergyStorageCapability</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibriumelectrodepotential">EquilibriumElectrodePotential</a></li>
@@ -11381,7 +11458,7 @@ of other configurations are used.</td>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formalelectrodepotential">FormalElectrodePotential</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#halfpeakpotential">HalfPeakPotential</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#halfwavepotential">HalfWavePotential</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialdischargevoltage">InitialDischargeVoltage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialdischargingvoltage">InitialDischargingVoltage</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inititalthermodynamictemperature">InititalThermodynamicTemperature</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instantaneouscurrent">InstantaneousCurrent</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internalapparentresistance">InternalApparentResistance</a></li>
@@ -11400,9 +11477,9 @@ of other configurations are used.</td>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnitudeofpotentialpulse">MagnitudeOfPotentialPulse</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#massloading">MassLoading</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximumconcentration">MaximumConcentration</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximumcontinuousdischargecurrent">MaximumContinuousDischargeCurrent</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximumpulsedischargecurrent">MaximumPulseDischargeCurrent</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximumpulsedischargeduration">MaximumPulseDischargeDuration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximumcontinuouscurrentdischarging">MaximumContinuousCurrentDischarging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximumpulsecurrentdischarging">MaximumPulseCurrentDischarging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximumpulsedurationdischarging">MaximumPulseDurationDischarging</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximumstoichiometriccoefficient">MaximumStoichiometricCoefficient</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximumtemperature">MaximumTemperature</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membranepotential">MembranePotential</a></li>
@@ -11430,6 +11507,7 @@ of other configurations are used.</td>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarity">Polarity</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potentialscanrate">PotentialScanRate</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potentiometricselectivitycoefficient">PotentiometricSelectivityCoefficient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#powerdensity">PowerDensity</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prismatic">Prismatic</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pulseduration">PulseDuration</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pulsemagnitude">PulseMagnitude</a></li>
@@ -11452,12 +11530,11 @@ of other configurations are used.</td>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shortcircuitcurrent">ShortCircuitCurrent</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signalreferencepotential">SignalReferencePotential</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificcapacity">SpecificCapacity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificchargecapacity">SpecificChargeCapacity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificdischargecapacity">SpecificDischargeCapacity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificenergycharge">SpecificEnergyCharge</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificenergydischarge">SpecificEnergyDischarge</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificenergyofstorage">SpecificEnergyOfStorage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificpowerofstorage">SpecificPowerOfStorage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificcapacitycharging">SpecificCapacityCharging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificcapacitydischarging">SpecificCapacityDischarging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificenergycharging">SpecificEnergyCharging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificenergydischarging">SpecificEnergyDischarging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificpower">SpecificPower</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specificsurfacearea">SpecificSurfaceArea</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#squarewavecurrent">SquareWaveCurrent</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standardelectrodepotential">StandardElectrodePotential</a></li>
@@ -11485,7 +11562,6 @@ of other configurations are used.</td>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltagechangelimit">VoltageChangeLimit</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltagelimit">VoltageLimit</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#volumetriccapacity">VolumetricCapacity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#volumetricpowerdensityofstorage">VolumetricPowerDensityofStorage</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#volumetricsurfacearea">VolumetricSurfaceArea</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workingpotentialrange">WorkingPotentialRange</a></li>
 </ul>
