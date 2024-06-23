@@ -5061,10 +5061,6 @@ AcidicElectrolyte
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">AcidicAqueousElectrolyte, AcidicSolution</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">typical alkaline electrolytes have a pH in the range 0 < x < 4</td>
-  </tr>
   </table>
 
 
@@ -5088,10 +5084,6 @@ ActiveElectrode
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">NonInertElectrode, ReactiveElectrode</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the opposite of an inert electrode</td>
-  </tr>
   </table>
 
 
@@ -5113,7 +5105,7 @@ ActiveMaterial
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">ActiveElectrochemicalMaterial, ActiveElectrochemicalMaterial, ActiveElectrochemicalMaterial, ActiveElectrochemicalMaterial, ElectrochemicallyActiveMaterial, ElectrochemicallyActiveMaterial, ElectrochemicallyActiveMaterial, ElectrochemicallyActiveMaterial</td>
+  <td class="element-table-value">ActiveElectrochemicalMaterial, ActiveElectrochemicalMaterial, ElectrochemicallyActiveMaterial, ElectrochemicallyActiveMaterial</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
@@ -5122,10 +5114,6 @@ ActiveMaterial
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q120907375'>https://www.wikidata.org/wiki/Q120907375</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">in secondary cells, the active material is restored to its original state during charge</td>
   </tr>
   </table>
 
@@ -5211,10 +5199,6 @@ AirElectrode
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a gas diffusion electrode in which the gas is air</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">The reaction occuring in an air electrode is typically the oxygen reduction reaction (ORR).</td>
-  </tr>
   </table>
 
 
@@ -5237,10 +5221,6 @@ AlkalineElectrolyte
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">AlkalineAqueousElectrolyte, AlkalineSolution</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">typical alkaline electrolytes have a pH in the range 13 < x < 15</td>
   </tr>
   </table>
 
@@ -5338,10 +5318,6 @@ AmmoniaSolution
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">AqueousAmmoniaSolution</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the solution can also be made by dissolving ammonium hydroxide (NH4OH) in water</td>
-  </tr>
   </table>
 
 
@@ -5423,10 +5399,6 @@ Anode
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q181232'>https://www.wikidata.org/wiki/Q181232</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">at an anode, electrons are produced in a galvanic cell or extracted in an electrolytic cell</td>
-  </tr>
   </table>
 
 
@@ -5475,15 +5447,11 @@ AnodicReaction
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">Electrooxidation, Electrooxidation, ElectrooxidationReaction, ElectrooxidationReaction</td>
+  <td class="element-table-value">Electrooxidation, ElectrooxidationReaction</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-02-09'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-02-09</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">an electrode reaction, when the energy of electrons in the working electrode is lower than the HOMO orbital of the substrate</td>
   </tr>
   </table>
 
@@ -5508,10 +5476,6 @@ Anolyte
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-03-19'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-03-19</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Electrolyte solution in the anodic compartment of an electrolysis cell or galvanic cell, i.e., in that part of the cell where the anode is placed.</td>
-  </tr>
   </table>
 
 
@@ -5530,10 +5494,6 @@ AnolyteTank
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a tank for holding anolyte</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">usually used in a flow cell system</td>
   </tr>
   </table>
 
@@ -5780,10 +5740,6 @@ BockrisDevanathanMuellerModel
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">BDM</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">proposed by John Bockris, M. A. V. Devanathan, and Klaus Mueller in 1963</td>
-  </tr>
   </table>
 
 
@@ -5873,10 +5829,6 @@ ButlerVolmerEquation
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q903846'>https://www.wikidata.org/wiki/Q903846</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">i = i0 * (exp(alpha*n*F*eta/(R*T)) &#8211; exp(-(1-alpha)*n*F*eta/(R*T)))</td>
-  </tr>
   </table>
 
 
@@ -5949,10 +5901,6 @@ CalciumBasedElectrode
 .. raw:: html
 
   <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">an electrode in which the primary active material consists of calcium or calcium compounds</td>
-  </tr>
   </table>
 
 
@@ -6022,10 +5970,6 @@ CarbonBasedElectrode
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode in which the primary active material consists of carbon or carbon compounds</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often represented in IEC cell designations by the letter I</td>
-  </tr>
   </table>
 
 
@@ -6049,10 +5993,6 @@ CarbonInkElectrode
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q120907443'>https://www.wikidata.org/wiki/Q120907443</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">These electrodes can easily be chemically modified by the incorporation of reagents (electrocatalysts, redox mediators, complexation agents, enzymes, etc.) and by the attachment of micro- or nanoparticles to prepare electrochemical sensors for analytical applications.</td>
-  </tr>
   </table>
 
 
@@ -6071,10 +6011,6 @@ CarbonMonofluorideElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">electrode in which the active material is carbon monofluoride</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the combination with lithium metal and an organic electrolyte is designated using IEC electrochemical system letter code B</td>
   </tr>
   </table>
 
@@ -6097,7 +6033,7 @@ CarbonPasteElectrode
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">CPE, CPE</td>
+  <td class="element-table-value">CPE</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
@@ -6106,10 +6042,6 @@ CarbonPasteElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q5037987'>https://www.wikidata.org/wiki/Q5037987</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">The CPE was first described by Adams in 1958. A CPE is typically housed in a Teflon holder, contacted by a conductive wire (occasionally a piston is used to renew the surface by extrusion of the used paste). Problems are long-term stability of the paste and that the binder can influence its properties.</td>
   </tr>
   </table>
 
@@ -6211,10 +6143,6 @@ Cathode
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q175233'>https://www.wikidata.org/wiki/Q175233</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">electrode of an electrochemical cell through which net electric current flows and at which the predominating electrochemical reaction is a reduction</td>
-  </tr>
   </table>
 
 
@@ -6233,10 +6161,6 @@ CathodeElectrolyteInterphase
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a type of solid electrolyte interface that forms on the surface of the electrode designated as the "cathode" or positive electrode</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">used to distinguish the interphase on the cathode surface from that on the anode, which is typically called the solid electrolyte interphase (SEI)</td>
   </tr>
   </table>
 
@@ -6313,15 +6237,11 @@ CathodicReaction
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">Electroreduction, Electroreduction, Electroreduction, Electroreduction, ElectroreductionReaction, ElectroreductionReaction, ElectroreductionReaction, ElectroreductionReaction</td>
+  <td class="element-table-value">Electroreduction, Electroreduction, ElectroreductionReaction, ElectroreductionReaction</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-02-10'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-02-10</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">electrode reaction involving an electrochemical reduction</td>
   </tr>
   </table>
 
@@ -6346,10 +6266,6 @@ Catholyte
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-03-18'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-03-18</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Electrolyte solution in the cathodic compartment of an electrolysis cell or galvanic cell, i.e., in that part of the cell where the cathode is placed.</td>
-  </tr>
   </table>
 
 
@@ -6368,10 +6284,6 @@ CatholyteTank
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a tank for holding catholyte</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">usually used in a flow cell system</td>
   </tr>
   </table>
 
@@ -6395,10 +6307,6 @@ CellBaffle
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-13'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-13</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">a cell baffle has a second function in protecting the plate pack from damage by objects inserted through the filling hole</td>
   </tr>
   </table>
 
@@ -6726,10 +6634,6 @@ CobaltBasedElectrode
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode which contains mostly materials based on cobalt</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often represented in IEC cell designations by the letter C</td>
-  </tr>
   </table>
 
 
@@ -6803,10 +6707,6 @@ ConcentrationCell
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q903563'>https://www.wikidata.org/wiki/Q903563</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">a concentration cell produces a voltage as it attempts to reach equilibrium, which will occur when the concentration in both cells is equal.</td>
-  </tr>
   </table>
 
 
@@ -6848,11 +6748,6 @@ ConductivityCell
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrochemical cell for conductivity measurements</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Formed, in theory, by two 1 cm2 reversible electrodes spaced 1 cm apart, providing a uniform distribution of electrical field. In practice, however, a number
-  of other configurations are used.</td>
   </tr>
   </table>
 
@@ -7130,10 +7025,6 @@ CopperOxideElectrode
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">CupricOxideElectrode</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the combination with lithium metal and an organic electrolyte is designated using IEC electrochemical system letter code G</td>
-  </tr>
   </table>
 
 
@@ -7155,7 +7046,7 @@ Coulometer
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">Voltameter, Voltameter</td>
+  <td class="element-table-value">Voltameter</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
@@ -7164,10 +7055,6 @@ Coulometer
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q905539'>https://www.wikidata.org/wiki/Q905539</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Modern instruments for measuring trace water by Karl Fischer titration use the passage of a measured charge to produce iodine from iodide solution. They are known as Karl Fischer coulometers</td>
   </tr>
   </table>
 
@@ -7190,7 +7077,7 @@ CounterElectrode
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">AuxiliaryElectrode, AuxiliaryElectrode</td>
+  <td class="element-table-value">AuxiliaryElectrode</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">IUPAC Reference</span></td>
@@ -7203,10 +7090,6 @@ CounterElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q1768785'>https://www.wikidata.org/wiki/Q1768785</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">An auxiliary electrode is used in any three-electrode cell, together with a working electrode and reference electrode.</td>
   </tr>
   </table>
 
@@ -7280,10 +7163,6 @@ CurrentPotentialPlot
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">CurrentPotentialCurve, ElectricCurrentPotentialCurve</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">The curve is sigmoidal in hydrodynamic voltammetry, voltammetry at microelectrodes and polarography, or peak-shaped in ac voltammetry, differential pulse voltammetry, square- wave voltammetry, stripping voltammetry, and derivative techniques.</td>
   </tr>
   </table>
 
@@ -7409,7 +7288,7 @@ Cycling
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">ChargeCycle, ChargeCycle, ElectrochemicalCycling, ElectrochemicalCycling</td>
+  <td class="element-table-value">ChargeCycle, ElectrochemicalCycling</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
@@ -7422,10 +7301,6 @@ Cycling
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q5074261'>https://www.wikidata.org/wiki/Q5074261</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">in a secondary battery these operations may consist of a sequence of a discharge followed by a charge or a charge followed by a discharge under specified conditions</td>
   </tr>
   </table>
 
@@ -7519,10 +7394,6 @@ DifferentialPotentialPulse
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">Small pulses of electric potential superimposed to a linear potential ramp or a staircase potential ramp.</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">The pulses are usually of constant height 10 to 100 mV and constant width 10 to 100 ms.</td>
-  </tr>
   </table>
 
 
@@ -7579,7 +7450,7 @@ DirectCurrent
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">DC, DC</td>
+  <td class="element-table-value">DC</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">IUPAC Reference</span></td>
@@ -7592,10 +7463,6 @@ DirectCurrent
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q159241'>https://www.wikidata.org/wiki/Q159241</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">I_{DC}</td>
   </tr>
   </table>
 
@@ -7623,10 +7490,6 @@ Discharging
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-23'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-23</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the opposite of a charging process</td>
   </tr>
   </table>
 
@@ -7681,10 +7544,6 @@ Dissolution
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-01-04'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-01-04</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the result of the dissolution of one or more solutes into a solvent is a solution</td>
   </tr>
   </table>
 
@@ -7788,7 +7647,7 @@ DroppingMercuryElectrode
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">DME, DME</td>
+  <td class="element-table-value">DME</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
@@ -7797,10 +7656,6 @@ DroppingMercuryElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q962292'>https://www.wikidata.org/wiki/Q962292</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Other kinds of mercury drop electrodes are the static mercury drop electrode (SMDE), in which a drop is held at constant radius before being mechanically knocked off, and the hanging mercury drop elec- trode (HMDE), in which the whole experiment is performed on a single drop of mercury.</td>
   </tr>
   </table>
 
@@ -8112,10 +7967,6 @@ ElectrochemicalCell
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q80097'>https://www.wikidata.org/wiki/Q80097</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">If processes of interest occur at both the anode and the cathode of a cell (as in differential amperometry or controlled-current potentiometric titration with two indicator electrodes), the cell should be said to comprise two indicator or two working electrodes.</td>
-  </tr>
   </table>
 
 
@@ -8134,10 +7985,6 @@ ElectrochemicalConstituent
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">A constituent in an electrochemical system.</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">a constituent is essential to the functioning of the system and cannot be replaced by a comparable thing without altering the behaviour of the system</td>
   </tr>
   </table>
 
@@ -8177,10 +8024,6 @@ ElectrochemicalDevice
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a device whose primary function is facilitating the conversion between chemical and electrical energy.</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">an electrochemical device contains at least one electrochemical cell plus the apparati required to make it work as a practical device (e.g. terminals, container, etc.)</td>
-  </tr>
   </table>
 
 
@@ -8203,10 +8046,6 @@ ElectrochemicalDoubleLayerCapacitor
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">DoubleLayerCapacitor, EDLC, ElectrochemicalCapacitor</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">stores energy electrostatically in the Helmholtz Layer</td>
   </tr>
   </table>
 
@@ -8384,10 +8223,6 @@ ElectrochemicalPlot
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">Graphical representation of a dataset resulting from the measurement of the response of an electrochemical system.</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Shows the relationship between two or more electrochemical variables.</td>
-  </tr>
   </table>
 
 
@@ -8415,10 +8250,6 @@ ElectrochemicalPseudocapacitor
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q7254569'>https://www.wikidata.org/wiki/Q7254569</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">stores energy electrochemically via Faradaic mechanisms</td>
-  </tr>
   </table>
 
 
@@ -8440,7 +8271,7 @@ ElectrochemicalReaction
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">ChargeTransferReaction, ChargeTransferReaction, ChargeTransferReaction, ChargeTransferReaction, ChargeTransferReaction, ChargeTransferReaction</td>
+  <td class="element-table-value">ChargeTransferReaction, ChargeTransferReaction</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
@@ -8449,10 +8280,6 @@ ElectrochemicalReaction
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q120892494'>https://www.wikidata.org/wiki/Q120892494</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">any process either caused or accompanied by the passage of an electric current and involving in most cases the transfer of electrons between two substances</td>
   </tr>
   </table>
 
@@ -8538,10 +8365,6 @@ Electrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q176140'>https://www.wikidata.org/wiki/Q176140</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Alternative definition: Half-cell consisting of at least one electron conductor and at least one ionic conductor (electrolyte). - Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019)</td>
   </tr>
   </table>
 
@@ -8713,10 +8536,6 @@ ElectrodeReaction
   <td class="element-table-key"><span class="element-table-key">IUPAC Reference</span></td>
   <td class="element-table-value"><a href='https://doi.org/10.1351/goldbook.E01960'>https://doi.org/10.1351/goldbook.E01960</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">An interfacial reaction that necessarily involves a charge-transfer step.</td>
-  </tr>
   </table>
 
 
@@ -8782,10 +8601,6 @@ Electrodissolution
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">the electrochemical dissolution of a material to soluble species</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">It can be regarded as the reversal of electrodeposition.</td>
-  </tr>
   </table>
 
 
@@ -8848,10 +8663,6 @@ Electrolyte
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q162908'>https://www.wikidata.org/wiki/Q162908</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">A solid electrolyte is a solid material where the predominant charge carriers are ions. For example: NASICON (Na Super Ionic Conductor), which has the general formula Na1+xZr2P3-xSix O12 , 0 < x < 3.</td>
-  </tr>
   </table>
 
 
@@ -8893,10 +8704,6 @@ ElectrolyteCreep
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-30'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-30</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">electrolyte creep is sometimes indicated by the presence of a visible solid deposit or wet spots</td>
   </tr>
   </table>
 
@@ -9006,10 +8813,6 @@ ElectrolyticCell
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q2608426'>https://www.wikidata.org/wiki/Q2608426</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">An electrochemical cell that requires input of work to drive the reaction.</td>
-  </tr>
   </table>
 
 
@@ -9071,10 +8874,6 @@ Electroplating
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
   <td class="element-table-value"><a href='https://en.wikipedia.org/wiki/Electroplating'>https://en.wikipedia.org/wiki/Electroplating</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">The process of depositing a usually thin layer of metal upon a usually metallic substrate (or any other conductor, e.g. graphite), in order to improve the appearance, and/or to change the surface properties of the substrate.</td>
   </tr>
   </table>
 
@@ -9149,10 +8948,6 @@ FaradaysSecondLawOfElectrolysis
   <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
   <td class="element-table-value"><a href='https://en.wikipedia.org/wiki/Faraday%27s_laws_of_electrolysis#Second_law'>https://en.wikipedia.org/wiki/Faraday%27s_laws_of_electrolysis#Second_law</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">m_1/m_2 = (M_1/z_1) / (M_2/z_2)</td>
-  </tr>
   </table>
 
 
@@ -9175,10 +8970,6 @@ FlameArrestorVent
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-11'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-11</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">this flame front may originate from a spark or an external naked flame igniting combustible electrolysis gas</td>
   </tr>
   </table>
 
@@ -9306,10 +9097,6 @@ FrequencyResponseAnalyser
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">FRA, FrequencyResponseAnalyzer</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">based on the Fourier Transform analysis</td>
-  </tr>
   </table>
 
 
@@ -9371,10 +9158,6 @@ GalvanicCell
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q209440'>https://www.wikidata.org/wiki/Q209440</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">An electrochemical cell that spontaneously produces work.</td>
   </tr>
   </table>
 
@@ -9466,7 +9249,7 @@ GasDiffusionElectrode
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">GDE, GDE, GDE</td>
+  <td class="element-table-value">GDE</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
@@ -9479,10 +9262,6 @@ GasDiffusionElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q909759'>https://www.wikidata.org/wiki/Q909759</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">A gas diffusion electrode usually comprises one or more porous layers, like the gas diffusion layer and the catalyst layer.</td>
   </tr>
   </table>
 
@@ -9601,11 +9380,7 @@ GlassyCarbonElectrode
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">GCE, GCE, GCE</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">extremely resistant to many chemicals, impermeable to gases and liquids, and has good electrical conductivity, high hardness and strength, and biocompatibility</td>
+  <td class="element-table-value">GCE</td>
   </tr>
   </table>
 
@@ -9649,10 +9424,6 @@ GoldElectrode
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">AuElectrode</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">At positive potentials, Au forms an oxide and/or chemisorbed oxygen layer, while in the presence of complexing anions, such as chloride or cyanide, it readily undergoes oxidation and dissolution, limiting its working potential range and its applications.</td>
-  </tr>
   </table>
 
 
@@ -9672,10 +9443,6 @@ GouyChapmanModel
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an extension of the Helmholtz model that describes the distribution of ions as a function of distance from the electrode surface to the bulk of the electroylte</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">this model fails for highly charged double layers</td>
-  </tr>
   </table>
 
 
@@ -9694,10 +9461,6 @@ GrahameModel
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a modification of the Stern model that considers the double layer as three regions separated by the inner Helmholtz plane and the outer Helmholtz plane</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">proposed by D. C. Grahame in 1947</td>
   </tr>
   </table>
 
@@ -9755,10 +9518,6 @@ HelmholtzModel
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a structural representation of the double layer that states that the accumulation of electric charge on the surface of the electrode is balanced by a layer of ions in the electrolyte</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">proposed by Hermann von Helmholtz in 1853</td>
   </tr>
   </table>
 
@@ -9825,10 +9584,6 @@ HydrogenElectrode
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-03-16'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-03-16</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">A platinized platinum electrode consists of a platinum rod covered by compact platinum powder called platinum black.</td>
-  </tr>
   </table>
 
 
@@ -9874,10 +9629,6 @@ IndicatorElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q120907462'>https://www.wikidata.org/wiki/Q120907462</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">If processes of interest occur both at the anode and the cathode of a cell (as in differential amperometry or controlled-current potentiometric titration with two indicator electrodes), the cell should be said to comprise two indicator or working electrodes.</td>
   </tr>
   </table>
 
@@ -9947,10 +9698,6 @@ InertElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q120907475'>https://www.wikidata.org/wiki/Q120907475</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Noble metals, mercury, and carbon are typically used as (nearly) inert electrodes.</td>
   </tr>
   </table>
 
@@ -10140,10 +9887,6 @@ IronBasedElectrode
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode which contains mostly materials based on iron</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often represented in cell designations by the letter F</td>
-  </tr>
   </table>
 
 
@@ -10182,10 +9925,6 @@ IronDisulfideElectrode
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode in which the primary active material consists of iron disulfide or iron disulfide compounds.</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the combination with lithium metal and an organic electrolyte is designated using IEC electrochemical system letter code F</td>
-  </tr>
   </table>
 
 
@@ -10204,10 +9943,6 @@ IronPhosphateBasedElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode in which the primary active material consists of iron phosphate or iron phosphate compounds</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">represented in IEC cell designations by the letter code Fp</td>
   </tr>
   </table>
 
@@ -10231,10 +9966,6 @@ Jacket
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-20'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-20</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">a jacket may be made of metal (insulated from the cell terminals), plastic, paper or other suitable material</td>
   </tr>
   </table>
 
@@ -10262,10 +9993,6 @@ KohlrauschsLaw
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q3258329'>https://www.wikidata.org/wiki/Q3258329</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">proposed by Friedrich Kohlrausch between 1875-1879</td>
   </tr>
   </table>
 
@@ -10309,10 +10036,6 @@ LeadBasedElectrode
 .. raw:: html
 
   <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">an electrode in which the primary active material consists of lead or lead compounds</td>
-  </tr>
   </table>
 
 
@@ -10500,10 +10223,6 @@ LiquidJunction
   <td class="element-table-key"><span class="element-table-key">IUPAC Reference</span></td>
   <td class="element-table-value"><a href='https://goldbook.iupac.org/terms/view/L03584'>https://goldbook.iupac.org/terms/view/L03584</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Across such a junction there arises a potential difference, called the liquid junction potential.</td>
-  </tr>
   </table>
 
 
@@ -10530,10 +10249,6 @@ LiquidMetalElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q6557456'>https://www.wikidata.org/wiki/Q6557456</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">they can be used in electrocapillarity, voltammetry, and impedance measurements</td>
   </tr>
   </table>
 
@@ -10971,10 +10686,6 @@ MagnesiumBasedElectrode
 .. raw:: html
 
   <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">an electrode in which the primary active material consists of magnesium or magnesium compounds</td>
-  </tr>
   </table>
 
 
@@ -11013,10 +10724,6 @@ ManganeseBasedElectrode
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode in which the primary active material consists of manganese or manganese compounds</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often represented in cell designations by the letter M</td>
-  </tr>
   </table>
 
 
@@ -11038,11 +10745,7 @@ ManganeseDioxideElectrode
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">MnO2Electrode, MnO2Electrode</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the combination with lithium metal and an organic electrolyte is designated using IEC electrochemical system letter code C</td>
+  <td class="element-table-value">MnO2Electrode</td>
   </tr>
   </table>
 
@@ -11062,10 +10765,6 @@ ManganesePhosphateBasedElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode in which the primary active material consists of manganese phosphate or manganese phosphate compounds</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often represented in cell designations by the letter Mp</td>
   </tr>
   </table>
 
@@ -11088,11 +10787,7 @@ MercuryElectrode
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">HgElectrode, HgElectrode</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">A mercury film electrode (MFE) or thin mercury film electrode (TMFE) is formed by coating a conducting substrate, usually glassy carbon, with a layer of mercury (thin film, amalgam, or array of microdrops), often by electrodeposition from a solution containing Hg(II). The electrode area is normally in the range of 0.1 to 0.5 cm2 and mercury film thickness typically ranges from 10 to 1000 nm, producing a film of large surface area-to-volume ratio that results in a high analyte pre-concentration during the deposition step of anodic stripping voltammetry. Compared to an HMDE, the MFE provides high sensitivity and resolution; however, it is somewhat less reproducible and more prone to interferences from intermetallic formation and surface-active substances.</td>
+  <td class="element-table-value">HgElectrode</td>
   </tr>
   </table>
 
@@ -11112,10 +10807,6 @@ MetalElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode in which the actve electrochemical material is a metal</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the term metal is meant to loosely cover alkali metals, alkaline earth metals, transition metals, post-transition metals, and metalloids</td>
   </tr>
   </table>
 
@@ -11228,10 +10919,6 @@ NearNeutralElectrolyte
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">NearNeutralAqueousElectrolyte, NearNeutralSolution</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">this covers the pH domain typically described as "weakly acidic", "neutral", and "weakly alkaline"</td>
-  </tr>
   </table>
 
 
@@ -11262,10 +10949,6 @@ NegativeElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q120907506'>https://www.wikidata.org/wiki/Q120907506</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">by convention, an oxidation reaction occurs during discharge</td>
   </tr>
   </table>
 
@@ -11317,10 +11000,6 @@ NernstEinsteinEquation
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q9325636'>https://www.wikidata.org/wiki/Q9325636</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">\Lambda_m^0 = (F^2/(R*T)) * (v_{+} * z_{+}^2 * D_{+} + v_{&#8211;} * z_{&#8211;}^2 * D_{&#8211;})</td>
-  </tr>
   </table>
 
 
@@ -11347,10 +11026,6 @@ NernstEquation
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q751124'>https://www.wikidata.org/wiki/Q751124</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">An expression of the Law of Mass Action.</td>
   </tr>
   </table>
 
@@ -11398,10 +11073,6 @@ NickelBasedElectrode
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode in which the primary active material consists of nickel or nickel compounds</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often represented in IEC cell designations by the letter N</td>
-  </tr>
   </table>
 
 
@@ -11448,10 +11119,6 @@ NickelOxideHydroxideElectrode
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">NiOOHElectrode, NickelOxyhydroxideElectrode</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the combination with zinc metal and an alkali metal hydoxide electrolyte is designated using IEC electrochemical system letter code Z</td>
-  </tr>
   </table>
 
 
@@ -11494,10 +11161,6 @@ NonPolarizableElectrode
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode that holds its potential essentially constant by efficiently allowing electric current to pass</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">this is a desirable characteristic for a reference electrode</td>
-  </tr>
   </table>
 
 
@@ -11520,10 +11183,6 @@ NonSpillableCell
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-16'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-16</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">some vented cells or batteries are designed so as to be non-spillable when operated within the limits specified by the manufacturer</td>
   </tr>
   </table>
 
@@ -11551,10 +11210,6 @@ NormalHydrogenElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q115694592'>https://www.wikidata.org/wiki/Q115694592</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">hydrogen gas at 1 atm pressures is bubbled through the acid solution</td>
   </tr>
   </table>
 
@@ -11652,10 +11307,6 @@ Overcharge
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-44'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-44</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">overcharge is also the act of charging beyond a certain limit specified by the manufacturer</td>
-  </tr>
   </table>
 
 
@@ -11674,10 +11325,6 @@ OxygenElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a gas diffusion electrode in which the active material is oxygen (O2)</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the combination with zinc metal and an alkali metal hydroxide electrolyte is designated using IEC electrochemical system letter code P</td>
   </tr>
   </table>
 
@@ -12300,10 +11947,6 @@ ParasiticReaction
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-02-07'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-02-07</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">in a galvanic cell, parasitic reactions may cause inefficiencies or loss of performance</td>
-  </tr>
   </table>
 
 
@@ -12484,10 +12127,6 @@ PlatinumElectrode
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q20851363'>https://www.wikidata.org/wiki/Q20851363</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Pt has a very small overpotential for hydrogen evolution, which determines the negative potential limit in protic solvents. Pt adsorbs hydrogen, resulting in hydrogen adsorption/desorption waves. However, the positive potential limit in polar aprotic solvents free of oxygen and water is higher than that for any other commonly used electrode materials. In the presence of water and/or oxygen, Pt forms a film of oxide (and/or chemisorbed oxygen), resulting in potentially interfering waves or peaks.</td>
-  </tr>
   </table>
 
 
@@ -12630,10 +12269,6 @@ PositiveElectrode
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q120907518'>https://www.wikidata.org/wiki/Q120907518</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">by convention, a reduction reaction occurs during discharge</td>
-  </tr>
   </table>
 
 
@@ -12672,10 +12307,6 @@ PotassiumBasedElectrode
 .. raw:: html
 
   <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">an electrode in which the primary active material consists of potassium or potassium compounds</td>
-  </tr>
   </table>
 
 
@@ -12781,11 +12412,7 @@ PotentiometricStrippingAnalysis
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">PSA, PSA, PSA, PSA</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">historically for the analysis of metal ions, mercury ions were added to the test solution to form a mercury amalgam when reduced. Alternatively, an HMDE or MFE was used and the oxidizing agent added after amalgam formation. However, the toxicity of mercury and its compounds have all but precluded the present-day use of mercury</td>
+  <td class="element-table-value">PSA</td>
   </tr>
   </table>
 
@@ -12867,10 +12494,6 @@ PouchCase
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a soft pouch case that is described by its length, width, and height</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often represented in cell designations by the letter P</td>
-  </tr>
   </table>
 
 
@@ -12946,10 +12569,6 @@ PrismaticCase
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a rigid prismatic case that is described by characteristic length, width, and height</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often represented in cell designations by the letter P</td>
   </tr>
   </table>
 
@@ -13367,10 +12986,6 @@ R2016
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a coin case with a nominal diameter of 20.0 mm and a height of 1.6 mm</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often used in wrist watches</td>
-  </tr>
   </table>
 
 
@@ -13409,10 +13024,6 @@ R2025
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a coin case with a nominal diameter of 20.0 mm and a height of 2.5 mm</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often used in wrist watches and automobile remotes</td>
-  </tr>
   </table>
 
 
@@ -13431,10 +13042,6 @@ R2032
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a coin case with a nominal diameter of 20.0 mm and a height of 3.2 mm</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">very common case for lithim metal cells</td>
   </tr>
   </table>
 
@@ -14166,10 +13773,6 @@ R626
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">R66</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often used in wrist watches</td>
-  </tr>
   </table>
 
 
@@ -14445,10 +14048,6 @@ R932
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a coin case with a nominal diameter of 9.3 mm and a height of 3.2 mm</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">8 of these in series are used to form an A23 battery</td>
-  </tr>
   </table>
 
 
@@ -14541,10 +14140,6 @@ ReferenceElectrode
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q653954'>https://www.wikidata.org/wiki/Q653954</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Electrode that maintains an essentially constant potential under the conditions prevailing in an electrochemical measurement, and that serves for observation, measurement, or control of the potential of the indicator or working electrode.</td>
-  </tr>
   </table>
 
 
@@ -14612,7 +14207,7 @@ RotatingDiskElectrode
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">RDE, RDE</td>
+  <td class="element-table-value">RDE</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
@@ -14621,10 +14216,6 @@ RotatingDiskElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q3587619'>https://www.wikidata.org/wiki/Q3587619</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">The current is directly proportional to the electrode area and the electrode is uniformly accessible.</td>
   </tr>
   </table>
 
@@ -14657,10 +14248,6 @@ RotatingRingDiskElectrode
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q5829908'>https://www.wikidata.org/wiki/Q5829908</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">This arrangement is largely used in mechanistic studies.</td>
-  </tr>
   </table>
 
 
@@ -14679,10 +14266,6 @@ RoundCase
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a case that is described by its diameter and height</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often represented in cell designations by the letter R</td>
   </tr>
   </table>
 
@@ -14772,10 +14355,6 @@ SaltBridge
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q899119'>https://www.wikidata.org/wiki/Q899119</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">A typical construction is a tube of an inert material (e.g. agar agar) filled with a solution containing an electrolyte with approximately equal ion mobilities of the cation and the anion (e.g., KNO3, KCl), with the ends of the tube immersed in the electrolyte solution of the half cells.</td>
-  </tr>
   </table>
 
 
@@ -14852,10 +14431,6 @@ SealedCell
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-17'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-17</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">a sealed cell may be equipped with a safety device to prevent a dangerously high internal pressure and is designed to operate during its life in its original sealed state</td>
   </tr>
   </table>
 
@@ -14941,10 +14516,6 @@ Separator
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q1718181'>https://www.wikidata.org/wiki/Q1718181</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Membranes and diaphragms are special forms of electrochemical separators.</td>
   </tr>
   </table>
 
@@ -15191,10 +14762,6 @@ SilverElectrode
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q20851418'>https://www.wikidata.org/wiki/Q20851418</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Ag electrodes were first used in potentiometry for the determination of Cl&#8722;, Br&#8722;, I&#8722;, as well as for Ag+ ions, to which they are sensitive.</td>
-  </tr>
   </table>
 
 
@@ -15213,10 +14780,6 @@ SilverOxideElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode in which the primary active material consists of manganese dioxide or vmanganese dioxide compounds</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the combination with zinc metal and an alkali metal hydoxide electrolyte is designated using IEC electrochemical system letter code S</td>
   </tr>
   </table>
 
@@ -15290,10 +14853,6 @@ SodiumBasedElectrode
 .. raw:: html
 
   <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">an electrode in which the primary active material consists of sodium or sodium compounds</td>
-  </tr>
   </table>
 
 
@@ -15585,11 +15144,7 @@ SolidAmalgamElectrode
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">SAE, SAE</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Liquid and paste amalgams can also be used.</td>
+  <td class="element-table-value">SAE</td>
   </tr>
   </table>
 
@@ -15741,10 +15296,6 @@ SquareWavePotentialWaveform
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">Periodic potential where the amplitude alternates at a steady frequency between fixed minimum and maximum values, with the same duration at minimum and maximum.</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">In an ideal square wave, the transitions between minimum and maximum are instantaneous.</td>
-  </tr>
   </table>
 
 
@@ -15837,10 +15388,6 @@ StandardHydrogenElectrode
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q898559'>https://www.wikidata.org/wiki/Q898559</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">Potential of a platinum electrode in a theoretical ideal solution (the current standard for zero potential for all temperatures)</td>
-  </tr>
   </table>
 
 
@@ -15859,10 +15406,6 @@ SternModel
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">describes the double layer as divided into two parts separated by the Stern plane, located about one hydrated ion radius from the electrode surface</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">proposed by Otto Stern in 1924</td>
   </tr>
   </table>
 
@@ -16152,10 +15695,6 @@ ThermalRunaway
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-54'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-54</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">in lithium batteries thermal runaway may cause melting of lithium</td>
-  </tr>
   </table>
 
 
@@ -16210,10 +15749,6 @@ ThionylChlorideElectrode
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode in which the primary active material consists of thionyl chloride</td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the combination with lithium metal and non-aqueous in-organic electrolyte is designated using IEC electrochemical system letter code E</td>
-  </tr>
   </table>
 
 
@@ -16235,11 +15770,7 @@ ThreeElectrodeCell
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">ThreeElectrodeElectrochemicalCell, ThreeElectrodeElectrochemicalCell</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">A potentiostat can be used to maintain a potential difference between the working and ref- erence electrodes.</td>
+  <td class="element-table-value">ThreeElectrodeElectrochemicalCell</td>
   </tr>
   </table>
 
@@ -16355,10 +15886,6 @@ TinBasedElectrode
 .. raw:: html
 
   <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">an electrode in which the primary active material consists of tin or tin compounds</td>
-  </tr>
   </table>
 
 
@@ -16377,10 +15904,6 @@ TitaniumBasedElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode in which the primary active material consists of titanium or titanium compounds</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often represented in cell designations by the letter T</td>
   </tr>
   </table>
 
@@ -16442,10 +15965,6 @@ TrasattiBuzzancaModel
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">considers the effects of specific adsorbed ions in the double layer</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">proposed by Sergio Trasatti and Giovanni Buzzanca in 1971</td>
   </tr>
   </table>
 
@@ -16596,10 +16115,6 @@ Valve
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-12'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-12</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">a valve has a characteristic venting or opening and closing pressure</td>
-  </tr>
   </table>
 
 
@@ -16618,10 +16133,6 @@ VanadiumBasedElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an electrode in which the primary active material consists of vanadium or vanadium compounds</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">often represented in IEC cell designations by the letter V</td>
   </tr>
   </table>
 
@@ -16849,10 +16360,6 @@ WorkingElectrode
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q477099'>https://www.wikidata.org/wiki/Q477099</a></td>
   </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">If processes of interest occur both at the anode and the cathode of a cell (as in differential amperometry or controlled-current potentiometric titration with two indicator electrodes), the cell should be said to comprise two indicator or working electrodes.</td>
-  </tr>
   </table>
 
 
@@ -16900,6 +16407,25 @@ ZincChlorideSolution
 
 .. raw:: html
 
+   <div id="electrochemistry_424bf750_7df5_49b5_ba73_ba74397a166b"></div>
+
+ZincElectrode
+-------------
+
+* https://w3id.org/emmo/domain//electrochemistry#electrochemistry_424bf750_7df5_49b5_ba73_ba74397a166b
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">an electrode in which the main active material is zinc metal</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_245c9442_ca1d_4070_a624_182b92d30b10"></div>
 
 ZincInsertionElectrode
@@ -16913,29 +16439,6 @@ ZincInsertionElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an insertion electrode in which the guest molecule is zinc</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_424bf750_7df5_49b5_ba73_ba74397a166b"></div>
-
-ZincMetalElectrode
-------------------
-
-* https://w3id.org/emmo/domain//electrochemistry#electrochemistry_424bf750_7df5_49b5_ba73_ba74397a166b
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">an electrode in which the main active material is zinc metal</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">the combination with manganese dioxide and an alkali metal hydoxide electrolyte is designated using IEC electrochemical system letter code L</td>
   </tr>
   </table>
 
