@@ -93,6 +93,25 @@ AdsorptionCurrent
 
 .. raw:: html
 
+   <div id="electrochemistry_abd08921_6f3b_4a48_811e_7685c58aec0b"></div>
+
+AmbientCelsiusTemperature
+-------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_abd08921_6f3b_4a48_811e_7685c58aec0b
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the celsius temperature of the ambient environment</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_39a44af0_0e1a_4859_b550_bdabad64386e"></div>
 
 AmbientThermodynamicTemperature
@@ -274,15 +293,11 @@ CRate
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">ChargeRate, ChargeRate, ChargeRate</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
-  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-45'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-45</a></td>
+  <td class="element-table-value">CapacityRate</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">in practice, the term CRate is often used to mean DRate</td>
+  <td class="element-table-value">the quantity CRate is not used for energy-decoupled batteries like Redox Flox batteries</td>
   </tr>
   </table>
 
@@ -420,7 +435,7 @@ CellCurrent
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">electric current flowing to or from an electrochemical cell.</td>
+  <td class="element-table-value">electric current flowing to or from an electrochemical cell or device</td>
   </tr>
   </table>
 
@@ -566,6 +581,29 @@ ChargeTransferCoefficient
 
 .. raw:: html
 
+   <div id="electrochemistry_a7dc73e2_d4aa_4dfc_8b4d_cb611f1501fb"></div>
+
+ChargingCRate
+-------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_a7dc73e2_d4aa_4dfc_8b4d_cb611f1501fb
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">[an indicator of the] electric current at which a secondary cell or battery is charged</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
+  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-45'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-45</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_10763eb0_dbc9_4d34_bd1a_7b8996590d45"></div>
 
 ChargingCapacity
@@ -583,6 +621,29 @@ ChargingCapacity
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">ChargeCapacity</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_7f073272_8925_4344_995c_a5a6dd1fcde6"></div>
+
+ChargingConstantCurrentPercentage
+---------------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_7f073272_8925_4344_995c_a5a6dd1fcde6
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the percentage of the total charge capacity that is obtained during a constant current charge process</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">ConstantCurrentChargePercentage</td>
   </tr>
   </table>
 
@@ -625,6 +686,71 @@ ChargingEnergy
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">ChargeEnergy</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_31a74e23_bb07_41d0_bb8f_1d8cca157503"></div>
+
+ChargingEnergyDensity
+---------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_31a74e23_bb07_41d0_bb8f_1d8cca157503
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the energy density of a device obtained during a charging process</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_4882cf2f_aab7_4a3a_a103_7f56b55fbed3"></div>
+
+ChargingSpecificCapacity
+------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4882cf2f_aab7_4a3a_a103_7f56b55fbed3
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">quotient of the capacity of a cell or battery [ or electrode or active material ] obtained during a charge process by its mass.</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">SpecificChargeCapacity</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_5e4490b8_c1dd_4e00_980b_c484e1bf4904"></div>
+
+ChargingSpecificEnergy
+----------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_5e4490b8_c1dd_4e00_980b_c484e1bf4904
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the specific energy of an electrochemical device obtained during a charge process</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">SpecificEnergyCharge</td>
   </tr>
   </table>
 
@@ -754,52 +880,6 @@ ConstantCurrentDischargingCapacity
 
 .. raw:: html
 
-   <div id="electrochemistry_7f073272_8925_4344_995c_a5a6dd1fcde6"></div>
-
-ConstantCurrentPercentageCharging
----------------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_7f073272_8925_4344_995c_a5a6dd1fcde6
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">the percentage of the total charge capacity that is obtained during a constant current charge process</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">ConstantCurrentChargePercentage</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_457aed58_6e7e_42d5_9d78_b424c8d60aa3"></div>
-
-ConstantCurrentPercentageDischarging
-------------------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_457aed58_6e7e_42d5_9d78_b424c8d60aa3
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">the percentage of the total discharge capacity that is obtained during a constant current discharge process</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">ConstantCurrentDischargePercentage</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
    <div id="electrochemistry_33e6986c_b35a_4cae_9a94_acb23248065c"></div>
 
 ControlProperty
@@ -892,6 +972,25 @@ CurrentChangeLimit
 
 .. raw:: html
 
+   <div id="electrochemistry_6516ed26_9661_4d81_8c6d_15d2384d17c0"></div>
+
+CurrentChangeRate
+-----------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_6516ed26_9661_4d81_8c6d_15d2384d17c0
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the first order time rate of change of electric current</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_76e7e556_f47e_47e2_b2ef_67aeed09c63e"></div>
 
 CurrentDensityLimit
@@ -955,8 +1054,8 @@ CurrentScanRate
 
    <div id="electrochemistry_5766a819_c319_48ba_ab9a_ce3bd8fedee8"></div>
 
-Cycle
------
+CycleIndex
+----------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_5766a819_c319_48ba_ab9a_ce3bd8fedee8
 
@@ -969,7 +1068,7 @@ Cycle
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">CycleIndex, CycleNumber</td>
+  <td class="element-table-value">Cycle, CycleNumber</td>
   </tr>
   </table>
 
@@ -1372,31 +1471,42 @@ D95ParticleSize
 
 .. raw:: html
 
-   <div id="electrochemistry_25e20915_c35d_4bee_ad31_736235a79780"></div>
+   <div id="electrochemistry_463950b9_fd8d_48de_a52d_b29cab026391"></div>
 
-DRate
------
+DeviceTemperature
+-----------------
 
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_25e20915_c35d_4bee_ad31_736235a79780
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_463950b9_fd8d_48de_a52d_b29cab026391
 
 .. raw:: html
 
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">[an indicator of the] electric current at which a battery is discharged</td>
+  <td class="element-table-value">the temperature of an electrochemical device</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_10104499_6580_4867_9c5d_b9882c89c2f7"></div>
+
+DifferentialCapacity
+--------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_10104499_6580_4867_9c5d_b9882c89c2f7
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the derivative of the capacity of an electrochemical device with respect to the terminal voltage</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">DischargeRate, DischargeRate, DischargeRate</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
-  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-25'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-25</a></td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">in practice, the term CRate is often used to mean DRate</td>
+  <td class="element-table-value">dQ/dV</td>
   </tr>
   </table>
 
@@ -1515,6 +1625,37 @@ Diffusivity
 
 .. raw:: html
 
+   <div id="electrochemistry_25e20915_c35d_4bee_ad31_736235a79780"></div>
+
+DischargingCRate
+----------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_25e20915_c35d_4bee_ad31_736235a79780
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">[an indicator of the] electric current at which a battery is discharged</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">DRate, DRate, DRate, DischargeRate, DischargeRate, DischargeRate</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
+  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-25'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-25</a></td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Comment</span></td>
+  <td class="element-table-value">in practice, the term CRate is often used to mean DRate</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_0141b5c2_9f15_46f4_82e6_92a104faa476"></div>
 
 DischargingCapacity
@@ -1536,6 +1677,29 @@ DischargingCapacity
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-14'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-14</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_457aed58_6e7e_42d5_9d78_b424c8d60aa3"></div>
+
+DischargingConstantCurrentPercentage
+------------------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_457aed58_6e7e_42d5_9d78_b424c8d60aa3
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the percentage of the total discharge capacity that is obtained during a constant current discharge process</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">ConstantCurrentDischargePercentage</td>
   </tr>
   </table>
 
@@ -1582,6 +1746,71 @@ DischargingEnergy
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">DischargeEnergy</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_4f14e153_cffb_42bd_9a7f_ae40d51ad2cd"></div>
+
+DischargingEnergyDensity
+------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4f14e153_cffb_42bd_9a7f_ae40d51ad2cd
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the energy density of a device obtained during a discharging process.</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_884650fd_6cc6_4ec6_8264_c18fbe6b90ee"></div>
+
+DischargingSpecificCapacity
+---------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_884650fd_6cc6_4ec6_8264_c18fbe6b90ee
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">quotient of the capacity of a cell or battery [ or electrode or active material ] obtained during a discharge process by its mass.</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">SpecificDischargeCapacity</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_9d57962c_e150_4e64_962b_8fd6a92c9234"></div>
+
+DischargingSpecificEnergy
+-------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_9d57962c_e150_4e64_962b_8fd6a92c9234
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the specific energy of an electrochemical device obtained during a discharge process</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">SpecificEnergyDischarge</td>
   </tr>
   </table>
 
@@ -2113,44 +2342,6 @@ EnergyDensity
 
 .. raw:: html
 
-   <div id="electrochemistry_31a74e23_bb07_41d0_bb8f_1d8cca157503"></div>
-
-EnergyDensityCharging
----------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_31a74e23_bb07_41d0_bb8f_1d8cca157503
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">the energy density of a device obtained during a charging process</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_4f14e153_cffb_42bd_9a7f_ae40d51ad2cd"></div>
-
-EnergyDensityDischarging
-------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4f14e153_cffb_42bd_9a7f_ae40d51ad2cd
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">the energy density of a device obtained during a discharging process.</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
    <div id="electrochemistry_79198264_cdf5_4fc3_8bcf_e5140a52547a"></div>
 
 EnergyEfficiency
@@ -2168,33 +2359,6 @@ EnergyEfficiency
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-53'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-53</a></td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_46376e5d_9627_4514_9881_9e62083625c3"></div>
-
-EnergyStorageCapability
------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_46376e5d_9627_4514_9881_9e62083625c3
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">amount of energy that can be stored in a device under specific conditions</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">BatteryEnergy</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
-  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-21'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-21</a></td>
   </tr>
   </table>
 
@@ -2539,6 +2703,29 @@ InstantaneousCurrent
   <tr>
   <td class="element-table-key"><span class="element-table-key">Comment</span></td>
   <td class="element-table-value">I_{t}</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_5973f91a_fa6b_49c9_ba46_3ecc1c2253d2"></div>
+
+InstantaneousPower
+------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_5973f91a_fa6b_49c9_ba46_3ecc1c2253d2
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">for a two-terminal element or a two-terminal circuit with terminals A and B, product of the voltage uAB between the terminals and the electric current i in the element or circuit</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
+  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=131-11-30'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=131-11-30</a></td>
   </tr>
   </table>
 
@@ -2918,6 +3105,25 @@ MassLoading
 
 .. raw:: html
 
+   <div id="electrochemistry_4a354510_4dc2_4803_8845_f4024a1a7260"></div>
+
+MaximumChargingTemperature
+--------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4a354510_4dc2_4803_8845_f4024a1a7260
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the maximum allowable temperature of an electrochemical device during a charging process</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_47287d09_6108_45ca_ac65_8b9451b1065e"></div>
 
 MaximumConcentration
@@ -2939,7 +3145,7 @@ MaximumConcentration
 
    <div id="electrochemistry_39d8a6ee_cd55_4855_8b5b_d42bef95ac78"></div>
 
-MaximumContinuousCurrentCharging
+MaximumContinuousChargingCurrent
 --------------------------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_39d8a6ee_cd55_4855_8b5b_d42bef95ac78
@@ -2962,7 +3168,7 @@ MaximumContinuousCurrentCharging
 
    <div id="electrochemistry_ba7ac581_0e13_4815_b888_013c378932f5"></div>
 
-MaximumContinuousCurrentDischarging
+MaximumContinuousDischargingCurrent
 -----------------------------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ba7ac581_0e13_4815_b888_013c378932f5
@@ -2983,9 +3189,47 @@ MaximumContinuousCurrentDischarging
 
 .. raw:: html
 
+   <div id="electrochemistry_d5dc0c1d_0926_4268_89f0_4519a326eabc"></div>
+
+MaximumDischargingPulseDuration
+-------------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_d5dc0c1d_0926_4268_89f0_4519a326eabc
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the maximum duration of a pulse discharge for a given electrochemical device</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_de612af2_a029_4a02_8090_4a75ab13271d"></div>
+
+MaximumDischargingTemperature
+-----------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_de612af2_a029_4a02_8090_4a75ab13271d
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the maximum allowable temperature of an electrochemical device during a discharging process</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_1b2a7137_64d4_483a_8437_dcb3bedcb6da"></div>
 
-MaximumPulseCurrentCharging
+MaximumPulseChargingCurrent
 ---------------------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_1b2a7137_64d4_483a_8437_dcb3bedcb6da
@@ -3008,7 +3252,7 @@ MaximumPulseCurrentCharging
 
    <div id="electrochemistry_3e54f9e3_a31d_4821_9bfb_ef953a42c35b"></div>
 
-MaximumPulseCurrentDischarging
+MaximumPulseDischargingCurrent
 ------------------------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_3e54f9e3_a31d_4821_9bfb_ef953a42c35b
@@ -3029,25 +3273,6 @@ MaximumPulseCurrentDischarging
 
 .. raw:: html
 
-   <div id="electrochemistry_d5dc0c1d_0926_4268_89f0_4519a326eabc"></div>
-
-MaximumPulseDurationDischarging
--------------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_d5dc0c1d_0926_4268_89f0_4519a326eabc
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">the maximum duration of a pulse discharge for a given electrochemical device</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
    <div id="electrochemistry_95ef8c3c_62fe_467f_b5d4_dd0cd18a7ea8"></div>
 
 MaximumStoichiometricCoefficient
@@ -3061,6 +3286,67 @@ MaximumStoichiometricCoefficient
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">The maximum allowed value for stoichiometric coefficient for an entity in a chemical substance</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_b7781ebc_90a7_4f19_997f_aed28dee1b01"></div>
+
+MaximumStorageCapacity
+----------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_b7781ebc_90a7_4f19_997f_aed28dee1b01
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the maximum amount of electric charge that can be reversible stored within an electrochemical device, component, or material - operated at an infinitely low rate - based on its chemical composition and design</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">TheoreticalChargeCapacity</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_1cdeedbf_7f9a_4e1f_a297_204a6e16b718"></div>
+
+MaximumStorageEnergy
+--------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_1cdeedbf_7f9a_4e1f_a297_204a6e16b718
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the maximum amount of energy that can be reversible stored within an electrochemical device, component, or material - operated at an infinitely low rate - based on its chemical composition and design</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_0ea4d188_9701_4699_a5ca_812a98a9afa7"></div>
+
+MaximumStorageTemperature
+-------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_0ea4d188_9701_4699_a5ca_812a98a9afa7
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the maximum temperature at which an electrochemical device shall be stored</td>
   </tr>
   </table>
 
@@ -3140,6 +3426,44 @@ MigrationCurrent
 
 .. raw:: html
 
+   <div id="electrochemistry_b90b1ad7_b9a8_44df_ad45_bfd25aac2e49"></div>
+
+MinimumChargingTemperature
+--------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_b90b1ad7_b9a8_44df_ad45_bfd25aac2e49
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the minimum allowable temperature of an electrochemical device during a charging process</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_2a1de79f_e927_45a2_9619_3799a0d61e9b"></div>
+
+MinimumDischargingTemperature
+-----------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_2a1de79f_e927_45a2_9619_3799a0d61e9b
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the minimum allowable temperature of an electrochemical device during a discharging process</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_86324806_4263_4d80_b5af_1a7be844ab5b"></div>
 
 MinimumStoichiometricCoefficient
@@ -3153,6 +3477,44 @@ MinimumStoichiometricCoefficient
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">The minimum allowed value for stoichiometric coefficient for an entity in a chemical substance</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_0ddfd57a_d338_4690_be45_b26884ed6302"></div>
+
+MinimumStorageTemperature
+-------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_0ddfd57a_d338_4690_be45_b26884ed6302
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the miniumum temperature at which an electrochemical device shall be stored</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_d3c0078e_c1d3_461e_873d_e5c3adf441c5"></div>
+
+MiniumumAcceptedCapacity
+------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_d3c0078e_c1d3_461e_873d_e5c3adf441c5
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the minimum acceptable threshold value for the rated capacity of an electrochemical device, as stated by the manufacturer.</td>
   </tr>
   </table>
 
@@ -4242,98 +4604,6 @@ SpecificCapacity
 
 .. raw:: html
 
-   <div id="electrochemistry_4882cf2f_aab7_4a3a_a103_7f56b55fbed3"></div>
-
-SpecificCapacityCharging
-------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4882cf2f_aab7_4a3a_a103_7f56b55fbed3
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">quotient of the capacity of a cell or battery [ or electrode or active material ] obtained during a charge process by its mass.</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">SpecificChargeCapacity</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_884650fd_6cc6_4ec6_8264_c18fbe6b90ee"></div>
-
-SpecificCapacityDischarging
----------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_884650fd_6cc6_4ec6_8264_c18fbe6b90ee
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">quotient of the capacity of a cell or battery [ or electrode or active material ] obtained during a discharge process by its mass.</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">SpecificDischargeCapacity</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_5e4490b8_c1dd_4e00_980b_c484e1bf4904"></div>
-
-SpecificEnergyCharging
-----------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_5e4490b8_c1dd_4e00_980b_c484e1bf4904
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">the specific energy of an electrochemical device obtained during a charge process</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">SpecificEnergyCharge</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_9d57962c_e150_4e64_962b_8fd6a92c9234"></div>
-
-SpecificEnergyDischarging
--------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_9d57962c_e150_4e64_962b_8fd6a92c9234
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">the specific energy of an electrochemical device obtained during a discharge process</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">SpecificEnergyDischarge</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
    <div id="electrochemistry_c762a928_5a74_46fd_9929_4ac2d7a3a8d7"></div>
 
 SpecificPower
@@ -4447,6 +4717,25 @@ StandardElectrodePotential
 
 .. raw:: html
 
+   <div id="electrochemistry_ae108db7_8765_4329_9908_059277dee586"></div>
+
+StepCapacity
+------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ae108db7_8765_4329_9908_059277dee586
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the amount of charge that has passed through an electrochemical device within the time interval of a given testing step</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_85e39686_9658_4c74_bb91_a935704c174a"></div>
 
 StepDuration
@@ -4478,7 +4767,11 @@ StepIndex
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">number describing the step in a protocol</td>
+  <td class="element-table-value">the currently running step number in the procedure</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">StepNumber</td>
   </tr>
   </table>
 
@@ -4536,6 +4829,29 @@ StepTime
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">time of a measurement relative to the start of the step (t = 0)</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_2d58b059_2ef0_418e_9337_13aa2de4b07f"></div>
+
+StepType
+--------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_2d58b059_2ef0_418e_9337_13aa2de4b07f
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a description (usually an integer, string, or alpha numeric code) describing the nature of a step in an electrochemical test protocol</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">State</td>
   </tr>
   </table>
 
@@ -4601,6 +4917,33 @@ StoichiometricCoefficientAtSOC100
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">the stoichiometric coefficient for a reactive entity in a chemical substance that corresponds to a cell-level state-of-charge of 100%</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_46376e5d_9627_4514_9881_9e62083625c3"></div>
+
+StoredEnergy
+------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_46376e5d_9627_4514_9881_9e62083625c3
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">amount of energy that is passed to or from an energy storage device under specified conditions</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">BatteryEnergy, EnergyStorageCapability</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
+  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-21'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-21</a></td>
   </tr>
   </table>
 
@@ -4778,28 +5121,66 @@ TestTime
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">time of a measurement relative to the start of the test (t = 0)</td>
   </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">RunTime</td>
+  </tr>
   </table>
 
 
 .. raw:: html
 
-   <div id="electrochemistry_b7781ebc_90a7_4f19_997f_aed28dee1b01"></div>
+   <div id="electrochemistry_df9e9d49_12fa_4794_b482_e0dcd2a7bb66"></div>
 
-TheoreticalCapacity
--------------------
+TotalCapacity
+-------------
 
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_b7781ebc_90a7_4f19_997f_aed28dee1b01
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_df9e9d49_12fa_4794_b482_e0dcd2a7bb66
 
 .. raw:: html
 
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">the maximum amount of electric charge that can be stored within a device based on its chemical composition and design</td>
+  <td class="element-table-value">the total amount of electric charge that has passed through an electrochemical device within a defined time interval</td>
   </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_4a30ff40_3ffa_4a08_9134_36dbe718bee1"></div>
+
+TotalDuration
+-------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4a30ff40_3ffa_4a08_9134_36dbe718bee1
+
+.. raw:: html
+
+  <table class="element-table">
   <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">TheoreticalChargeCapacity</td>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the total duration of a test</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_0f986d97_445f_4075_a5ce_ddde598a47a9"></div>
+
+TotalEnergy
+-----------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_0f986d97_445f_4075_a5ce_ddde598a47a9
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the total amount of energy that has passed through an electrochemical device</td>
   </tr>
   </table>
 
@@ -4921,6 +5302,29 @@ VoltageChangeLimit
 
 .. raw:: html
 
+   <div id="electrochemistry_f6f45881_9bf1_4cf5_988b_de79dab718ef"></div>
+
+VoltageChangeRate
+-----------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_f6f45881_9bf1_4cf5_988b_de79dab718ef
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the first order time rate of change of voltage</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">dV/dt</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_5ebeea80_af22_456b_9087_78c2a8465c58"></div>
 
 VoltageLimit
@@ -5015,6 +5419,139 @@ WorkingPotentialRange
   <tr>
   <td class="element-table-key"><span class="element-table-key">Comment</span></td>
   <td class="element-table-value">Because the working potential range is a function of a specific electrode/electrolyte system, only approximate ranges can be given for generic systems.</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_a07dd85b_d0df_4d5d_8b0c_14d20ea3fe45"></div>
+
+arbinLabel
+----------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_a07dd85b_d0df_4d5d_8b0c_14d20ea3fe45
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the label of a term used in resources from Arbin</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_1b717a20_17e3_4480_8c60_c4ae94058f05"></div>
+
+batteryArchiveLabel
+-------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_1b717a20_17e3_4480_8c60_c4ae94058f05
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the label of a term used in resources from Battery Archive</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_69022178_77b8_4669_97e2_351d45356e5a"></div>
+
+biologicLabel
+-------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_69022178_77b8_4669_97e2_351d45356e5a
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the label of a term used in resources from Biologic</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_8377c1f7_2b09_4632_9a4d_bb318438adbb"></div>
+
+indigoLabel
+-----------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_8377c1f7_2b09_4632_9a4d_bb318438adbb
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the label of a term used in resources from Indigo</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_097ea615_c209_4edd_a1a1_5eea71d98fe8"></div>
+
+maccorLabel
+-----------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_097ea615_c209_4edd_a1a1_5eea71d98fe8
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the label of a term used in resources from Maccor</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_811aafc3_0c6d_470e_b67e_ff5c82992609"></div>
+
+newareLabel
+-----------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_811aafc3_0c6d_470e_b67e_ff5c82992609
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the label of a term used in resources from Neware</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_ea9f4dba_8ca2_419e_9cdf_ce54e9ebbd46"></div>
+
+novonixLabel
+------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ea9f4dba_8ca2_419e_9cdf_ce54e9ebbd46
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the label of a term used in resources from Novonix</td>
   </tr>
   </table>
 
