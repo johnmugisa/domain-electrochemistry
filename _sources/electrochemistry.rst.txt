@@ -2636,6 +2636,25 @@ HalfWavePotential
 
 .. raw:: html
 
+   <div id="electrochemistry_0089729b_5890_4c15_aa09_1244d41f8626"></div>
+
+ImaginaryElectricImpedance
+--------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_0089729b_5890_4c15_aa09_1244d41f8626
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the imaginary part of the complex electric impedance</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_74861991_7da2_4e0f_b6c1_b16713f538bf"></div>
 
 InitialDischargingVoltage
@@ -2984,6 +3003,25 @@ LimitingMolarConductivity
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
   <td class="element-table-value"><a href='https://en.wikipedia.org/wiki/Molar_conductivity#Variation_of_molar_conductivity_with_dilution'>https://en.wikipedia.org/wiki/Molar_conductivity#Variation_of_molar_conductivity_with_dilution</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_7db845e7_0e5b_47d4_b954_2a2b8e85deea"></div>
+
+LowerCurrentLimit
+-----------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_7db845e7_0e5b_47d4_b954_2a2b8e85deea
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the lower bounding limit on the current used in the definition of an electrochemical testing protocol</td>
   </tr>
   </table>
 
@@ -3632,6 +3670,25 @@ NetFaradaicCurrent
 
 .. raw:: html
 
+   <div id="electrochemistry_8abde9d0_84f6_4b4f_a87e_86028a397100"></div>
+
+NominalCapacity
+---------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_8abde9d0_84f6_4b4f_a87e_86028a397100
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the rated capacity that is representative of the typical value associated with a cell as stated by the manufacturer</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_639b844a_e801_436b_985d_28926129ead6"></div>
 
 NominalVoltage
@@ -3786,6 +3843,25 @@ NumberOfFiniteVolumeCellsInZ
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">number of discrete finite volume cells in a grid or sub-grid in the Z-direction</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_88dd2bce_fb17_4705_905d_892681812290"></div>
+
+NumberOfIterations
+------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_88dd2bce_fb17_4705_905d_892681812290
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the number of times an iterative process should occur</td>
   </tr>
   </table>
 
@@ -4268,6 +4344,33 @@ ReactionRateConstant
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q658700'>https://www.wikidata.org/wiki/Q658700</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_abf986d2_90d5_4746_b42b_89dc7cc1bf0f"></div>
+
+RealElectricImpedance
+---------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_abf986d2_90d5_4746_b42b_89dc7cc1bf0f
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the imaginary part of the complex electric impedance</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">ACResistance</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
+  <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q1048490'>https://www.wikidata.org/wiki/Q1048490</a></td>
   </tr>
   </table>
 
@@ -5227,6 +5330,25 @@ TransitionTime
   <tr>
   <td class="element-table-key"><span class="element-table-key">Comment</span></td>
   <td class="element-table-value">In experimental practice, the latter is often taken to be the moment when the rate of varia- tion of the potential of the indicator electrode attains a maximum value.</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_3dac5115_6337_40a6_a2ab_317087fe3b45"></div>
+
+UpperCurrentLimit
+-----------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_3dac5115_6337_40a6_a2ab_317087fe3b45
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the upper bounding limit on the current used in the definition of an electrochemical testing protocol</td>
   </tr>
   </table>
 
@@ -6371,25 +6493,6 @@ ButlerVolmerEquation
 
 .. raw:: html
 
-   <div id="electrochemistry_ac6c2371_995a_4fcb_89a2_15cb6615741e"></div>
-
-CCCVCycling
------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ac6c2371_995a_4fcb_89a2_15cb6615741e
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">a cycling protocol in which an electrochemical cell is first put through a CCCV charging process followed by a constant current discharge process</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
    <div id="electrochemistry_dd4c5ffa_6228_41d8_8a44_a40a2b22723e"></div>
 
 CadmiumBasedElectrode
@@ -7358,6 +7461,29 @@ ConstantCurrentConstantVoltageCharging
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
   <td class="element-table-value">CCCV</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_ac6c2371_995a_4fcb_89a2_15cb6615741e"></div>
+
+ConstantCurrentConstantVoltageCycling
+-------------------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ac6c2371_995a_4fcb_89a2_15cb6615741e
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a cycling protocol in which an electrochemical cell is first put through a CCCV charging process followed by a constant current discharge process</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">CCCVCycling</td>
   </tr>
   </table>
 
@@ -14676,6 +14802,25 @@ ReferenceElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q653954'>https://www.wikidata.org/wiki/Q653954</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_35469eeb_7fc3_4317_a4b5_b3be7015444b"></div>
+
+Resting
+-------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_35469eeb_7fc3_4317_a4b5_b3be7015444b
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a step in an electrochemical testing workflow in which the electrochemical device is held at open-circuit conditions (i.e. cell current = 0 A) and occuring in series with at least one active (i.e. cell current ~= 0 A) step.</td>
   </tr>
   </table>
 

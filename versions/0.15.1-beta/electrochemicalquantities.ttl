@@ -24,8 +24,6 @@ emmo:EMMO_50c298c2_55a2_4068_b3ac_4e948c33181f a owl:AnnotationProperty .
 
 emmo:EMMO_5c78b424_087b_4e31_8c91_6422f1be1e86 owl:equivalentClass :electrochemistry_9c657fdc_b9d3_4964_907c_f9a6e8c5f52b .
 
-emmo:EMMO_79a02de5_b884_4eab_bc18_f67997d597a2 :electrochemistry_097ea615_c209_4edd_a1a1_5eea71d98fe8 "acimp/ohms"@en .
-
 emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry_37b24a94_cae0_4d7a_9519_9f7692dec607 ;
     skos:altLabel "MassDiffusivity"@en ;
     emmo:EMMO_26bf1bef_d192_4da6_b0eb_d2209698fb54 "https://www.wikidata.org/wiki/Q604008"@en ;
@@ -100,6 +98,13 @@ emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry
     rdfs:subClassOf emmo:EMMO_c1c8ac3c_8a1c_4777_8e0b_14c1f9f9b0c6 ;
     skos:prefLabel "D40ParticleSize"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a statistical measure used in particle size distribution analysis, indicating the particle diameter below which 40% of the sample's particles fall."@en .
+
+:electrochemistry_0089729b_5890_4c15_aa09_1244d41f8626 a owl:Class ;
+    rdfs:label "ImaginaryElectricImpedance"@en ;
+    rdfs:comment "the imaginary part of the complex electric impedance"@en ;
+    rdfs:subClassOf emmo:EMMO_79a02de5_b884_4eab_bc18_f67997d597a2 ;
+    skos:prefLabel "ImaginaryElectricImpedance"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "the imaginary part of the complex electric impedance"@en .
 
 :electrochemistry_02d2d1d1_241c_429b_b4e7_31f2c3dc4835 a owl:Class ;
     rdfs:label "D95ParticleSize"@en ;
@@ -381,6 +386,13 @@ emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry
     skos:prefLabel "D50ParticleSize"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a statistical measure used in particle size distribution analysis, indicating the particle diameter below which 50% of the sample's particles fall."@en .
 
+:electrochemistry_3dac5115_6337_40a6_a2ab_317087fe3b45 a owl:Class ;
+    rdfs:label "UpperCurrentLimit"@en ;
+    rdfs:comment "the upper bounding limit on the current used in the definition of an electrochemical testing protocol"@en ;
+    rdfs:subClassOf :electrochemistry_74de2c33_84fc_4c2f_afe1_56d169149114 ;
+    skos:prefLabel "UpperCurrentLimit"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "the upper bounding limit on the current used in the definition of an electrochemical testing protocol"@en .
+
 :electrochemistry_3e54f9e3_a31d_4821_9bfb_ef953a42c35b a owl:Class ;
     rdfs:label "MaximumPulseDischargingCurrent"@en ;
     rdfs:comment "the maximum current approved for pulse discharge of an electrochemical device"@en ;
@@ -608,6 +620,13 @@ emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry
     skos:prefLabel "ChargingCurrent"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "electric current applied to an electrochemical device during a charging process"@en .
 
+:electrochemistry_7db845e7_0e5b_47d4_b954_2a2b8e85deea a owl:Class ;
+    rdfs:label "LowerCurrentLimit"@en ;
+    rdfs:comment "the lower bounding limit on the current used in the definition of an electrochemical testing protocol"@en ;
+    rdfs:subClassOf :electrochemistry_74de2c33_84fc_4c2f_afe1_56d169149114 ;
+    skos:prefLabel "LowerCurrentLimit"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "the lower bounding limit on the current used in the definition of an electrochemical testing protocol"@en .
+
 :electrochemistry_7f073272_8925_4344_995c_a5a6dd1fcde6 a owl:Class ;
     rdfs:label "ChargingConstantCurrentPercentage"@en ;
     rdfs:comment "the percentage of the total charge capacity that is obtained during a constant current charge process"@en ;
@@ -704,6 +723,20 @@ emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry
         "SpeCapD/mAh/g"@en ;
     skos:prefLabel "DischargingSpecificCapacity"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "quotient of the capacity of a cell or battery [ or electrode or active material ] obtained during a discharge process by its mass."@en .
+
+:electrochemistry_88dd2bce_fb17_4705_905d_892681812290 a owl:Class ;
+    rdfs:label "NumberOfIterations"@en ;
+    rdfs:comment "the number of times an iterative process should occur"@en ;
+    rdfs:subClassOf emmo:EMMO_ba882f34_0d71_4e4f_9d92_0c076c633a2c ;
+    skos:prefLabel "NumberOfIterations"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "the number of times an iterative process should occur"@en .
+
+:electrochemistry_8abde9d0_84f6_4b4f_a87e_86028a397100 a owl:Class ;
+    rdfs:label "NominalCapacity"@en ;
+    rdfs:comment "the rated capacity that is representative of the typical value associated with a cell as stated by the manufacturer"@en ;
+    rdfs:subClassOf :electrochemistry_9b3b4668_0795_4a35_9965_2af383497a26 ;
+    skos:prefLabel "NominalCapacity"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "the rated capacity that is representative of the typical value associated with a cell as stated by the manufacturer"@en .
 
 :electrochemistry_8e943e12_ecc0_4093_899e_7226be6be7f2 a owl:Class ;
     rdfs:label "D90ParticleSize"@en ;
@@ -819,6 +852,15 @@ emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry
     skos:prefLabel "AmbientCelsiusTemperature"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "the celsius temperature of the ambient environment"@en ;
     :electrochemistry_1b717a20_17e3_4480_8c60_c4ae94058f05 "Environmental_Temperature (C)"@en .
+
+:electrochemistry_abf986d2_90d5_4746_b42b_89dc7cc1bf0f a owl:Class ;
+    rdfs:label "RealElectricImpedance"@en ;
+    rdfs:comment "the imaginary part of the complex electric impedance"@en ;
+    rdfs:subClassOf emmo:EMMO_79a02de5_b884_4eab_bc18_f67997d597a2 ;
+    skos:altLabel "ACResistance"@en ;
+    skos:prefLabel "RealElectricImpedance"@en ;
+    emmo:EMMO_26bf1bef_d192_4da6_b0eb_d2209698fb54 "https://www.wikidata.org/wiki/Q1048490"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "the imaginary part of the complex electric impedance"@en .
 
 :electrochemistry_ae108db7_8765_4329_9908_059277dee586 a owl:Class ;
     rdfs:label "StepCapacity"@en ;
@@ -1084,8 +1126,8 @@ emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry
         <https://orcid.org/0000-0003-2954-1233> ;
     dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode" ;
     owl:imports <https://w3id.org/emmo/1.0.0-beta7/disciplines/isq> ;
-    owl:versionIRI <https://w3id.org/emmo/domain/electrochemistry/0.17.0-beta/electrochemicalquantities> ;
-    owl:versionInfo "0.17.0-beta" .
+    owl:versionIRI <https://w3id.org/emmo/domain/electrochemistry/0.18.0-beta/electrochemicalquantities> ;
+    owl:versionInfo "0.18.0-beta" .
 
 <https://orcid.org/0000-0001-8869-3718> a owl:NamedIndividual,
         foaf:Person ;
@@ -1866,6 +1908,8 @@ In either case, the magnitude of the catalytic current depends on the applied po
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "electric potential of an ion-selective electrode (ISE) and activity of an analyte ion at which the potential of the ISE is independent of temperature"@en ;
     emmo:EMMO_fe015383_afb3_44a6_ae86_043628697aa2 "https://doi.org/10.1351/goldbook.I03304"@en .
 
+emmo:EMMO_79a02de5_b884_4eab_bc18_f67997d597a2 :electrochemistry_097ea615_c209_4edd_a1a1_5eea71d98fe8 "acimp/ohms"@en .
+
 emmo:EMMO_e218c625_6a39_47a9_8d08_a2ef41c152a9 rdfs:subClassOf :electrochemistry_02eb0465_4f94_453c_8c1f_5ddf80134634 ;
     skos:altLabel "GravimetricEnergyDensity"@en ;
     :electrochemistry_811aafc3_0c6d_470e_b67e_ff5c82992609 "CmpEng(mWh/g)"@en .
@@ -1997,14 +2041,6 @@ G° or ΔrG , written as a reduction with respect to that of the standard hydrog
     skos:prefLabel "TemperatureLimit"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "limit on the temperature of a system"@en .
 
-:electrochemistry_9b3b4668_0795_4a35_9965_2af383497a26 a owl:Class ;
-    rdfs:label "RatedCapacity"@en ;
-    rdfs:comment "capacity value of a battery [or electrode or electrochemical device] determined under specified conditions and declared by the manufacturer"@en ;
-    rdfs:subClassOf :electrochemistry_791c1915_a791_4450_acd8_7f94764743b5 ;
-    skos:prefLabel "RatedCapacity"@en ;
-    emmo:EMMO_50c298c2_55a2_4068_b3ac_4e948c33181f "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-15"@en ;
-    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "capacity value of a battery [or electrode or electrochemical device] determined under specified conditions and declared by the manufacturer"@en .
-
 :electrochemistry_9ed7210c_c4fa_467b_822d_ba12f885bdf4 a owl:Class ;
     rdfs:label "ConcentrationOverpotential"@en ;
     rdfs:comment "The concentration overpotential of an electrode reaction at a given electrode current density (c.d.) is basically the difference in equilibrium potentials across the diffusion layer. More precisely, it is the potential of a reference electrode (of the same electrode reaction as the working electrode ) with the interfacial concentrations which establish themselves at c.d., relative to the potential of a similar reference electrode with the concentrations of the bulk solution. From such a measured potential difference, with c.d. flowing, one needs to subtract the ohmic potential drop prevailing between the two electrodes."@en,
@@ -2110,6 +2146,14 @@ G° or ΔrG , written as a reduction with respect to that of the standard hydrog
     skos:prefLabel "NumberOfFiniteVolumeCells"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "number of discrete finite volume cells in a grid or sub-grid"@en .
 
+:electrochemistry_9b3b4668_0795_4a35_9965_2af383497a26 a owl:Class ;
+    rdfs:label "RatedCapacity"@en ;
+    rdfs:comment "capacity value of a battery [or electrode or electrochemical device] determined under specified conditions and declared by the manufacturer"@en ;
+    rdfs:subClassOf :electrochemistry_791c1915_a791_4450_acd8_7f94764743b5 ;
+    skos:prefLabel "RatedCapacity"@en ;
+    emmo:EMMO_50c298c2_55a2_4068_b3ac_4e948c33181f "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-15"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "capacity value of a battery [or electrode or electrochemical device] determined under specified conditions and declared by the manufacturer"@en .
+
 :electrochemistry_cc519a19_b8d5_4e3f_b893_3a884888ad79 a owl:Class ;
     rdfs:label "MaximumTemperature"@en ;
     rdfs:comment "the maximum allowable temperature"@en ;
@@ -2185,14 +2229,6 @@ The real (true) area, A_{real}, takes into account non-idealities of the interfa
     :electrochemistry_8377c1f7_2b09_4632_9a4d_bb318438adbb "cell_current_a"@en ;
     :electrochemistry_a07dd85b_d0df_4d5d_8b0c_14d20ea3fe45 "current"@en ;
     :electrochemistry_ea9f4dba_8ca2_419e_9cdf_ce54e9ebbd46 "Current (A)"@en .
-
-:electrochemistry_74de2c33_84fc_4c2f_afe1_56d169149114 a owl:Class ;
-    rdfs:label "CurrentLimit"@en ;
-    rdfs:comment "limit on the electric current of an electrical system"@en ;
-    rdfs:subClassOf emmo:EMMO_c995ae70_3b84_4ebb_bcfc_69e6a281bb88,
-        :electrochemistry_b395a244_3a75_4737_be38_981bfa1277fe ;
-    skos:prefLabel "CurrentLimit"@en ;
-    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "limit on the electric current of an electrical system"@en .
 
 :electrochemistry_900e357f_2ee3_425a_a0b6_322661117787 a owl:Class ;
     rdfs:label "ElectrochemicalProperty"@en ;
@@ -2291,6 +2327,14 @@ foaf:Person a owl:Class ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "electric current that results from the electrooxidation or electroreduction of an electroactive substance"@en ;
     emmo:EMMO_c84c6752_6d64_48cc_9500_e54a3c34898d "https://en.wikipedia.org/wiki/Faradaic_current"@en ;
     emmo:EMMO_fe015383_afb3_44a6_ae86_043628697aa2 "https://goldbook.iupac.org/terms/view/F02321"@en .
+
+:electrochemistry_74de2c33_84fc_4c2f_afe1_56d169149114 a owl:Class ;
+    rdfs:label "CurrentLimit"@en ;
+    rdfs:comment "limit on the electric current of an electrical system"@en ;
+    rdfs:subClassOf emmo:EMMO_c995ae70_3b84_4ebb_bcfc_69e6a281bb88,
+        :electrochemistry_b395a244_3a75_4737_be38_981bfa1277fe ;
+    skos:prefLabel "CurrentLimit"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "limit on the electric current of an electrical system"@en .
 
 :electrochemistry_1cd1d777_e67b_47eb_81f1_edac35d9f2c6 a owl:Class ;
     rdfs:label "Overpotential"@en ;

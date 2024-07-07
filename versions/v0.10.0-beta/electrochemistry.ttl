@@ -1,6 +1,6 @@
 @prefix : <https://w3id.org/emmo/domain/electrochemistry#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix chemsub: <https://w3id.org/emmo/domain/chemicalsubstance#> .
+@prefix chemsub: <https://w3id.org/emmo/domain/chemical-substance#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix emmo: <https://w3id.org/emmo#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -54,9 +54,9 @@ schema:name a owl:AnnotationProperty .
     dcterms:created "2022-11-25"^^xsd:date ;
     dcterms:creator <https://orcid.org/0000-0002-8758-6109>,
         <https://orcid.org/0000-0003-2954-1233> ;
-    dcterms:issued "2024-07-03"^^xsd:date ;
+    dcterms:issued "2024-07-05"^^xsd:date ;
     dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode" ;
-    dcterms:modified "2024-07-03"^^xsd:date ;
+    dcterms:modified "2024-07-05"^^xsd:date ;
     dcterms:publisher "EMMO" ;
     dcterms:source <https://doi.org/10.1109/IEEESTD.2016.7552407>,
         <https://doi.org/10.1351/goldbook>,
@@ -67,13 +67,13 @@ schema:name a owl:AnnotationProperty .
     bibo:status "unstable" ;
     vann:preferredNamespacePrefix "echem" ;
     vann:preferredNamespaceUri "https://w3id.org/emmo/domain/electrochemistry" ;
-    owl:backwardCompatibleWith "0.16.0-beta" ;
+    owl:backwardCompatibleWith "0.17.0-beta" ;
     owl:imports <https://w3id.org/emmo/domain/characterisation-methodology/chameo>,
         <https://w3id.org/emmo/domain/chemical-substance/0.6.0-beta/chemical-substance>,
-        <https://w3id.org/emmo/domain/electrochemistry/0.17.0-beta/electrochemicalquantities> ;
-    owl:priorVersion "0.16.0-beta" ;
-    owl:versionIRI <https://w3id.org/emmo/domain/electrochemistry/0.17.0-beta/electrochemistry> ;
-    owl:versionInfo "0.17.0-beta" ;
+        <https://w3id.org/emmo/domain/electrochemistry/0.18.0-beta/electrochemicalquantities> ;
+    owl:priorVersion "0.17.0-beta" ;
+    owl:versionIRI <https://w3id.org/emmo/domain/electrochemistry/0.18.0-beta/electrochemistry> ;
+    owl:versionInfo "0.18.0-beta" ;
     foaf:logo "https://raw.githubusercontent.com/emmo-repo/domain-electrochemistry/gh-pages/assets/img/fig/png/domain-electrochemistry-logo.png" .
 
 :electrochemistry_027d437e_3bbf_4eda_940b_e509f8d2b993 a owl:Class ;
@@ -534,6 +534,14 @@ schema:name a owl:AnnotationProperty .
     skos:altLabel "R67" ;
     skos:prefLabel "R716" ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a coin case with a nominal diameter of 7.9 mm and a height of 1.65 mm"@en .
+
+:electrochemistry_35469eeb_7fc3_4317_a4b5_b3be7015444b a owl:Class ;
+    rdfs:label "Resting"@en ;
+    rdfs:comment "a step in an electrochemical testing workflow in which the electrochemical device is held at open-circuit conditions (i.e. cell current = 0 A) and occuring in series with at least one active (i.e. cell current ~= 0 A) step."@en ;
+    rdfs:subClassOf <https://w3id.org/emmo/domain/characterisation-methodology/chameo#OpenCircuitHold>,
+        :electrochemistry_78a8f60b_10c2_41ee_9946_d35437e1edb5 ;
+    skos:prefLabel "Resting"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a step in an electrochemical testing workflow in which the electrochemical device is held at open-circuit conditions (i.e. cell current = 0 A) and occuring in series with at least one active (i.e. cell current ~= 0 A) step."@en .
 
 :electrochemistry_36444184_1100_4271_869f_7f2d983aaecb a owl:Class ;
     rdfs:label "P45173115" ;
@@ -1564,6 +1572,15 @@ schema:name a owl:AnnotationProperty .
     skos:prefLabel "TinBasedElectrode"@en ;
     emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "an electrode in which the primary active material consists of tin or tin compounds"@en .
 
+:electrochemistry_a1ec9e3c_c624_4848_af13_89a6bc54d77c a owl:Class ;
+    rdfs:label "PastedPlate"@en ;
+    rdfs:comment "plate in which the active material is applied as a paste to a conductive current collector"@en ;
+    rdfs:subClassOf :electrochemistry_92147e31_d015_4889_a092_04fbab033f15 ;
+    skos:altLabel "PastedElectrode"@en ;
+    skos:prefLabel "PastedPlate"@en ;
+    emmo:EMMO_50c298c2_55a2_4068_b3ac_4e948c33181f "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-03"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "plate in which the active material is applied as a paste to a conductive current collector"@en .
+
 :electrochemistry_a277e420_2483_44d5_a2bc_4e421dea231a a owl:Class ;
     rdfs:label "R926" ;
     rdfs:comment "a coin case with a nominal diameter of 9.5 mm and a height of 2.6 mm"@en ;
@@ -1658,10 +1675,11 @@ schema:name a owl:AnnotationProperty .
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a coin case with a nominal diameter of 11.6 mm and a height of 4.2 mm"@en .
 
 :electrochemistry_ac6c2371_995a_4fcb_89a2_15cb6615741e a owl:Class ;
-    rdfs:label "CCCVCycling"@en ;
+    rdfs:label "ConstantCurrentConstantVoltageCycling"@en ;
     rdfs:comment "a cycling protocol in which an electrochemical cell is first put through a CCCV charging process followed by a constant current discharge process"@en ;
     rdfs:subClassOf :electrochemistry_d3e2d213_d078_4b9a_8beb_62f063e57d69 ;
-    skos:prefLabel "CCCVCycling"@en ;
+    skos:altLabel "CCCVCycling"@en ;
+    skos:prefLabel "ConstantCurrentConstantVoltageCycling"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a cycling protocol in which an electrochemical cell is first put through a CCCV charging process followed by a constant current discharge process"@en .
 
 :electrochemistry_ad9cdad6_66e8_471e_a7c6_b79f37c20814 a owl:Class ;
@@ -1782,6 +1800,17 @@ schema:name a owl:AnnotationProperty .
     skos:altLabel "P20/100/141" ;
     skos:prefLabel "P20100141" ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a prismatic case with a nominal length of 20 mm, width of 100 mm, and height of 141 mm"@en .
+
+:electrochemistry_bd33779c_6f40_4354_ab5d_f6c17396414d a owl:Class ;
+    rdfs:label "FuelCell"@en ;
+    rdfs:comment "galvanic cell that transforms chemical energy from continuously supplied reactants to electric energy by an electrochemical process."@en ;
+    rdfs:subClassOf :electrochemistry_e248373f_294f_4ca4_9edf_0ad6653bb64f ;
+    skos:prefLabel "FuelCell"@en ;
+    emmo:EMMO_26bf1bef_d192_4da6_b0eb_d2209698fb54 "https://www.wikidata.org/wiki/Q180253"@en ;
+    emmo:EMMO_50c298c2_55a2_4068_b3ac_4e948c33181f "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-03-05"@en ;
+    emmo:EMMO_6dd685dd_1895_46e4_b227_be9f7d643c25 "https://dbpedia.org/page/Fuel_cell"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "galvanic cell that transforms chemical energy from continuously supplied reactants to electric energy by an electrochemical process."@en ;
+    emmo:EMMO_c84c6752_6d64_48cc_9500_e54a3c34898d "https://en.wikipedia.org/wiki/Fuel_cell"@en .
 
 :electrochemistry_bea04148_10d9_4eda_9cd5_8f609d7e9ff8 a owl:Class ;
     rdfs:label "CelsiusTemperatureMeasurement"@en ;
@@ -3335,15 +3364,6 @@ schema:name a owl:AnnotationProperty .
         "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-26"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "interface between an electrolyte and an electrode where an electrode reaction takes place."@en .
 
-:electrochemistry_a1ec9e3c_c624_4848_af13_89a6bc54d77c a owl:Class ;
-    rdfs:label "PastedPlate"@en ;
-    rdfs:comment "plate in which the active material is applied as a paste to a conductive current collector"@en ;
-    rdfs:subClassOf :electrochemistry_92147e31_d015_4889_a092_04fbab033f15 ;
-    skos:altLabel "PastedElectrode"@en ;
-    skos:prefLabel "PastedPlate"@en ;
-    emmo:EMMO_50c298c2_55a2_4068_b3ac_4e948c33181f "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-03"@en ;
-    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "plate in which the active material is applied as a paste to a conductive current collector"@en .
-
 :electrochemistry_a462859d_d8bd_48ea_8bde_1576f1248a1e a owl:Class ;
     rdfs:label "SilverElectrode"@en ;
     rdfs:comment "electrode in the form of foil, mesh, wire, rod, tube, powder, pellets, or single crystal of silver"@en ;
@@ -3458,17 +3478,6 @@ of other configurations are used."""@en .
     skos:prefLabel "EdgeInsulator"@en ;
     emmo:EMMO_50c298c2_55a2_4068_b3ac_4e948c33181f "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-19"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "part which insures insulation between the plate (electrode) edges and adjacent plates (electrodes) and the container side walls"@en .
-
-:electrochemistry_bd33779c_6f40_4354_ab5d_f6c17396414d a owl:Class ;
-    rdfs:label "FuelCell"@en ;
-    rdfs:comment "galvanic cell that transforms chemical energy from continuously supplied reactants to electric energy by an electrochemical process."@en ;
-    rdfs:subClassOf :electrochemistry_e248373f_294f_4ca4_9edf_0ad6653bb64f ;
-    skos:prefLabel "FuelCell"@en ;
-    emmo:EMMO_26bf1bef_d192_4da6_b0eb_d2209698fb54 "https://www.wikidata.org/wiki/Q180253"@en ;
-    emmo:EMMO_50c298c2_55a2_4068_b3ac_4e948c33181f "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-03-05"@en ;
-    emmo:EMMO_6dd685dd_1895_46e4_b227_be9f7d643c25 "https://dbpedia.org/page/Fuel_cell"@en ;
-    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "galvanic cell that transforms chemical energy from continuously supplied reactants to electric energy by an electrochemical process."@en ;
-    emmo:EMMO_c84c6752_6d64_48cc_9500_e54a3c34898d "https://en.wikipedia.org/wiki/Fuel_cell"@en .
 
 :electrochemistry_bed5b5f9_b89d_45e3_a8c2_81b70ae21847 a owl:Class ;
     rdfs:label "SeriesParallelConnection"@en ;
@@ -4518,15 +4527,20 @@ schema:Person a owl:Class ;
     skos:prefLabel "BimetallicOxideElectrode"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "an electrode consisting of two metal oxide active materials"@en .
 
-:electrochemistry_78a8f60b_10c2_41ee_9946_d35437e1edb5 a owl:Class ;
-    rdfs:label "GalvanostaticProcess"@en ;
-    rdfs:comment "a process in which the electric current is kept constant"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty emmo:EMMO_ae2d1a96_bfa1_409a_a7d2_03d69e8a125a ;
-            owl:someValuesFrom :electrochemistry_22725105_c941_4b14_a4a2_fcb627958607 ],
-        :electrochemistry_5548f188_df00_4c05_ae98_7846e92efe36 ;
-    skos:prefLabel "GalvanostaticProcess"@en ;
-    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a process in which the electric current is kept constant"@en .
+:electrochemistry_79d1b273_58cd_4be6_a250_434817f7c261 a owl:Class ;
+    rdfs:label "ActiveMaterial"@en ;
+    rdfs:comment "material that is oxidized or reduced at an electrode in an electrochemical cell"@en ;
+    rdfs:subClassOf :electrochemistry_b5ea31c9_bb10_4276_980e_c3eceb1efc82,
+        :electrochemistry_ebdb68e9_c4b5_4d57_a042_c0f51d446755 ;
+    skos:altLabel "ActiveElectrochemicalMaterial"@en,
+        "ElectrochemicallyActiveMaterial"@en ;
+    skos:prefLabel "ActiveMaterial"@en ;
+    emmo:EMMO_26bf1bef_d192_4da6_b0eb_d2209698fb54 "https://www.wikidata.org/wiki/Q120907375" ;
+    emmo:EMMO_50c298c2_55a2_4068_b3ac_4e948c33181f "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-33",
+        "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-03-14"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "material that is oxidized or reduced at an electrode in an electrochemical cell"@en ;
+    emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "material which reacts chemically to produce electric energy when the cell discharges",
+        "in secondary cells, the active material is restored to its original state during charge"@en .
 
 :electrochemistry_916b1863_f417_4b94_9407_9d749ada9ed5 a owl:Class ;
     rdfs:label "PotentiometricStrippingAnalysis"@en ;
@@ -4601,20 +4615,15 @@ schema:Person a owl:Class ;
         "The electrode (or interfacial) reaction involves all the processes (chemical reaction, structural reorganization, adsorption) accompanying the charge transfer step."@en ;
     emmo:EMMO_fe015383_afb3_44a6_ae86_043628697aa2 "https://doi.org/10.1351/goldbook.E01960"@en .
 
-:electrochemistry_79d1b273_58cd_4be6_a250_434817f7c261 a owl:Class ;
-    rdfs:label "ActiveMaterial"@en ;
-    rdfs:comment "material that is oxidized or reduced at an electrode in an electrochemical cell"@en ;
-    rdfs:subClassOf :electrochemistry_b5ea31c9_bb10_4276_980e_c3eceb1efc82,
-        :electrochemistry_ebdb68e9_c4b5_4d57_a042_c0f51d446755 ;
-    skos:altLabel "ActiveElectrochemicalMaterial"@en,
-        "ElectrochemicallyActiveMaterial"@en ;
-    skos:prefLabel "ActiveMaterial"@en ;
-    emmo:EMMO_26bf1bef_d192_4da6_b0eb_d2209698fb54 "https://www.wikidata.org/wiki/Q120907375" ;
-    emmo:EMMO_50c298c2_55a2_4068_b3ac_4e948c33181f "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-02-33",
-        "https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=114-03-14"@en ;
-    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "material that is oxidized or reduced at an electrode in an electrochemical cell"@en ;
-    emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "material which reacts chemically to produce electric energy when the cell discharges",
-        "in secondary cells, the active material is restored to its original state during charge"@en .
+:electrochemistry_78a8f60b_10c2_41ee_9946_d35437e1edb5 a owl:Class ;
+    rdfs:label "GalvanostaticProcess"@en ;
+    rdfs:comment "a process in which the electric current is kept constant"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty emmo:EMMO_ae2d1a96_bfa1_409a_a7d2_03d69e8a125a ;
+            owl:someValuesFrom :electrochemistry_22725105_c941_4b14_a4a2_fcb627958607 ],
+        :electrochemistry_5548f188_df00_4c05_ae98_7846e92efe36 ;
+    skos:prefLabel "GalvanostaticProcess"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a process in which the electric current is kept constant"@en .
 
 :electrochemistry_8a1c9a7b_978c_4421_a9c1_d0b07b42aab9 a owl:Class ;
     rdfs:label "ChemicalReaction"@en ;
@@ -4953,9 +4962,9 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_057bb143_639c_472b_99ed_ffa1867f6e63 ;
-    owl:annotatedTarget "extremely resistant to many chemicals, impermeable to gases and liquids, and has good electrical conductivity, high hardness and strength, and biocompatibility"@en .
+    owl:annotatedTarget "electrode made of glassy carbon material with an intertwined graphitic ribbon structure, formed by pyrolysis of a resol precursor at temperatures up to 3000 °C"@en .
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
@@ -4976,28 +4985,22 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "A disc electrode that is embedded in the centre of a cylinder which rotates in solution around the longitudinal cylinder axis."@en .
 
 [] a owl:Axiom ;
+    dcterms:source "J. Newman and K. E. Thmoas-Alyea, Electrochemical Systems, 3rd ed. Hoboken, New Jersey: John Wiley & Sons, 2004." ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_6f2c88c9_5c04_4953_a298_032cc3ab9b77 ;
+    owl:annotatedTarget "a system containing two electrodes that allow transport of electrons, separated by an electrolyte that allows movement of ions but blocks movement of electrons."@en .
+
+[] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_6f2c88c9_5c04_4953_a298_032cc3ab9b77 ;
     owl:annotatedTarget "composite system in which the supplied electric energy mainly produces chemical reactions or, conversely, in which the energy released by chemical reactions is mainly delivered by the system as electric energy"@en .
 
 [] a owl:Axiom ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_6f2c88c9_5c04_4953_a298_032cc3ab9b77 ;
-    owl:annotatedTarget "system that consists of at least two electron conductors (electrodes) in contact with ionic conductors (electrolytes)"@en ;
-    emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" .
-
-[] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_057bb143_639c_472b_99ed_ffa1867f6e63 ;
-    owl:annotatedTarget "glassy carbon combines glass-like mechanical characteristics with physical properties similar to graphite, owing to its “graphene ribbon” structure"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "J. Newman and K. E. Thmoas-Alyea, Electrochemical Systems, 3rd ed. Hoboken, New Jersey: John Wiley & Sons, 2004." ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_6f2c88c9_5c04_4953_a298_032cc3ab9b77 ;
-    owl:annotatedTarget "a system containing two electrodes that allow transport of electrons, separated by an electrolyte that allows movement of ions but blocks movement of electrons."@en .
+    owl:annotatedTarget "extremely resistant to many chemicals, impermeable to gases and liquids, and has good electrical conductivity, high hardness and strength, and biocompatibility"@en .
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
@@ -5033,25 +5036,19 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_057bb143_639c_472b_99ed_ffa1867f6e63 ;
-    owl:annotatedTarget "one of the most frequently used working electrodes"@en .
-
-[] a owl:Axiom ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_79d1b273_58cd_4be6_a250_434817f7c261 ;
-    owl:annotatedTarget "in secondary cells, the active material is restored to its original state during charge"@en ;
-    emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_79d1b273_58cd_4be6_a250_434817f7c261 ;
-    owl:annotatedTarget "material which reacts chemically to produce electric energy when the cell discharges" .
+    owl:annotatedTarget "glassy carbon combines glass-like mechanical characteristics with physical properties similar to graphite, owing to its “graphene ribbon” structure"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_79d1b273_58cd_4be6_a250_434817f7c261 ;
     owl:annotatedTarget "material that is oxidized or reduced at an electrode in an electrochemical cell"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedSource :electrochemistry_79d1b273_58cd_4be6_a250_434817f7c261 ;
+    owl:annotatedTarget "material which reacts chemically to produce electric energy when the cell discharges" .
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
@@ -5061,9 +5058,9 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_057bb143_639c_472b_99ed_ffa1867f6e63 ;
-    owl:annotatedTarget "electrode made of glassy carbon material with an intertwined graphitic ribbon structure, formed by pyrolysis of a resol precursor at temperatures up to 3000 °C"@en .
+    owl:annotatedTarget "one of the most frequently used working electrodes"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5084,16 +5081,16 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "charge during which the electric current is maintained at a constant value regardless of the battery voltage or temperature"@en .
 
 [] a owl:Axiom ;
-    dcterms:source "A. J. Bard, G. Inzelt, and F. Scholz, Eds., Electrochemical Dictionary, 2nd Edition. Berlin: Springer-Verlag, 2012. DOI: https://doi.org/10.1007/978-3-642-29551-5" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_865a40fc_2187_4549_a7e1_37aa2458448f ;
-    owl:annotatedTarget "Electrolyte solution in the anodic compartment of an electrolysis cell or galvanic cell, i.e., in that part of the cell where the anode is placed."@en .
-
-[] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_865a40fc_2187_4549_a7e1_37aa2458448f ;
     owl:annotatedTarget "electrolyte on the anode side of an electrochemical cell that is divided into compartments"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "A. J. Bard, G. Inzelt, and F. Scholz, Eds., Electrochemical Dictionary, 2nd Edition. Berlin: Springer-Verlag, 2012. DOI: https://doi.org/10.1007/978-3-642-29551-5" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedSource :electrochemistry_865a40fc_2187_4549_a7e1_37aa2458448f ;
+    owl:annotatedTarget "Electrolyte solution in the anodic compartment of an electrolysis cell or galvanic cell, i.e., in that part of the cell where the anode is placed."@en .
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
@@ -5133,15 +5130,15 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_8d3bf304_78e4_4e99_abe1_6ab429e44ed1 ;
-    owl:annotatedTarget "a sealed cell may be equipped with a safety device to prevent a dangerously high internal pressure and is designed to operate during its life in its original sealed state"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_8d3bf304_78e4_4e99_abe1_6ab429e44ed1 ;
     owl:annotatedTarget "cell which remains closed and does not release either gas or liquid when operated within the limits specified by the manufacturer"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedSource :electrochemistry_8d3bf304_78e4_4e99_abe1_6ab429e44ed1 ;
+    owl:annotatedTarget "a sealed cell may be equipped with a safety device to prevent a dangerously high internal pressure and is designed to operate during its life in its original sealed state"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5150,16 +5147,22 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "capacitor consisting of a metallic plate as first conductor, a very thin oxide film formed on the metal as the dielectric and an electrolyte as second conductor"@en .
 
 [] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_06d8e1ee_924a_4915_998d_33a69f41dadc ;
-    owl:annotatedTarget "operation during which an electrochemical cell supplies electric energy as the result of chemical changes within the cell"@en .
+    owl:annotatedSource :electrochemistry_916b1863_f417_4b94_9407_9d749ada9ed5 ;
+    owl:annotatedTarget "two-step electrochemical measurement in which 1) material is accumulated at an electrode and 2) the material is removed by chemical reaction or electrochemically at constant current with measurement of electrode potential"@en .
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_916b1863_f417_4b94_9407_9d749ada9ed5 ;
     owl:annotatedTarget "historically for the analysis of metal ions, mercury ions were added to the test solution to form a mercury amalgam when reduced. Alternatively, an HMDE or MFE was used and the oxidizing agent added after amalgam formation. However, the toxicity of mercury and its compounds have all but precluded the present-day use of mercury"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_06d8e1ee_924a_4915_998d_33a69f41dadc ;
+    owl:annotatedTarget "operation during which an electrochemical cell supplies electric energy as the result of chemical changes within the cell"@en .
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
@@ -5178,12 +5181,6 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_916b1863_f417_4b94_9407_9d749ada9ed5 ;
     owl:annotatedTarget "the time between changes in potential in step 2 is related to the concentration of analyte in the solution"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_916b1863_f417_4b94_9407_9d749ada9ed5 ;
-    owl:annotatedTarget "two-step electrochemical measurement in which 1) material is accumulated at an electrode and 2) the material is removed by chemical reaction or electrochemically at constant current with measurement of electrode potential"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5211,21 +5208,27 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_9ee6e728_e8f5_4b36_a045_d63da69dfc85 ;
-    owl:annotatedTarget "overcharge is also the act of charging beyond a certain limit specified by the manufacturer"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_9ee6e728_e8f5_4b36_a045_d63da69dfc85 ;
     owl:annotatedTarget "continued charging of a fully charged secondary cell or battery"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedSource :electrochemistry_9ee6e728_e8f5_4b36_a045_d63da69dfc85 ;
+    owl:annotatedTarget "overcharge is also the act of charging beyond a certain limit specified by the manufacturer"@en .
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_9f466223_e20a_474d_ac4d_6d4b6131c275 ;
     owl:annotatedTarget "an electrode that holds its potential essentially constant by efficiently allowing electric current to pass"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_a0580fa9_5073_44af_b33e_7adbc83892d0 ;
+    owl:annotatedTarget "electrode reaction in which oxidation occurs at the anode"@en .
 
 [] a owl:Axiom ;
     dcterms:source "A. J. Bard, G. Inzelt, and F. Scholz, Eds., Electrochemical Dictionary, 2nd Edition. Berlin: Springer-Verlag, 2012. DOI: https://doi.org/10.1007/978-3-642-29551-5" ;
@@ -5242,14 +5245,14 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_a0580fa9_5073_44af_b33e_7adbc83892d0 ;
-    owl:annotatedTarget "electrode reaction in which oxidation occurs at the anode"@en .
+    owl:annotatedSource :electrochemistry_a0a619d7_da95_41f0_8bc3_9c19d636d543 ;
+    owl:annotatedTarget "electrode that serves only as a source or sink for electrons without playing a chemical role in the electrode reaction"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_a0a619d7_da95_41f0_8bc3_9c19d636d543 ;
-    owl:annotatedTarget "electrode that serves only as a source or sink for electrons without playing a chemical role in the electrode reaction"@en .
+    owl:annotatedSource :electrochemistry_a0fcb105_587f_45d8_a89a_46dc8f745069 ;
+    owl:annotatedTarget "partial or complete external covering of a cell"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5260,14 +5263,8 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_a0fcb105_587f_45d8_a89a_46dc8f745069 ;
-    owl:annotatedTarget "partial or complete external covering of a cell"@en .
-
-[] a owl:Axiom ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_a1ec9e3c_c624_4848_af13_89a6bc54d77c ;
-    owl:annotatedTarget "plate in which the active material is applied as a paste to a conductive current collector"@en ;
-    emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" .
+    owl:annotatedSource :electrochemistry_a2b92d2e_4431_411e_8da5_a4c08bac2c0e ;
+    owl:annotatedTarget "process inside an electrolytic cell used to coat a conductive object with a layer of a material"@en .
 
 [] a owl:Axiom ;
     dcterms:source "A. J. Bard, G. Inzelt, and F. Scholz, Eds., Electrochemical Dictionary, 2nd Edition. Berlin: Springer-Verlag, 2012. DOI: https://doi.org/10.1007/978-3-642-29551-5" ;
@@ -5278,20 +5275,14 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_a2b92d2e_4431_411e_8da5_a4c08bac2c0e ;
-    owl:annotatedTarget "process inside an electrolytic cell used to coat a conductive object with a layer of a material"@en .
+    owl:annotatedSource :electrochemistry_a2f4dca3_829f_412b_9025_bd7581aad82a ;
+    owl:annotatedTarget "component of a cell which permits the flow of gas in one direction only"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_a2f4dca3_829f_412b_9025_bd7581aad82a ;
     owl:annotatedTarget "a valve has a characteristic venting or opening and closing pressure"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_a2f4dca3_829f_412b_9025_bd7581aad82a ;
-    owl:annotatedTarget "component of a cell which permits the flow of gas in one direction only"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5306,6 +5297,12 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "electrode in the form of foil, mesh, wire, rod, tube, powder, pellets, or single crystal of silver"@en .
 
 [] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_a6a69e90_06b5_45b1_83cf_7c0bf39b2914 ;
+    owl:annotatedTarget "a chemical reaction in an electrolyte involving a transfer of electrons between chemical components or between chemical components and an electrode"@en .
+
+[] a owl:Axiom ;
     dcterms:source "Bockris, J. O'M. and Despić, . Aleksandar R. (2011, December 15). Electrochemical reaction. Encyclopedia Britannica. https://www.britannica.com/science/electrochemical-reaction" ;
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_a6a69e90_06b5_45b1_83cf_7c0bf39b2914 ;
@@ -5316,12 +5313,6 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_a6a69e90_06b5_45b1_83cf_7c0bf39b2914 ;
     owl:annotatedTarget "the electrode reaction can also involve other chemical reactions including subreactions on a cell electrode"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_a6a69e90_06b5_45b1_83cf_7c0bf39b2914 ;
-    owl:annotatedTarget "a chemical reaction in an electrolyte involving a transfer of electrons between chemical components or between chemical components and an electrode"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5355,15 +5346,15 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_ae56cce3_7a7c_4e53_bb58_31e0d642d47e ;
-    owl:annotatedTarget "this flame front may originate from a spark or an external naked flame igniting combustible electrolysis gas"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_ae56cce3_7a7c_4e53_bb58_31e0d642d47e ;
     owl:annotatedTarget "vent of special design which provides protection against the propagation of a flame front from or into the interior of a secondary cell"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedSource :electrochemistry_ae56cce3_7a7c_4e53_bb58_31e0d642d47e ;
+    owl:annotatedTarget "this flame front may originate from a spark or an external naked flame igniting combustible electrolysis gas"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5396,6 +5387,12 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "an electrochemical cell for conductivity measurements"@en .
 
 [] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_b6319c74_d2ce_48c0_a75a_63156776b302 ;
+    owl:annotatedTarget "by convention, cell electrode at which an oxidation reaction occurs"@en .
+
+[] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_b6319c74_d2ce_48c0_a75a_63156776b302 ;
@@ -5420,12 +5417,6 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "the concepts of “anode” and “cathode” are related only to the direction of electron flow, not to the polarity of the electrodes"@en .
 
 [] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_b6319c74_d2ce_48c0_a75a_63156776b302 ;
-    owl:annotatedTarget "by convention, cell electrode at which an oxidation reaction occurs"@en .
-
-[] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_b76a778f_253f_4210_a67f_fb6444d0de26 ;
@@ -5433,15 +5424,15 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_b79d4f9e_5727_4895_8d7f_5fc18d83eb90 ;
-    owl:annotatedTarget "in a galvanic cell, parasitic reactions may cause inefficiencies or loss of performance"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_b79d4f9e_5727_4895_8d7f_5fc18d83eb90 ;
     owl:annotatedTarget "an unwanted side reaction"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedSource :electrochemistry_b79d4f9e_5727_4895_8d7f_5fc18d83eb90 ;
+    owl:annotatedTarget "in a galvanic cell, parasitic reactions may cause inefficiencies or loss of performance"@en .
 
 [] a owl:Axiom ;
     dcterms:source "IEEE Standard Glossary of Stationary Battery Terminology (2016), https://doi.org/10.1109/IEEESTD.2016.7552407" ;
@@ -5482,12 +5473,6 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "current-potential curve in a voltammetry experiment"@en .
 
 [] a owl:Axiom ;
-    dcterms:source "https://en.wikipedia.org/wiki/Square_wave" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_0e33278b_639f_412d_9abd_64c3790026ef ;
-    owl:annotatedTarget "Periodic potential where the amplitude alternates at a steady frequency between fixed minimum and maximum values, with the same duration at minimum and maximum."@en .
-
-[] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_bbb1d95b_72d1_44f6_b07e_a3d7d41ac215 ;
@@ -5500,10 +5485,10 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "part which insures insulation between the plate (electrode) edges and adjacent plates (electrodes) and the container side walls"@en .
 
 [] a owl:Axiom ;
+    dcterms:source "https://en.wikipedia.org/wiki/Square_wave" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_bd33779c_6f40_4354_ab5d_f6c17396414d ;
-    owl:annotatedTarget "galvanic cell that transforms chemical energy from continuously supplied reactants to electric energy by an electrochemical process."@en ;
-    emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" .
+    owl:annotatedSource :electrochemistry_0e33278b_639f_412d_9abd_64c3790026ef ;
+    owl:annotatedTarget "Periodic potential where the amplitude alternates at a steady frequency between fixed minimum and maximum values, with the same duration at minimum and maximum."@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5536,12 +5521,6 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "An ionic liquid is an electrolyte composed of a salt that is liquid below 100 °C. Ionic liquids have found uses in electrochemical analysis, because their unconventional properties include a negligible vapor pressure, a high thermal and electrochemical stability, and exceptional dissolution properties for both organic and inorganic chemical species."@en .
 
 [] a owl:Axiom ;
-    dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_0f007072_a8dd_4798_b865_1bf9363be627 ;
-    owl:annotatedTarget "Electron conductor in an electrochemical cell connected to the external circuit."@en .
-
-[] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_c4a778c7_33da_4e1a_960e_402a210bfeff ;
@@ -5555,6 +5534,12 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_c610d869_cc03_44f0_b40d_ca86e945b9c9 ;
+    owl:annotatedTarget "cell from which electrolyte cannot escape regardless of its orientation"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_c610d869_cc03_44f0_b40d_ca86e945b9c9 ;
     owl:annotatedTarget "some vented cells or batteries are designed so as to be non-spillable when operated within the limits specified by the manufacturer"@en .
@@ -5562,8 +5547,8 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_c610d869_cc03_44f0_b40d_ca86e945b9c9 ;
-    owl:annotatedTarget "cell from which electrolyte cannot escape regardless of its orientation"@en .
+    owl:annotatedSource :electrochemistry_0f007072_a8dd_4798_b865_1bf9363be627 ;
+    owl:annotatedTarget "electronically conductive part in electric contact with a medium of lower electronic conductivity and intended to perform one or more of the functions of emitting charge carriers to or receiving charge carriers from that medium or to establish an electric field in that medium"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5579,21 +5564,21 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_c94c041b_8ea6_43e7_85cc_d2bce7785b4c ;
+    owl:annotatedTarget "for a device having two electrodes, that electrode having the lower electric potential"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_c94c041b_8ea6_43e7_85cc_d2bce7785b4c ;
     owl:annotatedTarget "by convention, an oxidation reaction occurs during discharge"@en .
 
 [] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_0f007072_a8dd_4798_b865_1bf9363be627 ;
-    owl:annotatedTarget "electronically conductive part in electric contact with a medium of lower electronic conductivity and intended to perform one or more of the functions of emitting charge carriers to or receiving charge carriers from that medium or to establish an electric field in that medium"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_c94c041b_8ea6_43e7_85cc_d2bce7785b4c ;
-    owl:annotatedTarget "for a device having two electrodes, that electrode having the lower electric potential"@en .
+    owl:annotatedTarget "Electron conductor in an electrochemical cell connected to the external circuit."@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5604,8 +5589,8 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_0f827b54_370d_4c63_99a6_80f13b24e55e ;
-    owl:annotatedTarget "evolution of gas resulting from electrolysis of the water in the electrolyte of a cell"@en .
+    owl:annotatedSource :electrochemistry_d3e2d213_d078_4b9a_8beb_62f063e57d69 ;
+    owl:annotatedTarget "set of operations that is carried out on a secondary cell or battery and is repeated regularly in the same sequence."@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5622,14 +5607,14 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_d3e2d213_d078_4b9a_8beb_62f063e57d69 ;
-    owl:annotatedTarget "set of operations that is carried out on a secondary cell or battery and is repeated regularly in the same sequence."@en .
+    owl:annotatedSource :electrochemistry_d5da9948_e95b_4f12_a2d2_10a48f390c52 ;
+    owl:annotatedTarget "arrangement of cells or batteries wherein parallel connected cells or batteries are connected in series."@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_d5da9948_e95b_4f12_a2d2_10a48f390c52 ;
-    owl:annotatedTarget "arrangement of cells or batteries wherein parallel connected cells or batteries are connected in series."@en .
+    owl:annotatedSource :electrochemistry_0f827b54_370d_4c63_99a6_80f13b24e55e ;
+    owl:annotatedTarget "evolution of gas resulting from electrolysis of the water in the electrolyte of a cell"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5656,10 +5641,28 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "liquid metal electrode used in polarography"@en .
 
 [] a owl:Axiom ;
+    dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_e248373f_294f_4ca4_9edf_0ad6653bb64f ;
+    owl:annotatedTarget "electrochemical cell in which chemical reactions occur spontaneously and chemical energy is converted into electrical energy."@en .
+
+[] a owl:Axiom ;
     dcterms:references "J. Newman and K. E. Thmoas-Alyea, Electrochemical Systems, 3rd ed. Hoboken, New Jersey: John Wiley & Sons, 2004." ;
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_e248373f_294f_4ca4_9edf_0ad6653bb64f ;
     owl:annotatedTarget "An electrochemical cell that spontaneously produces work."@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedSource :electrochemistry_e248373f_294f_4ca4_9edf_0ad6653bb64f ;
+    owl:annotatedTarget "Electrochemical cell intended to produce electric energy."@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_e2a1dae1_05e4_4bd1_a39d_0eb10db482bc ;
+    owl:annotatedTarget "method of separating and neutralizing ions by an electric current in an electrolytic cell"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5669,21 +5672,9 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_e248373f_294f_4ca4_9edf_0ad6653bb64f ;
-    owl:annotatedTarget "Electrochemical cell intended to produce electric energy."@en .
-
-[] a owl:Axiom ;
-    dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_e248373f_294f_4ca4_9edf_0ad6653bb64f ;
-    owl:annotatedTarget "electrochemical cell in which chemical reactions occur spontaneously and chemical energy is converted into electrical energy."@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_e2a1dae1_05e4_4bd1_a39d_0eb10db482bc ;
-    owl:annotatedTarget "method of separating and neutralizing ions by an electric current in an electrolytic cell"@en .
+    owl:annotatedSource :electrochemistry_e931087f_7681_4096_b200_5223bcc47eb4 ;
+    owl:annotatedTarget "electrochemical cell intended to produce chemical reactions"@en .
 
 [] a owl:Axiom ;
     dcterms:references "J. Newman and K. E. Thmoas-Alyea, Electrochemical Systems, 3rd ed. Hoboken, New Jersey: John Wiley & Sons, 2004." ;
@@ -5700,18 +5691,6 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_e931087f_7681_4096_b200_5223bcc47eb4 ;
-    owl:annotatedTarget "electrochemical cell intended to produce chemical reactions"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_1152ae6b_8b57_4d99_912e_40c6a29342fb ;
-    owl:annotatedTarget "mass m of electrochemically-transformed substance is proportional to the charge Q passed, m ∝ Q."@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_e94f6d42_35e4_4f9f_bb74_5e0628bbd454 ;
     owl:annotatedTarget "case with multiple separate cell compartments"@en .
 
@@ -5720,6 +5699,12 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_ec1dce8b_bb46_41a9_b532_6bed381aa557 ;
     owl:annotatedTarget "secondary cell having a cover provided with an opening through which products of electrolysis and evaporation are allowed to escape freely from the cell to the atmosphere"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_1152ae6b_8b57_4d99_912e_40c6a29342fb ;
+    owl:annotatedTarget "mass m of electrochemically-transformed substance is proportional to the charge Q passed, m ∝ Q."@en .
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
@@ -5742,12 +5727,6 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_1355816f_a2b5_4800_8001_fc888f5d6b1b ;
-    owl:annotatedTarget "instrument intended to measure the value of a voltage."@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_f330680b_347e_45b3_9113_5ce09d18d60b ;
     owl:annotatedTarget "vent of special design which allows to release gas from a cell in order to avoid excessive internal pressure and thereby to preclude rupture or explosion of the cell container"@en .
 
@@ -5756,6 +5735,18 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_f47611a2_e081_47f0_b287_3fda5f706154 ;
     owl:annotatedTarget "chemical reaction which occurs in addition to the main process"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_f4a1323a_ce2b_4c1a_b89d_c80170110ed6 ;
+    owl:annotatedTarget "electrode reaction in which reduction  occurs at the cathode"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_1355816f_a2b5_4800_8001_fc888f5d6b1b ;
+    owl:annotatedTarget "instrument intended to measure the value of a voltage."@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5770,22 +5761,16 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "electrode reaction, where the energy of electrons in the working electrode is higher than the LUMO orbital of the substrate"@en .
 
 [] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_f4a1323a_ce2b_4c1a_b89d_c80170110ed6 ;
-    owl:annotatedTarget "electrode reaction in which reduction  occurs at the cathode"@en .
-
-[] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_f6fcd255_248d_4603_b128_04dab960a676 ;
     owl:annotatedTarget "electrode that responds to one, or more than one, species in the solution being investigated, with no appreciable change of bulk solution composition during the measurement"@en .
 
 [] a owl:Axiom ;
-    dcterms:source "IUPAC. Compendium of Chemical Terminology, 2nd ed. (the \"Gold Book\"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997). Online version (2019-) created by S. J. Chalk. ISBN 0-9678550-9-8. https://doi.org/10.1351/goldbook." ;
+    dcterms:source "J. Newman and K. E. Thmoas-Alyea, Electrochemical Systems, 3rd ed. Hoboken, New Jersey: John Wiley & Sons, 2004." ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_15325775_6d4c_4192_82f1_e4feca9de426 ;
-    owl:annotatedTarget "A membrane having ion-exchange groups:"@en .
+    owl:annotatedSource :electrochemistry_fb0d9eef_92af_4628_8814_e065ca255d59 ;
+    owl:annotatedTarget "a material in which the mobile species are ions and free movement of electrons is blocked."@en .
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
@@ -5800,16 +5785,16 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "liquid or solid substance containing mobile ions that render it conductive"@en .
 
 [] a owl:Axiom ;
+    dcterms:source "IUPAC. Compendium of Chemical Terminology, 2nd ed. (the \"Gold Book\"). Compiled by A. D. McNaught and A. Wilkinson. Blackwell Scientific Publications, Oxford (1997). Online version (2019-) created by S. J. Chalk. ISBN 0-9678550-9-8. https://doi.org/10.1351/goldbook." ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_15325775_6d4c_4192_82f1_e4feca9de426 ;
+    owl:annotatedTarget "A membrane having ion-exchange groups:"@en .
+
+[] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
     owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_fb0d9eef_92af_4628_8814_e065ca255d59 ;
     owl:annotatedTarget "substance that provides ions on dissolution in a solvent or on melting"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "J. Newman and K. E. Thmoas-Alyea, Electrochemical Systems, 3rd ed. Hoboken, New Jersey: John Wiley & Sons, 2004." ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_fb0d9eef_92af_4628_8814_e065ca255d59 ;
-    owl:annotatedTarget "a material in which the mobile species are ions and free movement of electrons is blocked."@en .
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
@@ -5824,16 +5809,16 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "measuring instrument to obtain the electrical charge passed in an experiment, or to produce a known amount of substance in a titration."@en .
 
 [] a owl:Axiom ;
-    dcterms:source "A. J. Bard, G. Inzelt, and F. Scholz, Eds., Electrochemical Dictionary, 2nd Edition. Berlin: Springer-Verlag, 2012. DOI: https://doi.org/10.1007/978-3-642-29551-5" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_15b852b5_19cc_49ab_849f_7df6175fb2be ;
-    owl:annotatedTarget "Electrolyte solution in the cathodic compartment of an electrolysis cell or galvanic cell, i.e., in that part of the cell where the cathode is placed."@en .
-
-[] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_15b852b5_19cc_49ab_849f_7df6175fb2be ;
     owl:annotatedTarget "electrolyte on the cathode side of an electrochemical cell that is divided into compartments."@en .
+
+[] a owl:Axiom ;
+    dcterms:source "A. J. Bard, G. Inzelt, and F. Scholz, Eds., Electrochemical Dictionary, 2nd Edition. Berlin: Springer-Verlag, 2012. DOI: https://doi.org/10.1007/978-3-642-29551-5" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedSource :electrochemistry_15b852b5_19cc_49ab_849f_7df6175fb2be ;
+    owl:annotatedTarget "Electrolyte solution in the cathodic compartment of an electrolysis cell or galvanic cell, i.e., in that part of the cell where the cathode is placed."@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5932,16 +5917,16 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedTarget "foil, wire, disc, or mesh electrode made of platinum, which is the most commonly used metallic working electrode in electrochemistry"@en .
 
 [] a owl:Axiom ;
-    dcterms:source "A. J. Bard, G. Inzelt, and F. Scholz, Eds., Electrochemical Dictionary, 2nd Edition. Berlin: Springer-Verlag, 2012. DOI: https://doi.org/10.1007/978-3-642-29551-5" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_2e3e14f9_4cb8_45b2_908e_47eec893dec8 ;
-    owl:annotatedTarget "An interfacial reaction that necessarily involves a charge-transfer step."@en .
-
-[] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_2e3e14f9_4cb8_45b2_908e_47eec893dec8 ;
     owl:annotatedTarget "electrochemical reaction involving the transfer of electrons between electrolyte and electrode"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "A. J. Bard, G. Inzelt, and F. Scholz, Eds., Electrochemical Dictionary, 2nd Edition. Berlin: Springer-Verlag, 2012. DOI: https://doi.org/10.1007/978-3-642-29551-5" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedSource :electrochemistry_2e3e14f9_4cb8_45b2_908e_47eec893dec8 ;
+    owl:annotatedTarget "An interfacial reaction that necessarily involves a charge-transfer step."@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5957,15 +5942,15 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_328c6e36_3706_4d92_abae_432fa3adb2a0 ;
-    owl:annotatedTarget "a cell baffle has a second function in protecting the plate pack from damage by objects inserted through the filling hole"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_328c6e36_3706_4d92_abae_432fa3adb2a0 ;
     owl:annotatedTarget "internal component used to reduce the amount of electrolyte loss due to electrolyte spray being carried in the gas and/or by electrolyte movement"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedSource :electrochemistry_328c6e36_3706_4d92_abae_432fa3adb2a0 ;
+    owl:annotatedTarget "a cell baffle has a second function in protecting the plate pack from damage by objects inserted through the filling hole"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -5978,6 +5963,12 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_34bc54e3_de4c_41f8_8d3a_d77c951ee23a ;
     owl:annotatedTarget "needle-like or tree-like formation of crystalline growth formed during deposition of a material"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedSource :electrochemistry_35c650ab_3b23_4938_b312_1b0dede2e6d5 ;
+    owl:annotatedTarget "by convention, cell electrode at which, a reduction reaction occurs"@en .
 
 [] a owl:Axiom ;
     dcterms:source "J. M. Pingarrón et al., Terminology of electrochemical methods of analysis (IUPAC Recommendations 2019), Pure and Applied Chemistry, 4, 92, 2020, 641-694. https://doi.org/10.1515/pac-2018-0109" ;
@@ -6000,12 +5991,6 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
-    owl:annotatedSource :electrochemistry_35c650ab_3b23_4938_b312_1b0dede2e6d5 ;
-    owl:annotatedTarget "by convention, cell electrode at which, a reduction reaction occurs"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_0471ec77_91bc_4a78_be31_b6af613e5966 ;
     owl:annotatedTarget "insertion or removal of electrons into or from ions to obtain particles having zero electric charge"@en .
 
@@ -6023,15 +6008,15 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
-    owl:annotatedSource :electrochemistry_3f6c9e09_5f23_41cc_9f85_7de365cef089 ;
-    owl:annotatedTarget "electrolyte creep is sometimes indicated by the presence of a visible solid deposit or wet spots"@en .
-
-[] a owl:Axiom ;
-    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
     owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_3f6c9e09_5f23_41cc_9f85_7de365cef089 ;
     owl:annotatedTarget "gradual and slow spreading of an electrolyte film on the external surface of a cell or battery"@en .
+
+[] a owl:Axiom ;
+    dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedSource :electrochemistry_3f6c9e09_5f23_41cc_9f85_7de365cef089 ;
+    owl:annotatedTarget "electrolyte creep is sometimes indicated by the presence of a visible solid deposit or wet spots"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -6041,9 +6026,9 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
+    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
     owl:annotatedSource :electrochemistry_04f28ce3_251d_429e_aa85_ab3eb45bbcd2 ;
-    owl:annotatedTarget "in lithium batteries thermal runaway may cause melting of lithium"@en .
+    owl:annotatedTarget "unstable condition arising during constant voltage charge in which the rate of heat dissipation capability, causing a continuous temperature increase with resulting further charge current increase, which can lead to the destruction of the battery"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
@@ -6077,9 +6062,9 @@ Cl2, Hg | Hg2SO4, and Hg | HgO, can be used as reference electrodes in aqueous s
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
-    owl:annotatedProperty emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 ;
+    owl:annotatedProperty emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f ;
     owl:annotatedSource :electrochemistry_04f28ce3_251d_429e_aa85_ab3eb45bbcd2 ;
-    owl:annotatedTarget "unstable condition arising during constant voltage charge in which the rate of heat dissipation capability, causing a continuous temperature increase with resulting further charge current increase, which can lead to the destruction of the battery"@en .
+    owl:annotatedTarget "in lithium batteries thermal runaway may cause melting of lithium"@en .
 
 [] a owl:Axiom ;
     dcterms:source "International Electrotechnical Commission (IEC), IEC 60050 - International Electrotechnical Vocabulary, retrieved from: https://www.electropedia.org" ;
