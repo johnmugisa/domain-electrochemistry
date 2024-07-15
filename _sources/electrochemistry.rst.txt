@@ -757,6 +757,25 @@ ChargingSpecificEnergy
 
 .. raw:: html
 
+   <div id="electrochemistry_79a9e1be_35b0_4c3c_8087_b5f967ca0e87"></div>
+
+ChargingVoltage
+---------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_79a9e1be_35b0_4c3c_8087_b5f967ca0e87
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">voltage between the terminals of a cell or battery when being charged</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_3b938708_e7e4_4ac0_a959_9c04306302e7"></div>
 
 CoatingThickness
@@ -1641,7 +1660,7 @@ DischargingCRate
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">DRate, DRate, DRate, DischargeRate, DischargeRate, DischargeRate</td>
+  <td class="element-table-value">DRate, DRate, DischargeRate, DischargeRate</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
@@ -1649,7 +1668,7 @@ DischargingCRate
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Comment</span></td>
-  <td class="element-table-value">in practice, the term CRate is often used to mean DRate</td>
+  <td class="element-table-value">the discharge rate is calculated as the rated capacity divided by the corresponding discharge time which results in an electric current</td>
   </tr>
   </table>
 
@@ -1936,7 +1955,7 @@ ElectrochemicalKineticQuantity
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">An ElectrochemicalQuantity that relates to the kinetics of a reaction.</td>
+  <td class="element-table-value">a quantity that relates to the kinetics of a reaction.</td>
   </tr>
   </table>
 
@@ -1953,6 +1972,10 @@ ElectrochemicalPerformanceQuantity
 .. raw:: html
 
   <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a quantity that indicates the performance of an electrochemical device</td>
+  </tr>
   </table>
 
 
@@ -2058,7 +2081,7 @@ ElectrochemicalThermodynamicQuantity
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">A thermodynamically derived ElectrochemicalQuantity.</td>
+  <td class="element-table-value">an electrochemical quantity describing concepts from thermodynamics</td>
   </tr>
   </table>
 
@@ -2077,7 +2100,7 @@ ElectrochemicalTransportQuantity
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">An ElectrochemicalQuantity related to the transport of mass, charge, or energy.</td>
+  <td class="element-table-value">an electrochemical quantity related to the transport of mass, charge, or energy.</td>
   </tr>
   </table>
 
@@ -3072,52 +3095,6 @@ LowerVoltageLimit
   <tr>
   <td class="element-table-key"><span class="element-table-key">Comment</span></td>
   <td class="element-table-value">specified voltage of a battery at which the battery discharge is terminated.</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_346519a4_006c_496d_8f36_74e38814ed2d"></div>
-
-MagnitudeOfCurrentPulse
------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_346519a4_006c_496d_8f36_74e38814ed2d
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">the magnitude of a current pulse applied to an electrochemical cell during pulsed potentiometry and related techniques</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">PulseMagnitudeCurrent</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_4d2b102b_3515_4591_b079_69232c44f9dc"></div>
-
-MagnitudeOfPotentialPulse
--------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4d2b102b_3515_4591_b079_69232c44f9dc
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">The magnitude of a voltage pulse applied to an electrochemical cell during pulsed amperometry and related techniques.</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">PulseMagnitudePotential</td>
   </tr>
   </table>
 
@@ -4169,6 +4146,29 @@ Prismatic
 
 .. raw:: html
 
+   <div id="electrochemistry_346519a4_006c_496d_8f36_74e38814ed2d"></div>
+
+PulseCurrent
+------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_346519a4_006c_496d_8f36_74e38814ed2d
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the magnitude of a current pulse applied to an electrochemical cell during pulsed potentiometry and related techniques</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">MagnitudeOfCurrentPulse, PulseMagnitudeCurrent</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_3cd0e74e_292c_48ed_a831_4cb8753d9a56"></div>
 
 PulseDuration
@@ -4213,6 +4213,29 @@ PulseMagnitude
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=702-03-03'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=702-03-03</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_4d2b102b_3515_4591_b079_69232c44f9dc"></div>
+
+PulseVoltage
+------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4d2b102b_3515_4591_b079_69232c44f9dc
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">The magnitude of a voltage pulse applied to an electrochemical cell during pulsed amperometry and related techniques.</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">MagnitudeOfPotentialPulse, PulseMagnitudePotential</td>
   </tr>
   </table>
 
@@ -5204,6 +5227,25 @@ TemperatureLimit
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">limit on the temperature of a system</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_44a67eb4_52e8_433c_aef7_a928c2b9906c"></div>
+
+TerminationQuantity
+-------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_44a67eb4_52e8_433c_aef7_a928c2b9906c
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a quantity that is used to express the termination criteria for an electrochemical process</td>
   </tr>
   </table>
 
@@ -6493,6 +6535,25 @@ ButlerVolmerEquation
 
 .. raw:: html
 
+   <div id="electrochemistry_99b2b3ad_8efc_48ee_a630_6d805a47efdc"></div>
+
+CRateTest
+---------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_99b2b3ad_8efc_48ee_a630_6d805a47efdc
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a process that assesses the performance of an electrochemical device at different charge and discharge rates to understand its behavior under various current loads</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_dd4c5ffa_6228_41d8_8a44_a40a2b22723e"></div>
 
 CadmiumBasedElectrode
@@ -6590,6 +6651,25 @@ CapacityFade
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q16851742'>https://www.wikidata.org/wiki/Q16851742</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_137dc19f_a3af_49af_971f_743d27e09f43"></div>
+
+CapacityTest
+------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_137dc19f_a3af_49af_971f_743d27e09f43
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a process that measures the total amount of charge an electrochemical device can store and deliver under specified conditions</td>
   </tr>
   </table>
 
@@ -6999,6 +7079,25 @@ CellLid
 
 .. raw:: html
 
+   <div id="electrochemistry_efaca8db_a3e0_4188_9c9b_ed0037966725"></div>
+
+CelsiusTemperatureData
+----------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_efaca8db_a3e0_4188_9c9b_ed0037966725
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">celsius temperature data, usually resulting from an electrochemical measurement process</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_bea04148_10d9_4eda_9cd5_8f609d7e9ff8"></div>
 
 CelsiusTemperatureMeasurement
@@ -7031,25 +7130,6 @@ CelsiusTemperatureMeasurementResult
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a measurement of the value of the temperature in units of degree Celsius</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_efaca8db_a3e0_4188_9c9b_ed0037966725"></div>
-
-CelsiusTemperatureVector
-------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_efaca8db_a3e0_4188_9c9b_ed0037966725
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">vector containing at least two values for the quantity celsius temperature</td>
   </tr>
   </table>
 
@@ -7551,54 +7631,27 @@ ConstantPotentialSignal
 
 .. raw:: html
 
-   <div id="electrochemistry_3e7fe02d_c888_4c49_8e05_ccd9785607a6"></div>
+   <div id="electrochemistry_acdeaa89_0e99_4941_8821_d5dea3d34912"></div>
 
 ConstantVoltageCharging
 -----------------------
 
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_3e7fe02d_c888_4c49_8e05_ccd9785607a6
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_acdeaa89_0e99_4941_8821_d5dea3d34912
 
 .. raw:: html
 
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">charge during which the voltage is maintained at a constant value regardless of charge current or temperature</td>
+  <td class="element-table-value">constant voltage charge where the electric current is limited to a predetermined value</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">FloatCharging, PotentiostaticCharging</td>
+  <td class="element-table-value">ModifiedConstantVoltageCharging</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
-  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-49'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-49</a></td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_3e7fe02d_c888_4c49_8e05_ccd9785607a6"></div>
-
-ConstantVoltageCharging
------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_3e7fe02d_c888_4c49_8e05_ccd9785607a6
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">charging process during which the voltage is maintained at a constant value regardless of charge current or temperature</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">FloatCharging, PotentiostaticCharging</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
-  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-49'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-49</a></td>
+  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-50'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-50</a></td>
   </tr>
   </table>
 
@@ -7834,8 +7887,8 @@ CurrentPotentialPlot
 
    <div id="electrochemistry_712c791a_d593_4732_af73_493f7bc50999"></div>
 
-CurrentPulse
-------------
+CurrentPulseSignal
+------------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_712c791a_d593_4732_af73_493f7bc50999
 
@@ -7857,8 +7910,8 @@ CurrentPulse
 
    <div id="electrochemistry_9f1ffb54_4403_4541_98c1_3a821c6d060f"></div>
 
-CurrentPulse
-------------
+CurrentPulsing
+--------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_9f1ffb54_4403_4541_98c1_3a821c6d060f
 
@@ -7867,7 +7920,7 @@ CurrentPulse
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">the process of applying a current pulse</td>
+  <td class="element-table-value">the process of applying a current pulse to an electrochemical device</td>
   </tr>
   </table>
 
@@ -7897,10 +7950,29 @@ CurrentTimePlot
 
 .. raw:: html
 
+   <div id="electrochemistry_ca48d41c_f5ea_4bf8_84ce_2d67fd9dad98"></div>
+
+CycleNumberData
+---------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ca48d41c_f5ea_4bf8_84ce_2d67fd9dad98
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">cycle number data, usually resulting from an electrochemical measurement process</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_d2f6f1a6_4dee_4c5e_9a69_32b9fe990d2f"></div>
 
-CycleDomainMatrix
------------------
+CycleSeriesDataset
+------------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_d2f6f1a6_4dee_4c5e_9a69_32b9fe990d2f
 
@@ -7910,25 +7982,6 @@ CycleDomainMatrix
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">a series of data points indexed in cycle order</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_ca48d41c_f5ea_4bf8_84ce_2d67fd9dad98"></div>
-
-CycleNumberVector
------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_ca48d41c_f5ea_4bf8_84ce_2d67fd9dad98
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">vector containing at least two values for the quantity cycle number</td>
   </tr>
   </table>
 
@@ -7964,6 +8017,25 @@ Cycling
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q5074261'>https://www.wikidata.org/wiki/Q5074261</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_435b22d4_c441_45ea_8c79_0cbec11fd287"></div>
+
+CyclingTest
+-----------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_435b22d4_c441_45ea_8c79_0cbec11fd287
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a process that determines the number of complete charge-discharge cycles an electrochemical device can undergo before its capacity falls below a predefined threshold</td>
   </tr>
   </table>
 
@@ -8367,6 +8439,25 @@ ElectricChargeSignal
 
 .. raw:: html
 
+   <div id="electrochemistry_4920de95_3a48_4669_b762_5a0b5232b52f"></div>
+
+ElectricCurrentData
+-------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4920de95_3a48_4669_b762_5a0b5232b52f
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">electric current data, usually resulting from an electrochemical measurement process</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_158ae038_c64b_4cc0_aa56_650475490705"></div>
 
 ElectricCurrentMeasurement
@@ -8433,25 +8524,6 @@ ElectricCurrentSignal
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">Time-dependent variation of electric current</td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_4920de95_3a48_4669_b762_5a0b5232b52f"></div>
-
-ElectricCurrentVector
----------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4920de95_3a48_4669_b762_5a0b5232b52f
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">vector containing at least two values for the quantity electric current</td>
   </tr>
   </table>
 
@@ -8666,7 +8738,7 @@ ElectrochemicalDegradationPhenomenon
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">A phenomenon that causes an electrochemical system to deviate from its ideal behaviour.</td>
+  <td class="element-table-value">A phenomenon that causes an electrochemical device to deviate from its ideal behaviour.</td>
   </tr>
   </table>
 
@@ -8781,7 +8853,7 @@ ElectrochemicalInterface
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">The two-dimensional space comprising the boundary between two electrochemical constituents.</td>
+  <td class="element-table-value">the two-dimensional space comprising the boundary between two electrochemical constituents</td>
   </tr>
   </table>
 
@@ -8801,6 +8873,25 @@ ElectrochemicalMaterial
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">A material that undergoes electrochemical changes.</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_f4ce4df2_d7e6_470f_8eab_3a911adaaf0f"></div>
+
+ElectrochemicalMeasurementProcess
+---------------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_f4ce4df2_d7e6_470f_8eab_3a911adaaf0f
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">The measurement step in an electrochemical testing procedure or characterization method with output data for voltage, current, time, and temperature.</td>
   </tr>
   </table>
 
@@ -8962,6 +9053,25 @@ ElectrochemicalRelation
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">A material relation in electrochemistry.</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_830d02dd_f897_4c3c_95a7_c5e5eafa346a"></div>
+
+ElectrochemicalTestingProcedure
+-------------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_830d02dd_f897_4c3c_95a7_c5e5eafa346a
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the process of evaluating the performance and operational capabilities of an electrochemical device under specific conditions to determine its practical suitability for intended applications</td>
   </tr>
   </table>
 
@@ -9639,6 +9749,60 @@ FlameArrestorVent
 
 .. raw:: html
 
+   <div id="electrochemistry_3e7fe02d_c888_4c49_8e05_ccd9785607a6"></div>
+
+FloatCharging
+-------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_3e7fe02d_c888_4c49_8e05_ccd9785607a6
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">charge during which the voltage is maintained at a constant value regardless of charge current or temperature</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">ConstantVoltageCharging, PotentiostaticCharging</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
+  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-49'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-49</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_3e7fe02d_c888_4c49_8e05_ccd9785607a6"></div>
+
+FloatCharging
+-------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_3e7fe02d_c888_4c49_8e05_ccd9785607a6
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">charging process during which the voltage is maintained at a constant value regardless of charge current or temperature</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">ConstantVoltageCharging, PotentiostaticCharging</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
+  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-49'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-49</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_95e4aa95_b7e9_40d7_b78e_4d7dcc31093d"></div>
 
 FlowCell
@@ -10055,7 +10219,7 @@ GlassyCarbonElectrode
 GoldBasedElectrode
 ------------------
 
-* https://w3id.org/emmo/domain//electrochemistry#electrochemistry_52547692_f773_4e3f_8c8b_1d9d39bc3c8c
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_52547692_f773_4e3f_8c8b_1d9d39bc3c8c
 
 .. raw:: html
 
@@ -10390,6 +10554,56 @@ InsertionElectrode
 
 .. raw:: html
 
+   <div id="electrochemistry_94d9d5e2_9e9b_4eb7_b3ce_f3d658b7ae64"></div>
+
+Interface
+---------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_94d9d5e2_9e9b_4eb7_b3ce_f3d658b7ae64
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">the plane ideally marking the boundary between two phases</td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">IUPAC Reference</span></td>
+  <td class="element-table-value"><a href='https://doi.org/10.1351/goldbook.I03082'>https://doi.org/10.1351/goldbook.I03082</a></td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
+  <td class="element-table-value"><a href='https://en.wikipedia.org/wiki/Interface_(matter)'>https://en.wikipedia.org/wiki/Interface_(matter)</a></td>
+  </tr>
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
+  <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q901882'>https://www.wikidata.org/wiki/Q901882</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_f78e3c87_01c6_4cc2_b047_30322262e22d"></div>
+
+InterfacialRegion
+-----------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_f78e3c87_01c6_4cc2_b047_30322262e22d
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a 3D spatial region at an interface with physical properties that are distinct from the bulk phases in contact</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_54e0c2bd_1bb2_4f9c_9b55_5b6cc34651ec"></div>
 
 Interphase
@@ -10406,7 +10620,7 @@ Interphase
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
-  <td class="element-table-value">InterfacialLayer</td>
+  <td class="element-table-value">InterfacialLayer, InterfacialRegion</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">IUPAC Reference</span></td>
@@ -10965,7 +11179,7 @@ LithiumCobaltOxideElectrode
 LithiumElectrode
 ----------------
 
-* https://w3id.org/emmo/domain//electrochemistry#electrochemistry_55775b50_b9d9_4d68_8cb5_38fcd7b9b54d
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_55775b50_b9d9_4d68_8cb5_38fcd7b9b54d
 
 .. raw:: html
 
@@ -11495,29 +11709,6 @@ MetalOxideElectrode
 
 .. raw:: html
 
-   <div id="electrochemistry_acdeaa89_0e99_4941_8821_d5dea3d34912"></div>
-
-ModifiedConstantVoltageCharging
--------------------------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_acdeaa89_0e99_4941_8821_d5dea3d34912
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">constant voltage charge where the electric current is limited to a predetermined value</td>
-  </tr>
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
-  <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-50'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-05-50</a></td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
    <div id="electrochemistry_e94f6d42_35e4_4f9f_bb74_5e0628bbd454"></div>
 
 MonoblocContainer
@@ -11954,8 +12145,8 @@ OutputCable
 
    <div id="electrochemistry_9ee6e728_e8f5_4b36_a045_d63da69dfc85"></div>
 
-Overcharge
-----------
+Overcharging
+------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_9ee6e728_e8f5_4b36_a045_d63da69dfc85
 
@@ -12754,7 +12945,7 @@ PlateGroup
 PlatinumBasedElectrode
 ----------------------
 
-* https://w3id.org/emmo/domain//electrochemistry#electrochemistry_d8a9a88e_d437_4fef_bc3c_65a1fe627061
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_d8a9a88e_d437_4fef_bc3c_65a1fe627061
 
 .. raw:: html
 
@@ -13094,11 +13285,30 @@ Potentiostat
   <table class="element-table">
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">Measuring instrument for electric current that controls the potential difference between a working electrode and a reference electrode and measures the electric current between a working electrode and an auxiliary electrode.</td>
+  <td class="element-table-value">measuring instrument for electric current that controls the potential difference between a working electrode and a reference electrode and measures the electric current between a working electrode and an auxiliary electrode.</td>
   </tr>
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikipedia Reference</span></td>
   <td class="element-table-value"><a href='https://en.wikipedia.org/wiki/Potentiostat'>https://en.wikipedia.org/wiki/Potentiostat</a></td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_5a5ef74b_e4a7_4b85_ab21_ae0febebaf58"></div>
+
+PotentiostaticCycling
+---------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_5a5ef74b_e4a7_4b85_ab21_ae0febebaf58
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">electrochemical method where the voltage of an electrochemical device is held constant while measuring the current response over multiple charge-discharge cycles to evaluate its performance and stability</td>
   </tr>
   </table>
 
@@ -13251,6 +13461,44 @@ ProtonInsertionElectrode
   <tr>
   <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
   <td class="element-table-value">an insertion electrode in which the guest molecule is a proton (hydrogen)</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_8372fdaa_dc01_4abf_9b75_442d0b28f263"></div>
+
+PulseCharging
+-------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_8372fdaa_dc01_4abf_9b75_442d0b28f263
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">charging an electrochemical device at a given charging current for a defined short duration</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
+   <div id="electrochemistry_acdedc56_61da_40ca_aa81_db4c06d82dd5"></div>
+
+PulseDischarging
+----------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_acdedc56_61da_40ca_aa81_db4c06d82dd5
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">discharging an electrochemical device at a given charging current for a defined short duration</td>
   </tr>
   </table>
 
@@ -14808,6 +15056,25 @@ ReferenceElectrode
 
 .. raw:: html
 
+   <div id="electrochemistry_c7e37e88_ed86_4acd_99ee_b6a2a5fcbd24"></div>
+
+ReferencePerformanceTest
+------------------------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_c7e37e88_ed86_4acd_99ee_b6a2a5fcbd24
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">a periodic assessment of battery degradation during life testing</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_35469eeb_7fc3_4317_a4b5_b3be7015444b"></div>
 
 Resting
@@ -15285,21 +15552,6 @@ SideReaction
 
 .. raw:: html
 
-   <div id="Signal"></div>
-
-Signal
-------
-
-* https://w3id.org/emmo/domain/chameo#Signal
-
-.. raw:: html
-
-  <table class="element-table">
-  </table>
-
-
-.. raw:: html
-
    <div id="electrochemistry_79e12290_d1e5_4c41_916c_18f1e4d7fb51"></div>
 
 SiliconBasedElectrode
@@ -15381,7 +15633,7 @@ SiliconOxideGraphiteElectrode
 SilverBasedElectrode
 --------------------
 
-* https://w3id.org/emmo/domain//electrochemistry#electrochemistry_f897db90_afd6_42e7_8d1f_0fcba856e45a
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_f897db90_afd6_42e7_8d1f_0fcba856e45a
 
 .. raw:: html
 
@@ -16144,6 +16396,10 @@ StorageTest
   <td class="element-table-value">test carried out to measure the loss of capacity, open-circuit voltage, short-circuit current or other quantities after storage under specified conditions</td>
   </tr>
   <tr>
+  <td class="element-table-key"><span class="element-table-key">Alternative Label(s)</span></td>
+  <td class="element-table-value">SelfDischargeTest</td>
+  </tr>
+  <tr>
   <td class="element-table-key"><span class="element-table-key">IEC Reference</span></td>
   <td class="element-table-value"><a href='https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-45'>https://www.electropedia.org/iev/iev.nsf/display?openform&ievref=482-03-45</a></td>
   </tr>
@@ -16162,6 +16418,10 @@ StrippingChronopotentiometry
 .. raw:: html
 
   <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">an electroanalytical technique that involves applying a constant current to a working electrode to strip previously deposited analyte from the electrode surface while measuring the potential change over time</td>
+  </tr>
   </table>
 
 
@@ -16459,6 +16719,25 @@ ThreeElectrodeCell
 
 .. raw:: html
 
+   <div id="electrochemistry_58ad1d22_3803_4c95_a137_207cfebe242a"></div>
+
+TimeData
+--------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_58ad1d22_3803_4c95_a137_207cfebe242a
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">time data, usually resulting from an electrochemical measurement process</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_7fdf65c1_b86a_4cbe_8c06_56321b425d4e"></div>
 
 TimeMeasurement
@@ -16495,8 +16774,8 @@ TimeMeasurementResult
 
    <div id="electrochemistry_7fa74f69_047f_4c86_a02c_e7805d6f5b77"></div>
 
-TimeSeries
-----------
+TimeSeriesDataset
+-----------------
 
 * https://w3id.org/emmo/domain/electrochemistry#electrochemistry_7fa74f69_047f_4c86_a02c_e7805d6f5b77
 
@@ -16514,25 +16793,6 @@ TimeSeries
   <tr>
   <td class="element-table-key"><span class="element-table-key">Wikidata Reference</span></td>
   <td class="element-table-value"><a href='https://www.wikidata.org/wiki/Q186588'>https://www.wikidata.org/wiki/Q186588</a></td>
-  </tr>
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_58ad1d22_3803_4c95_a137_207cfebe242a"></div>
-
-TimeVector
-----------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_58ad1d22_3803_4c95_a137_207cfebe242a
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">a vector of discrete times</td>
   </tr>
   </table>
 
@@ -16886,6 +17146,25 @@ VoltageControlledProcess
 
 .. raw:: html
 
+   <div id="electrochemistry_4d09ddc4_7e71_4712_afab_b33d8df38983"></div>
+
+VoltageData
+-----------
+
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4d09ddc4_7e71_4712_afab_b33d8df38983
+
+.. raw:: html
+
+  <table class="element-table">
+  <tr>
+  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
+  <td class="element-table-value">voltage data, usually resulting from an electrochemical measurement process</td>
+  </tr>
+  </table>
+
+
+.. raw:: html
+
    <div id="electrochemistry_825a749f_dd07_46fb_947c_db286440911e"></div>
 
 VoltageMeasurement
@@ -16919,25 +17198,6 @@ VoltageMeasurementResult
 .. raw:: html
 
   <table class="element-table">
-  </table>
-
-
-.. raw:: html
-
-   <div id="electrochemistry_4d09ddc4_7e71_4712_afab_b33d8df38983"></div>
-
-VoltageVector
--------------
-
-* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_4d09ddc4_7e71_4712_afab_b33d8df38983
-
-.. raw:: html
-
-  <table class="element-table">
-  <tr>
-  <td class="element-table-key"><span class="element-table-key">Elucidation</span></td>
-  <td class="element-table-value">vector containing at least two values for the quantity voltage</td>
-  </tr>
   </table>
 
 
@@ -17094,7 +17354,7 @@ ZincChlorideSolution
 ZincElectrode
 -------------
 
-* https://w3id.org/emmo/domain//electrochemistry#electrochemistry_424bf750_7df5_49b5_ba73_ba74397a166b
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_424bf750_7df5_49b5_ba73_ba74397a166b
 
 .. raw:: html
 
@@ -17320,7 +17580,7 @@ hasFormFactor
 hasInsertedEntity
 -----------------
 
-* https://w3id.org/emmo/domain//electrochemistry#electrochemistry_fd1fae29_a182_4692_98b8_919764b07b00
+* https://w3id.org/emmo/domain/electrochemistry#electrochemistry_fd1fae29_a182_4692_98b8_919764b07b00
 
 .. raw:: html
 

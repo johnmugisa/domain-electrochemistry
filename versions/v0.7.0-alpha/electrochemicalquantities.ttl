@@ -402,6 +402,13 @@ emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry
     skos:prefLabel "MaximumPulseDischargingCurrent"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "the maximum current approved for pulse discharge of an electrochemical device"@en .
 
+:electrochemistry_44a67eb4_52e8_433c_aef7_a928c2b9906c a owl:Class ;
+    rdfs:label "TerminationQuantity"@en ;
+    rdfs:comment "a quantity that is used to express the termination criteria for an electrochemical process"@en ;
+    rdfs:subClassOf :electrochemistry_c5047d29_4e68_43ee_8355_3e8f05dc70a5 ;
+    skos:prefLabel "TerminationQuantity"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a quantity that is used to express the termination criteria for an electrochemical process"@en .
+
 :electrochemistry_457aed58_6e7e_42d5_9d78_b424c8d60aa3 a owl:Class ;
     rdfs:label "DischargingConstantCurrentPercentage"@en ;
     rdfs:comment "the percentage of the total discharge capacity that is obtained during a constant current discharge process"@en ;
@@ -467,12 +474,13 @@ emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry
     emmo:EMMO_fe015383_afb3_44a6_ae86_043628697aa2 "https://doi.org/10.1351/goldbook.D01862"@en .
 
 :electrochemistry_4d2b102b_3515_4591_b079_69232c44f9dc a owl:Class ;
-    rdfs:label "MagnitudeOfPotentialPulse"@en ;
+    rdfs:label "PulseVoltage"@en ;
     rdfs:comment "The magnitude of a voltage pulse applied to an electrochemical cell during pulsed amperometry and related techniques."@en ;
     rdfs:subClassOf :electrochemistry_4ebe2ef1_eea8_4b10_822d_7a68215bd24d,
         :electrochemistry_c5047d29_4e68_43ee_8355_3e8f05dc70a5 ;
-    skos:altLabel "PulseMagnitudePotential"@en ;
-    skos:prefLabel "MagnitudeOfPotentialPulse"@en ;
+    skos:altLabel "MagnitudeOfPotentialPulse"@en,
+        "PulseMagnitudePotential"@en ;
+    skos:prefLabel "PulseVoltage"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "The magnitude of a voltage pulse applied to an electrochemical cell during pulsed amperometry and related techniques."@en .
 
 :electrochemistry_4f14e153_cffb_42bd_9a7f_ae40d51ad2cd a owl:Class ;
@@ -619,6 +627,13 @@ emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry
     owl:disjointWith :electrochemistry_e4d666ee_d637_45cd_a904_dc33941ead4f ;
     skos:prefLabel "ChargingCurrent"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "electric current applied to an electrochemical device during a charging process"@en .
+
+:electrochemistry_79a9e1be_35b0_4c3c_8087_b5f967ca0e87 a owl:Class ;
+    rdfs:label "ChargingVoltage"@en ;
+    rdfs:comment "voltage between the terminals of a cell or battery when being charged"@en ;
+    rdfs:subClassOf :electrochemistry_4ebe2ef1_eea8_4b10_822d_7a68215bd24d ;
+    skos:prefLabel "ChargingVoltage"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "voltage between the terminals of a cell or battery when being charged"@en .
 
 :electrochemistry_7db845e7_0e5b_47d4_b954_2a2b8e85deea a owl:Class ;
     rdfs:label "LowerCurrentLimit"@en ;
@@ -1126,8 +1141,8 @@ emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry
         <https://orcid.org/0000-0003-2954-1233> ;
     dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode" ;
     owl:imports <https://w3id.org/emmo/1.0.0-beta7/disciplines/isq> ;
-    owl:versionIRI <https://w3id.org/emmo/domain/electrochemistry/0.18.0-beta/electrochemicalquantities> ;
-    owl:versionInfo "0.18.0-beta" .
+    owl:versionIRI <https://w3id.org/emmo/domain/electrochemistry/0.19.0-beta/electrochemicalquantities> ;
+    owl:versionInfo "0.19.0-beta" .
 
 <https://orcid.org/0000-0001-8869-3718> a owl:NamedIndividual,
         foaf:Person ;
@@ -1375,12 +1390,13 @@ emmo:EMMO_931a725b_926d_4f60_8955_61fe17fce98b rdfs:subClassOf :electrochemistry
     emmo:EMMO_fe015383_afb3_44a6_ae86_043628697aa2 "https://goldbook.iupac.org/terms/view/S05897"@en .
 
 :electrochemistry_346519a4_006c_496d_8f36_74e38814ed2d a owl:Class ;
-    rdfs:label "MagnitudeOfCurrentPulse"@en ;
+    rdfs:label "PulseCurrent"@en ;
     rdfs:comment "the magnitude of a current pulse applied to an electrochemical cell during pulsed potentiometry and related techniques"@en ;
     rdfs:subClassOf emmo:EMMO_c995ae70_3b84_4ebb_bcfc_69e6a281bb88,
         :electrochemistry_c5047d29_4e68_43ee_8355_3e8f05dc70a5 ;
-    skos:altLabel "PulseMagnitudeCurrent"@en ;
-    skos:prefLabel "MagnitudeOfCurrentPulse"@en ;
+    skos:altLabel "MagnitudeOfCurrentPulse"@en,
+        "PulseMagnitudeCurrent"@en ;
+    skos:prefLabel "PulseCurrent"@en ;
     emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "the magnitude of a current pulse applied to an electrochemical cell during pulsed potentiometry and related techniques"@en .
 
 :electrochemistry_37b24a94_cae0_4d7a_9519_9f7692dec607 a owl:Class ;
@@ -1957,7 +1973,6 @@ and t* through mathematical models, provided that the long-time potential- deter
 :electrochemistry_25e20915_c35d_4bee_ad31_736235a79780 a owl:Class ;
     rdfs:label "DischargingCRate"@en ;
     rdfs:comment "[an indicator of the] electric current at which a battery is discharged"@en,
-        "in practice, the term CRate is often used to mean DRate"@en,
         "the discharge rate is calculated as the rated capacity divided by the corresponding discharge time which results in an electric current"@en,
         "the quantity DRate is not used for energy-decoupled batteries like Redox Flox batteries"@en ;
     rdfs:seeAlso "CRate"@en ;
@@ -2208,10 +2223,10 @@ The real (true) area, A_{real}, takes into account non-idealities of the interfa
 
 :electrochemistry_4a450a27_b84a_4c70_a3a9_15ec30e2f30b a owl:Class ;
     rdfs:label "ElectrochemicalTransportQuantity"@en ;
-    rdfs:comment "An ElectrochemicalQuantity related to the transport of mass, charge, or energy."@en ;
+    rdfs:comment "an electrochemical quantity related to the transport of mass, charge, or energy."@en ;
     rdfs:subClassOf :electrochemistry_aecc6094_c6a5_4a36_a825_8a497a2ae112 ;
     skos:prefLabel "ElectrochemicalTransportQuantity"@en ;
-    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An ElectrochemicalQuantity related to the transport of mass, charge, or energy."@en .
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "an electrochemical quantity related to the transport of mass, charge, or energy."@en .
 
 :electrochemistry_637ee9c4_4b3f_4d3a_975b_c0572dfe53ce a owl:Class ;
     rdfs:label "CellCurrent"@en ;
@@ -2309,10 +2324,10 @@ foaf:Person a owl:Class ;
 
 :electrochemistry_21745019_2830_4395_bca7_15ddfd266673 a owl:Class ;
     rdfs:label "ElectrochemicalKineticQuantity"@en ;
-    rdfs:comment "An ElectrochemicalQuantity that relates to the kinetics of a reaction."@en ;
+    rdfs:comment "a quantity that relates to the kinetics of a reaction."@en ;
     rdfs:subClassOf :electrochemistry_aecc6094_c6a5_4a36_a825_8a497a2ae112 ;
     skos:prefLabel "ElectrochemicalKineticQuantity"@en ;
-    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "An ElectrochemicalQuantity that relates to the kinetics of a reaction."@en .
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a quantity that relates to the kinetics of a reaction."@en .
 
 :electrochemistry_2a2f59b7_aa16_40aa_9c8b_0de8a2720456 a owl:Class ;
     rdfs:label "FaradaicCurrent"@en ;
@@ -2354,10 +2369,10 @@ foaf:Person a owl:Class ;
 
 :electrochemistry_2d896559_eee3_447c_9759_87c854a4266a a owl:Class ;
     rdfs:label "ElectrochemicalThermodynamicQuantity"@en ;
-    rdfs:comment "A thermodynamically derived ElectrochemicalQuantity."@en ;
+    rdfs:comment "an electrochemical quantity describing concepts from thermodynamics"@en ;
     rdfs:subClassOf :electrochemistry_aecc6094_c6a5_4a36_a825_8a497a2ae112 ;
     skos:prefLabel "ElectrochemicalThermodynamicQuantity"@en ;
-    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "A thermodynamically derived ElectrochemicalQuantity."@en .
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "an electrochemical quantity describing concepts from thermodynamics"@en .
 
 :electrochemistry_4ebe2ef1_eea8_4b10_822d_7a68215bd24d a owl:Class ;
     rdfs:label "CellVoltage"@en ;
@@ -2404,8 +2419,10 @@ foaf:Person a owl:Class ;
 
 :electrochemistry_02eb0465_4f94_453c_8c1f_5ddf80134634 a owl:Class ;
     rdfs:label "ElectrochemicalPerformanceQuantity"@en ;
+    rdfs:comment "a quantity that indicates the performance of an electrochemical device"@en ;
     rdfs:subClassOf :electrochemistry_aecc6094_c6a5_4a36_a825_8a497a2ae112 ;
-    skos:prefLabel "ElectrochemicalPerformanceQuantity"@en .
+    skos:prefLabel "ElectrochemicalPerformanceQuantity"@en ;
+    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "a quantity that indicates the performance of an electrochemical device"@en .
 
 :electrochemistry_c5047d29_4e68_43ee_8355_3e8f05dc70a5 a owl:Class ;
     rdfs:label "ElectrochemicalControlQuantity"@en ;
