@@ -1,22 +1,14 @@
 {
     "@context": "https://w3id.org/emmo/domain/electrochemistry/context",
     "@type": "Electrode",
-    "schema:manufacturer": {
-       "@type": "schema:ResearchOrganization",
-       "@id": "https://www.wikidata.org/wiki/Q3041255",
-       "schema:name": "SINTEF"
-    },
-    "schema:creator": {
-       "@type": "schema:Person",
-       "@id": "https://orcid.org/0000-0002-8758-6109",
-       "schema:name": "Simon Clark"
-    },
+    "rdfs:label": "Demo Zinc Electrode",
+    "rdfs:comment": ["This example shows how to describe an electrode using the 'hasActiveMaterial' property.", "Using 'hasActiveMaterial' with 'Zinc' is equivalent to using the 'ZincElectrode' term in the ontology.", "Electrode types that are needed to describe IEC regulated electrochemical cell definitions are included in the ontology (e.g. 'ZincElectrode'). Use 'hasActiveMaterial' as a more flexible alternative to define other electrode types that are outside the scope of specific regulations."],
     "hasActiveMaterial": {
-       "@type": ["Zinc", "Foil"]
+       "@type": "Zinc"
     },
     "hasProperty": [
        {
-             "@type": ["SpecificCapacity", "MeasuredProperty"],
+             "@type": "SpecificCapacity",
              "hasNumericalPart": {
                 "@type": "Real",
                 "hasNumericalValue": 800
@@ -24,7 +16,7 @@
              "hasMeasurementUnit": "emmo:MilliAmpereHourPerGram"
        },
        {
-             "@type": ["Thickness", "ConventionalProperty"],
+             "@type": "Thickness",
              "hasNumericalPart": {
                 "@type": "Real",
                 "hasNumericalValue": 250
@@ -32,7 +24,7 @@
              "hasMeasurementUnit": "emmo:MicroMetre"
        },
        {
-             "@type": ["Diameter", "MeasuredProperty"],
+             "@type": "Diameter",
              "hasNumericalPart": {
                 "@type": "Real",
                 "hasNumericalValue": 2
@@ -40,10 +32,10 @@
              "hasMeasurementUnit": "emmo:CentiMetre"
        },
        {
-             "@type": ["Mass", "MeasuredProperty"],
+             "@type": "Mass",
              "hasNumericalPart": {
                 "@type": "Real",
-                "hasNumericalValue": 2.5
+                "hasNumericalValue": 0.56
              },
              "hasMeasurementUnit": "emmo:Gram"
        }
