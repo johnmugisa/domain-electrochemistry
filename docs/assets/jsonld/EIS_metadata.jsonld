@@ -1,0 +1,132 @@
+{
+    "@context": "https://w3id.org/emmo/domain/battery/context",
+    "@type": "csvw:TableSchema",
+    "csvw:columns": [
+        {
+            "csvw:name": "frequency",
+            "csvw:titles": "Frequency",
+            "csvw:propertyUrl": {
+                "@type": "Frequency"
+            },
+            "hasMeasurementUnit": [
+                {
+                    "@id": "emmo:Hertz"
+                },
+                {
+                    "@id": "unit:HZ"
+                }
+            ],
+            "schema:unitCode": [
+                {
+                    "@id": "emmo:Hertz"
+                },
+                {
+                    "@id": "unit:HZ"
+                }
+            ],
+            "csvw:datatype": "xsd:decimal",
+            "csvw:required": "true"
+        },
+        {
+            "csvw:name": "impedance",
+            "csvw:titles": "Absolute Impedance",
+            "csvw:propertyUrl": {
+                "@type": "ElectricImpedance"
+            },
+            "hasMeasurementUnit": [
+                {
+                    "@id": "emmo:Ohm"
+                },
+                {
+                    "@id": "unit:OHM"
+                }
+            ],
+            "schema:unitCode": [
+                {
+                    "@id": "emmo:Ohm"
+                },
+                {
+                    "@id": "unit:OHM"
+                }
+            ],
+            "csvw:datatype": "xsd:decimal",
+            "csvw:required": "true"
+        },
+        {
+            "csvw:name": "phase",
+            "csvw:titles": "Phase Angle",
+            "csvw:propertyUrl": {
+                "@type": "PhaseAngle"
+            },
+            "hasMeasurementUnit": [
+                {
+                    "@id": "emmo:Radian"
+                },
+                {
+                    "@id": "unit:RAD"
+                }
+            ],
+            "schema:unitCode": [
+                {
+                    "@id": "emmo:Radian"
+                },
+                {
+                    "@id": "unit:RAD"
+                }
+            ],
+            "csvw:datatype": "xsd:decimal",
+            "csvw:required": "true"
+        },
+        {
+            "csvw:name": "z_real",
+            "csvw:titles": "Real Part of the Impedance",
+            "csvw:propertyUrl": {
+                "@type": "RealElectricImpedance"
+            },
+            "hasMeasurementUnit": [
+                {
+                    "@id": "emmo:Ohm"
+                },
+                {
+                    "@id": "unit:OHM"
+                }
+            ],
+            "schema:unitCode": [
+                {
+                    "@id": "emmo:Ohm"
+                },
+                {
+                    "@id": "unit:OHM"
+                }
+            ],
+            "csvw:datatype": "xsd:decimal",
+            "csvw:required": "true"
+        },
+        {
+            "csvw:name": "z_imag",
+            "csvw:titles": "Imaginary Part of the Impedance",
+            "csvw:propertyUrl": {
+                "@type": "ImaginaryElectricImpedance"
+            },
+            "hasMeasurementUnit": [
+                {
+                    "@id": "emmo:Ohm"
+                },
+                {
+                    "@id": "unit:OHM"
+                }
+            ],
+            "schema:unitCode": [
+                {
+                    "@id": "emmo:Ohm"
+                },
+                {
+                    "@id": "unit:OHM"
+                }
+            ],
+            "csvw:datatype": "xsd:decimal",
+            "csvw:required": "true"
+        }
+    ],
+    "csvw:primaryKey": "frequency"
+}
