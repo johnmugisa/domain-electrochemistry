@@ -1,0 +1,58 @@
+{
+    "@context": "https://w3id.org/emmo/domain/battery/context",
+    "@type": "csvw:TableSchema",
+    "csvw:columns": [
+        {
+            "@type": "csvw:Column",
+            "csvw:name": "SOC(%)",
+            "csvw:titles": "State of Charge",
+            "dc:description": "The state of charge of the electrode, determined according to some specific conditions e.g. voltage limits",
+            "csvw:propertyUrl": "https://w3id.org/emmo/domain/electrochemistry#electrochemistry_8b2aaa50_bbe1_45da_8778_8898326246a2",
+            "hasMeasurementUnit": [
+                {
+                    "@id": "echem:PercentUnit"
+                },
+                {
+                    "@id": "unit:PERCENT"
+                }
+            ],
+            "schema:unitCode": [
+                {
+                    "@id": "echem:PercentUnit"
+                },
+                {
+                    "@id": "unit:PERCENT"
+                }
+            ],
+            "csvw:datatype": "xsd:decimal",
+            "csvw:required": "false"
+        },
+        {
+            "@type": "csvw:Column",
+            "csvw:name": "Diffusion_coefficient(cm2/s)",
+            "csvw:titles": "Diffusion Coefficient",
+            "dc:description": "Diffusion coefficient measured in cm²/s",
+            "csvw:propertyUrl": "https://w3id.org/emmo#EMMO_931a725b_926d_4f60_8955_61fe17fce98b",
+            "hasMeasurementUnit": [
+                {
+                    "@id": "emmo:SquareCentiMetrePerSecond"
+                },
+                {
+                    "@id": "unit:CentiM2-PER-SEC"
+                }
+            ],
+            "schema:unitCode": [
+                {
+                    "@id": "emmo:SquareCentiMetrePerSecond"
+                },
+                {
+                    "@id": "unit:CentiM2-PER-SEC"
+                }
+            ],
+            "csvw:datatype": "xsd:decimal",
+            "csvw:required": "true"
+        }
+    ],
+    "csvw:primaryKey": "SOC(%)"
+  }
+  

@@ -1,0 +1,55 @@
+{
+    "@type": "csvw:TableSchema",
+    "schema:name": "SoC vs i0 Schema",
+    "csvw:columns": [
+        {
+            "@type": "csvw:Column",
+            "csvw:name": "SOC(%)",
+            "csvw:titles": "State of Charge",
+            "dc:description": "The state of charge of the electrode, determined according to some specific conditions e.g. voltage limits",
+            "csvw:propertyUrl": {
+                "@type": "StateOfCharge"
+            },
+            "hasMeasurementUnit": [
+                {
+                    "@id": "echem:PercentUnit"
+                },
+                {
+                    "@id": "unit:PERCENT"
+                }
+            ],
+            "schema:unitCode": [
+                {
+                    "@id": "echem:PercentUnit"
+                },
+                {
+                    "@id": "unit:PERCENT"
+                }
+            ],
+            "csvw:datatype": "xsd:decimal",
+            "csvw:required": "false"
+        },
+        {
+            "@type": "csvw:Column",
+            "csvw:name": "Exchange current(mA/cm2)",
+            "csvw:titles": "Exchange current density",
+            "dc:description": "Exchange current density measured in mA/cm2",
+            "csvw:propertyUrl": {
+                "@type": "ExchangeCurrentDensity"
+            },
+            "hasMeasurementUnit": [
+                {
+                    "@id": "emmo:MilliAmperePerSquareCentiMetre"
+                }
+            ],
+            "schema:unitCode": [
+                {
+                    "@id": "emmo:MilliAmperePerSquareCentiMetre"
+                }
+            ],
+            "csvw:datatype": "xsd:decimal",
+            "csvw:required": "true"
+        }
+    ],
+    "csvw:primaryKey": "SOC(%)"
+}

@@ -1,0 +1,61 @@
+{
+    "@type": "csvw:TableSchema",
+    "schema:name": "Stoichiometry vs Voltage Schema",
+    "csvw:columns": [
+        {
+            "@type": "csvw:Column",
+            "csvw:name": "stoichiometry",
+            "csvw:titles": "Stoichiometry",
+            "dc:description": "The stoichiometry of lithium in the active material",
+            "csvw:propertyUrl": {
+                "@type": "StoichiometricCoefficient"
+            },
+            "hasMeasurementUnit": [
+                {
+                    "@id": "emmo:UnitOne"
+                },
+                {
+                    "@id": "unit:UNITLESS"
+                }
+            ],
+            "schema:unitCode": [
+                {
+                    "@id": "emmo:UnitOne"
+                },
+                {
+                    "@id": "unit:UNITLESS"
+                }
+            ],
+            "csvw:datatype": "xsd:decimal",
+            "csvw:required": "false"
+        },
+        {
+            "@type": "csvw:Column",
+            "csvw:name": "Voltage(V)",
+            "csvw:titles": "Voltage",
+            "dc:description": "The voltage of the cell versus lithium",
+            "csvw:propertyUrl": {
+                "@type": "Voltage"
+            },
+            "hasMeasurementUnit": [
+                {
+                    "@id": "emmo:Volt"
+                },
+                {
+                    "@id": "unit:V"
+                }
+            ],
+            "schema:unitCode": [
+                {
+                    "@id": "emmo:Volt"
+                },
+                {
+                    "@id": "unit:V"
+                }
+            ],
+            "csvw:datatype": "xsd:decimal",
+            "csvw:required": "true"
+        }
+    ],
+    "csvw:primaryKey": "stoichiometry"
+}
