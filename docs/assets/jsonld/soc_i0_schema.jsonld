@@ -31,7 +31,7 @@
         },
         {
             "@type": "csvw:Column",
-            "csvw:name": "Exchange current(mA/cm2)",
+            "csvw:name": "i0(mA/cm2)",
             "csvw:titles": "Exchange current density",
             "dc:description": "Exchange current density measured in mA/cm2",
             "csvw:propertyUrl": {
