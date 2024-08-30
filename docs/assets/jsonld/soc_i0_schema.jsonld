@@ -1,6 +1,6 @@
 {
+    "@context": "https://w3id.org/emmo/domain/battery/context",
     "@type": "csvw:TableSchema",
-    "schema:name": "SoC vs i0 Schema",
     "csvw:columns": [
         {
             "@type": "csvw:Column",
